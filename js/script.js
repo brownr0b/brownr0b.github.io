@@ -164,8 +164,8 @@ function workModal(){
             $('#img').wrap("<a href='projects/samzorz'></a>");
             $('.view h3').wrap("<a href='projects/samzorz'></a>");
         }else if(url.indexOf("workTwo") >0){
-            $('#img').wrap("<a href='index.html'></a>");
-            $('.view h3').wrap("<a href='index.html'></a>");
+            $('#img').wrap("<a href='https://brownr0b.github.io'></a>");
+            $('.view h3').wrap("<a href='https://brownr0b.github.io'></a>");
         }else if(url.indexOf("workThree") >0){
             $('#img').wrap("<a href='projects/calmWeather'></a>");
             $('.view h3').wrap("<a href='projects/calmWeather'></a>");
