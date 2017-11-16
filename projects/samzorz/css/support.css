@@ -1,0 +1,515 @@
+#support {
+  width: 100%;
+  height: 660px;
+  background-color: #0a0a0a;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  #support .bg {
+    width: 100%;
+    height: 660px;
+    background: url("../img/background/StockSnap_N37RJ5IIPO.jpg") top center rgba(22, 22, 22, 0.5) no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    position: absolute;
+    margin: 0; }
+  #support .supportContent {
+    width: 1150px;
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100; }
+    #support .supportContent .supportPanel {
+      width: 350px;
+      height: 600px;
+      text-align: center;
+      background-color: rgba(22, 22, 22, 0.8);
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: center; }
+      #support .supportContent .supportPanel a {
+        color: #e5e5e5; }
+      #support .supportContent .supportPanel a:hover {
+        color: #DD1A22;
+        transition: color .3s ease; }
+      #support .supportContent .supportPanel .donation {
+        width: 350px;
+        height: 600px; }
+        #support .supportContent .supportPanel .donation ul {
+          width: 300px;
+          text-align: left;
+          font-size: 14px; }
+          #support .supportContent .supportPanel .donation ul li {
+            margin: 10px 0; }
+        #support .supportContent .supportPanel .donation .tipBtn {
+          width: 140px;
+          height: 40px;
+          background-color: #6441a5;
+          color: #fff;
+          margin: 30px auto;
+          border: 1px solid #432b6e;
+          box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2); }
+          #support .supportContent .supportPanel .donation .tipBtn a {
+            width: 100%;
+            height: 100%;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #e5e5e5;
+            text-shadow: 0 1px 0 rgba(0, 0, 0, 0.8); }
+        #support .supportContent .supportPanel .donation .tipBtn:hover {
+          background-color: #4e3380;
+          transition: background-color .3s ease; }
+        #support .supportContent .supportPanel .donation p {
+          width: 300px;
+          margin: 10px auto;
+          text-align: left;
+          font-size: 14px;
+          letter-spacing: 1px; }
+      #support .supportContent .supportPanel .wishlist {
+        width: 350px;
+        height: 600px; }
+        #support .supportContent .supportPanel .wishlist p {
+          width: 300px;
+          margin: 10px auto;
+          text-align: left;
+          font-size: 14px;
+          letter-spacing: 1px; }
+        #support .supportContent .supportPanel .wishlist .wishBtn {
+          width: 140px;
+          height: 40px;
+          background-color: #dd1a22;
+          color: #fff;
+          margin: 30px auto;
+          border: 1px solid #c6171e;
+          box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2); }
+          #support .supportContent .supportPanel .wishlist .wishBtn a {
+            width: 100%;
+            height: 100%;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #e5e5e5;
+            text-shadow: 0 1px 0 rgba(0, 0, 0, 0.8); }
+        #support .supportContent .supportPanel .wishlist .wishBtn:hover {
+          background-color: #991217;
+          transition: background-color .3s ease; }
+      #support .supportContent .supportPanel .subscribe {
+        width: 350px;
+        height: 600px; }
+        #support .supportContent .supportPanel .subscribe .subBtn {
+          width: 140px;
+          height: 40px;
+          background-color: #6441a5;
+          color: #fff;
+          margin: 30px auto;
+          border: 1px solid #432b6e;
+          box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2); }
+          #support .supportContent .supportPanel .subscribe .subBtn a {
+            width: 100%;
+            height: 100%;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #e5e5e5;
+            text-shadow: 0 1px 0 rgba(0, 0, 0, 0.8); }
+        #support .supportContent .supportPanel .subscribe .subBtn:hover {
+          background-color: #4e3380;
+          transition: background-color .3s ease; }
+        #support .supportContent .supportPanel .subscribe p {
+          width: 300px;
+          margin: 10px auto;
+          text-align: left;
+          font-size: 14px;
+          letter-spacing: 1px; }
+        #support .supportContent .supportPanel .subscribe ul {
+          width: 300px;
+          text-align: left;
+          font-size: 14px; }
+          #support .supportContent .supportPanel .subscribe ul li {
+            margin: 10px 0; }
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px) {
+  #support {
+    width: 100%;
+    height: 660px;
+    background-color: #0a0a0a; }
+    #support .bg {
+      width: 100%;
+      height: 660px;
+      background: url("../img/background/StockSnap_N37RJ5IIPO.jpg") top center rgba(22, 22, 22, 0.5);
+      overflow: hidden;
+      position: absolute; }
+    #support .supportContent {
+      width: 950px;
+      display: flex;
+      position: absolute;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100; }
+      #support .supportContent .supportPanel {
+        width: 300px;
+        height: 600px;
+        text-align: center;
+        background-color: rgba(22, 22, 22, 0.8);
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center; }
+        #support .supportContent .supportPanel a {
+          color: #e5e5e5; }
+        #support .supportContent .supportPanel .donation {
+          width: 300px;
+          height: 600px; }
+          #support .supportContent .supportPanel .donation ul {
+            width: 240px;
+            text-align: left;
+            font-size: 14px; }
+            #support .supportContent .supportPanel .donation ul li {
+              margin: 10px 0; }
+          #support .supportContent .supportPanel .donation .tipBtn {
+            width: 140px;
+            height: 40px;
+            background-color: #6441a5;
+            color: #fff;
+            margin: 30px auto;
+            border: 1px solid #593a93;
+            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2); }
+            #support .supportContent .supportPanel .donation .tipBtn a {
+              width: 100%;
+              height: 100%;
+              text-decoration: none;
+              text-transform: uppercase;
+              font-weight: bold;
+              letter-spacing: 1px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              color: #e5e5e5;
+              text-shadow: 0 1px 0 rgba(0, 0, 0, 0.8); }
+          #support .supportContent .supportPanel .donation p {
+            width: 260px;
+            margin: 10px auto;
+            text-align: left;
+            font-size: 14px;
+            letter-spacing: 1px; }
+        #support .supportContent .supportPanel .wishlist {
+          width: 300px;
+          height: 600px; }
+          #support .supportContent .supportPanel .wishlist p {
+            width: 260px;
+            margin: 10px auto;
+            text-align: left;
+            font-size: 14px;
+            letter-spacing: 1px; }
+          #support .supportContent .supportPanel .wishlist .wishBtn {
+            width: 140px;
+            height: 40px;
+            background-color: #dd1a22;
+            color: #fff;
+            margin: 30px auto;
+            border: 1px solid #c6171e;
+            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2); }
+            #support .supportContent .supportPanel .wishlist .wishBtn a {
+              width: 100%;
+              height: 100%;
+              text-decoration: none;
+              text-transform: uppercase;
+              font-weight: bold;
+              letter-spacing: 1px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              color: #e5e5e5;
+              text-shadow: 0 1px 0 rgba(0, 0, 0, 0.8); }
+        #support .supportContent .supportPanel .subscribe {
+          width: 300px;
+          height: 600px; }
+          #support .supportContent .supportPanel .subscribe .subBtn {
+            width: 140px;
+            height: 40px;
+            background-color: #6441a5;
+            color: #fff;
+            margin: 30px auto;
+            border: 1px solid #593a93;
+            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2); }
+            #support .supportContent .supportPanel .subscribe .subBtn a {
+              width: 100%;
+              height: 100%;
+              text-decoration: none;
+              text-transform: uppercase;
+              font-weight: bold;
+              letter-spacing: 1px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              color: #e5e5e5;
+              text-shadow: 0 1px 0 rgba(0, 0, 0, 0.8); }
+          #support .supportContent .supportPanel .subscribe p {
+            width: 260px;
+            margin: 10px auto;
+            text-align: left;
+            font-size: 14px;
+            letter-spacing: 1px; }
+          #support .supportContent .supportPanel .subscribe ul {
+            width: 240px;
+            text-align: left;
+            font-size: 14px; }
+            #support .supportContent .supportPanel .subscribe ul li {
+              margin: 10px 0; } }
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+  #support {
+    width: 100%;
+    height: 710px;
+    background-color: #0a0a0a; }
+    #support .bg {
+      width: 100%;
+      height: 710px;
+      background: url("../img/background/StockSnap_N37RJ5IIPO.jpg") top center rgba(22, 22, 22, 0.5) no-repeat;
+      background-size: cover;
+      overflow: hidden;
+      position: absolute; }
+    #support .supportContent {
+      width: 100%;
+      display: flex;
+      position: absolute;
+      justify-content: space-around;
+      align-items: center;
+      z-index: 100; }
+      #support .supportContent .supportPanel {
+        height: 650px;
+        margin: 0;
+        text-align: center;
+        background-color: rgba(22, 22, 22, 0.8);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 1; }
+        #support .supportContent .supportPanel a {
+          color: #e5e5e5; }
+        #support .supportContent .supportPanel .donation {
+          width: 250px;
+          height: 650px; }
+          #support .supportContent .supportPanel .donation ul {
+            width: 190px;
+            text-align: left;
+            font-size: 14px; }
+            #support .supportContent .supportPanel .donation ul li {
+              margin: 10px 0; }
+          #support .supportContent .supportPanel .donation .tipBtn {
+            width: 140px;
+            height: 40px;
+            background-color: #6441a5;
+            color: #fff;
+            margin: 30px auto;
+            border: 1px solid #593a93;
+            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2); }
+            #support .supportContent .supportPanel .donation .tipBtn a {
+              width: 100%;
+              height: 100%;
+              text-decoration: none;
+              text-transform: uppercase;
+              font-weight: bold;
+              letter-spacing: 1px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              color: #e5e5e5;
+              text-shadow: 0 1px 0 rgba(0, 0, 0, 0.8); }
+          #support .supportContent .supportPanel .donation p {
+            width: 210px;
+            margin: 10px auto;
+            text-align: left;
+            font-size: 14px;
+            letter-spacing: 1px; }
+        #support .supportContent .supportPanel .store {
+          width: 250px;
+          height: 275px; }
+          #support .supportContent .supportPanel .store p {
+            width: 210px;
+            margin: 10px auto;
+            text-align: left;
+            font-size: 14px;
+            letter-spacing: 1px; }
+        #support .supportContent .supportPanel .wishlist {
+          width: 250px;
+          height: 650px; }
+          #support .supportContent .supportPanel .wishlist p {
+            width: 210px;
+            margin: 10px auto;
+            text-align: left;
+            font-size: 14px;
+            letter-spacing: 1px; }
+          #support .supportContent .supportPanel .wishlist .wishBtn {
+            width: 140px;
+            height: 40px;
+            background-color: #dd1a22;
+            color: #fff;
+            margin: 30px auto;
+            border: 1px solid #c6171e;
+            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2); }
+            #support .supportContent .supportPanel .wishlist .wishBtn a {
+              width: 100%;
+              height: 100%;
+              text-decoration: none;
+              text-transform: uppercase;
+              font-weight: bold;
+              letter-spacing: 1px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              color: #e5e5e5;
+              text-shadow: 0 1px 0 rgba(0, 0, 0, 0.8); }
+        #support .supportContent .supportPanel .subscribe {
+          width: 250px;
+          height: 650px; }
+          #support .supportContent .supportPanel .subscribe .subBtn {
+            width: 140px;
+            height: 40px;
+            background-color: #6441a5;
+            color: #fff;
+            margin: 30px auto;
+            border: 1px solid #593a93;
+            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2); }
+            #support .supportContent .supportPanel .subscribe .subBtn a {
+              width: 100%;
+              height: 100%;
+              text-decoration: none;
+              text-transform: uppercase;
+              font-weight: bold;
+              letter-spacing: 1px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              color: #e5e5e5;
+              text-shadow: 0 1px 0 rgba(0, 0, 0, 0.8); }
+          #support .supportContent .supportPanel .subscribe p {
+            width: 210px;
+            margin: 10px auto;
+            text-align: left;
+            font-size: 14px;
+            letter-spacing: 1px; }
+          #support .supportContent .supportPanel .subscribe ul {
+            width: 190px;
+            text-align: left;
+            font-size: 14px; }
+            #support .supportContent .supportPanel .subscribe ul li {
+              margin: 10px 0; } }
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+  #support {
+    display: block;
+    width: 100%;
+    height: 1100px;
+    font-size: 12px; }
+    #support .bg {
+      height: 1100px; }
+    #support .supportContent {
+      width: 100%;
+      height: 1100px;
+      flex-direction: column;
+      justify-content: space-around; }
+      #support .supportContent .supportPanel {
+        width: 460px;
+        flex: initial; }
+        #support .supportContent .supportPanel .subscribe {
+          width: 350px;
+          height: 400px; }
+          #support .supportContent .supportPanel .subscribe p {
+            width: 350px; }
+          #support .supportContent .supportPanel .subscribe ul {
+            width: 330px;
+            padding-left: 20px; }
+          #support .supportContent .supportPanel .subscribe .subBtn {
+            margin: 25px auto; }
+        #support .supportContent .supportPanel .donation {
+          width: 350px;
+          height: 325px; }
+          #support .supportContent .supportPanel .donation p {
+            width: 350px; }
+          #support .supportContent .supportPanel .donation ul {
+            width: 330px;
+            padding-left: 20px; }
+          #support .supportContent .supportPanel .donation .tipBtn {
+            margin: 19px auto; }
+        #support .supportContent .supportPanel .wishlist {
+          width: 350px;
+          height: 265px; }
+          #support .supportContent .supportPanel .wishlist p {
+            width: 350px; }
+          #support .supportContent .supportPanel .wishlist .wishBtn {
+            margin: 23px auto; }
+      #support .supportContent .supportPanel:nth-child(1) {
+        height: 400px; }
+      #support .supportContent .supportPanel:nth-child(2) {
+        height: 325px; }
+      #support .supportContent .supportPanel:nth-child(3) {
+        height: 265px; } }
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+  #support {
+    height: 1130px;
+    font-size: 12px; }
+    #support .bg {
+      height: 1130px;
+      width: 100%; }
+    #support .supportContent {
+      width: 100%;
+      height: 1130px;
+      flex-direction: column;
+      justify-content: space-around; }
+      #support .supportContent .supportPanel {
+        width: 320px;
+        flex: initial; }
+        #support .supportContent .supportPanel .subscribe {
+          width: 300px;
+          height: 400px; }
+          #support .supportContent .supportPanel .subscribe p {
+            width: 300px; }
+          #support .supportContent .supportPanel .subscribe ul {
+            width: 280px;
+            padding-left: 20px; }
+          #support .supportContent .supportPanel .subscribe .subBtn {
+            margin: 25px auto; }
+        #support .supportContent .supportPanel .donation {
+          width: 300px;
+          height: 325px; }
+          #support .supportContent .supportPanel .donation p {
+            width: 300px; }
+          #support .supportContent .supportPanel .donation ul {
+            width: 280px;
+            padding-left: 20px; }
+          #support .supportContent .supportPanel .donation .tipBtn {
+            margin: 19px auto; }
+        #support .supportContent .supportPanel .wishlist {
+          width: 300px;
+          height: 265px; }
+          #support .supportContent .supportPanel .wishlist p {
+            width: 300px; }
+          #support .supportContent .supportPanel .wishlist .wishBtn {
+            margin: 23px auto; }
+      #support .supportContent .supportPanel:nth-child(1) {
+        height: 410px; }
+      #support .supportContent .supportPanel:nth-child(2) {
+        height: 335px; }
+      #support .supportContent .supportPanel:nth-child(3) {
+        height: 275px; } }
+/* Custom, iPhone Retina */
+
+/*# sourceMappingURL=support.css.map */

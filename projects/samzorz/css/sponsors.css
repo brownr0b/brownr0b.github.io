@@ -1,0 +1,221 @@
+#sponsors {
+  width: 100%;
+  height: 250px;
+  background-color: #0a0a0a;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  #sponsors .bg {
+    width: 100%;
+    height: 250px;
+    background: url("../img/background/StockSnap_N37RJ5IIPO.jpg") bottom center rgba(22, 22, 22, 0.5) no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    position: absolute; }
+  #sponsors h2 {
+    z-index: 100; }
+  #sponsors .slick-active:focus {
+    outline: none; }
+  #sponsors .slick-cloned {
+    outline: none; }
+  #sponsors .slick-slide {
+    outline: none; }
+  #sponsors .slick-current {
+    outline: none; }
+  #sponsors .slick-track {
+    height: 100%; }
+  #sponsors .carousel-sponsor {
+    width: 1000px;
+    height: 150px;
+    color: #e5e5e5;
+    text-align: center;
+    z-index: 100;
+    overflow-y: hidden; }
+    #sponsors .carousel-sponsor div {
+      height: 100% !important;
+      width: 100%; }
+    #sponsors .carousel-sponsor .sponsor-1 {
+      width: 1000px;
+      height: 150px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center; }
+    #sponsors .carousel-sponsor .sponsor-2 {
+      width: 1000px;
+      height: 150px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center; }
+    #sponsors .carousel-sponsor .sponsor-3 {
+      width: 1000px;
+      height: 150px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center; }
+  #sponsors .carousel-sponsor-mini {
+    width: 320px;
+    height: 200px;
+    color: #e5e5e5;
+    text-align: center;
+    z-index: 100;
+    overflow-y: hidden;
+    display: none; }
+    #sponsors .carousel-sponsor-mini div {
+      height: 100%;
+      width: 100%; }
+    #sponsors .carousel-sponsor-mini .mini-1, #sponsors .carousel-sponsor-mini .mini-2, #sponsors .carousel-sponsor-mini .mini-3, #sponsors .carousel-sponsor-mini .mini-4, #sponsors .carousel-sponsor-mini .mini-5, #sponsors .carousel-sponsor-mini .mini-6 {
+      width: 320px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center; }
+      #sponsors .carousel-sponsor-mini .mini-1 img, #sponsors .carousel-sponsor-mini .mini-2 img, #sponsors .carousel-sponsor-mini .mini-3 img, #sponsors .carousel-sponsor-mini .mini-4 img, #sponsors .carousel-sponsor-mini .mini-5 img, #sponsors .carousel-sponsor-mini .mini-6 img {
+        height: 80%;
+        width: 80%; }
+      #sponsors .carousel-sponsor-mini .mini-1 a, #sponsors .carousel-sponsor-mini .mini-2 a, #sponsors .carousel-sponsor-mini .mini-3 a, #sponsors .carousel-sponsor-mini .mini-4 a, #sponsors .carousel-sponsor-mini .mini-5 a, #sponsors .carousel-sponsor-mini .mini-6 a {
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px) {
+  #sponsors {
+    width: 100%;
+    height: 250px;
+    background-color: #0a0a0a; }
+    #sponsors .bg {
+      width: 100%;
+      height: 250px;
+      background: url("../img/background/StockSnap_N37RJ5IIPO.jpg") bottom center rgba(22, 22, 22, 0.5);
+      overflow: hidden;
+      position: absolute; }
+    #sponsors h2 {
+      z-index: 100; }
+    #sponsors .carousel-sponsor {
+      width: 912px;
+      height: 150px;
+      color: #e5e5e5;
+      text-align: center;
+      z-index: 100; }
+      #sponsors .carousel-sponsor .sponsor-1 {
+        width: 912px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center; }
+      #sponsors .carousel-sponsor .sponsor-2 {
+        width: 912px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center; }
+      #sponsors .carousel-sponsor .sponsor-3 {
+        width: 912px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center; } }
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+  #sponsors {
+    height: 200px; }
+    #sponsors .bg {
+      width: 100%;
+      height: 200px; }
+    #sponsors .carousel-sponsor {
+      width: 693px;
+      height: 100px;
+      color: #e5e5e5;
+      text-align: center;
+      z-index: 100; }
+      #sponsors .carousel-sponsor .sponsor-1 {
+        width: 693px;
+        height: 100px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center; }
+        #sponsors .carousel-sponsor .sponsor-1 a {
+          margin: 0 auto;
+          width: 200px;
+          height: auto; }
+        #sponsors .carousel-sponsor .sponsor-1 img {
+          height: 76%;
+          width: 76%;
+          margin: 0 auto; }
+      #sponsors .carousel-sponsor .sponsor-2 {
+        width: 693px;
+        height: 100px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center; }
+        #sponsors .carousel-sponsor .sponsor-2 a {
+          margin: 0 auto;
+          width: 200px;
+          height: auto; }
+        #sponsors .carousel-sponsor .sponsor-2 img {
+          height: 76%;
+          width: 76%;
+          margin: 0 auto; }
+      #sponsors .carousel-sponsor .sponsor-3 {
+        width: 693px;
+        height: 100px;
+        display: flex;
+        justify-content: space-around; }
+        #sponsors .carousel-sponsor .sponsor-3 a {
+          margin: 0 auto;
+          height: auto; }
+        #sponsors .carousel-sponsor .sponsor-3 img {
+          height: 76%;
+          width: 76%;
+          margin: 0 auto; } }
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+  #sponsors {
+    height: 150px;
+    font-size: 12px; }
+    #sponsors .bg {
+      width: 100%;
+      height: 150px; }
+    #sponsors .carousel-sponsor {
+      width: 480px;
+      height: 75px; }
+      #sponsors .carousel-sponsor .sponsor-1 {
+        width: 480px;
+        height: 75px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center; }
+        #sponsors .carousel-sponsor .sponsor-1 a {
+          margin: 0 auto;
+          height: auto; }
+        #sponsors .carousel-sponsor .sponsor-1 img {
+          height: 63%;
+          width: 63%;
+          margin: 0 auto; }
+      #sponsors .carousel-sponsor .sponsor-2 {
+        width: 480px;
+        height: 75px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center; }
+        #sponsors .carousel-sponsor .sponsor-2 a {
+          margin: 0 auto;
+          width: 200px;
+          height: auto; }
+        #sponsors .carousel-sponsor .sponsor-2 img {
+          height: 63%;
+          width: 63%;
+          margin: 0 auto; } }
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+  #sponsors {
+    height: 230px;
+    font-size: 12px; }
+    #sponsors h2 {
+      margin-bottom: 0; }
+    #sponsors .bg {
+      width: 100%;
+      height: 230px; }
+    #sponsors .carousel-sponsor {
+      display: none; }
+    #sponsors .carousel-sponsor-mini {
+      display: block; } }
+/* Custom, iPhone Retina */
+
+/*# sourceMappingURL=sponsors.css.map */

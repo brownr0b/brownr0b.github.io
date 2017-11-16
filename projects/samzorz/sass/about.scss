@@ -1,0 +1,120 @@
+#about{
+  background-color: #0a0a0a;
+  width: 100%;
+  min-height: 100%;
+  margin-top: 91px;
+  display:flex;
+  flex-direction: row;
+    #aboutLeft{
+      width: 50%;
+      background-color: #161616;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      #aboutText{
+        width: 70%;
+        height:100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        h1{
+          font-family: Lombok, sans-serif;
+          font-size: 48px;
+          margin-top: 0;
+          width:100%;
+        }
+        h3{
+          padding: 0;
+          margin: 0;
+          width:100%;
+        }
+        p{
+          font-size: 14px;
+          letter-spacing: 1px;
+          width: 100%;
+        }
+      }
+    }
+
+    #aboutRight{
+      width: 50%;
+      background-color: #0a0a0a;
+      #aboutImg{
+        height: 100%;
+        width: 100%;
+        background: url("../img/samzorz-bg2.png") no-repeat;
+        background-size: cover;
+        -webkit-background-size:cover;
+        opacity: 0.6;
+        display: block;
+        overflow: hidden;
+      }
+    }
+  }
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+  #about{
+    margin-top: 51px;
+  }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+  #about {
+    min-height: initial !important;
+    margin-top:0;
+    flex-direction: column;
+        #aboutLeft{
+          width:100%;
+          margin-top:51px;
+          #aboutText{
+            width: 80%;
+            margin: 10px;
+            h1{
+              margin-bottom:20px;
+            }
+          }
+        }
+        #aboutRight{
+          width:100%;
+          #aboutImg{
+            background: url("../img/samzorz-bg.png") center no-repeat;
+            background-size: cover;
+            -webkit-background-size:cover;
+            height:301px;
+          }
+        }
+      }
+  }
+
+  /* Extra Small Devices, Phones */
+  @media only screen and (max-width: 480px) {
+    #about {
+      min-height: initial !important;
+      #aboutLeft{
+        #aboutText{
+          h1{
+            margin-top:10px;
+          }
+          p{
+            font-size:12px;
+          }
+        }
+      }
+      #aboutRight{
+        #aboutImg{
+          height:200px;
+        }
+      }
+    }
+  }
+
+  /* Custom, iPhone Retina */
+  @media only screen and (max-width: 320px) {
+  }

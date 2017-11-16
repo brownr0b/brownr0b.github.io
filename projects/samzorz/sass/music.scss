@@ -1,0 +1,264 @@
+#music{
+  width: 100%;
+  height: 615px;
+  background-color: #0D0D0D;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .music-embed{
+    width: 1150px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    h2{
+      margin: 0;
+    }
+    .panel-1{
+      width: 1150px;
+      height: 250px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      h1{
+        margin-top: 0;
+        font-size: 16px;
+        text-align: center;
+      }
+    }
+    .panel-2{
+      width: 1150px;
+      height: 250px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      h1{
+        margin-top: 0;
+        font-size: 16px;
+        text-align: center;
+      }
+    }
+  }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+  #music{
+    .music-embed{
+      width: 972px;
+      height: 600px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      h2{
+        margin: 0;
+      }
+      .panel-1{
+        width: 972px;
+        height: 250px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        div{
+          iframe{
+            width: 300px;
+            height: 169px;
+          }
+        }
+        h1{
+          margin-top: 0;
+          font-size: 16px;
+          text-align: center;
+        }
+      }
+      .panel-2{
+        width: 972px;
+        height: 250px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        div{
+          iframe{
+            width: 300px;
+            height: 169px;
+          }
+        }
+        h1{
+          margin-top: 0;
+          font-size: 16px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+  #music{
+    height: 475px;
+    .music-embed{
+      width: 748px;
+      height: 450px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      h2{
+        margin-top: 5px;
+      }
+      .panel-1{
+        width: 748px;
+        height: 190px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        div{
+          iframe{
+            width: 232px;
+            height: 131px;
+          }
+        }
+        h1{
+          margin-top: 0;
+          font-size: 16px;
+          text-align: center;
+        }
+      }
+      .panel-2{
+        width: 748px;
+        height: 190px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        div{
+
+          iframe{
+            width: 232px;
+            height: 131px;
+          }
+        }
+        h1{
+          margin-top: 0;
+          font-size: 16px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+  #music{
+    height: 1930px;
+    font-size: 14px;
+    .music-embed{
+      width: 100%;
+      height: 1900px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      h2{
+        margin-top: 5px;
+      }
+      .panel-1{
+        width: 100%;
+        height: 930px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        div{
+          iframe{
+            width: 450px;
+            height: 254px;
+          }
+        }
+        h1{
+          margin-top: 0;
+          font-size: 16px;
+          text-align: center;
+        }
+      }
+      .panel-2{
+        width: 100%;
+        height: 930px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        div{
+          iframe{
+            width: 450px;
+            height: 254px;
+          }
+        }
+        h1{
+          margin-top: 0;
+          font-size: 16px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+  #music{
+    height: 1380px;
+    .music-embed{
+      height: 1350px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      h2{
+        margin-top: 5px;
+      }
+      .panel-1{
+        width: 100%;
+        height: 930px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        div{
+          iframe{
+            width: 290px;
+            height: 164px;
+          }
+        }
+      }
+      .panel-2{
+        width: 100%;
+        height: 930px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        div{
+          iframe{
+            width: 290px;
+            height: 164px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+}

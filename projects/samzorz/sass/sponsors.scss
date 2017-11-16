@@ -1,0 +1,284 @@
+#sponsors{
+  width: 100%;
+  height: 250px;
+  background-color: #0a0a0a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .bg{
+    width: 100%;
+    height: 250px;
+    background: url("../img/background/StockSnap_N37RJ5IIPO.jpg") bottom center rgba(22, 22, 22, 0.5) no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    position: absolute;
+  }
+  h2{
+    z-index: 100;
+  }
+  .slick-active:focus {
+    outline: none;
+  }
+  .slick-cloned {
+    outline: none;
+  }
+  .slick-slide {
+    outline: none;
+  }
+  .slick-current {
+    outline: none;
+  }
+  .slick-track{
+    height: 100%;
+  }
+
+  .carousel-sponsor{
+    width: 1000px;
+    height: 150px;
+    color: #e5e5e5;
+    text-align: center;
+    z-index: 100;
+    overflow-y:hidden;
+    div {
+      height: 100% !important;
+      width: 100%;
+    }
+    .sponsor-1{
+      width: 1000px;
+      height: 150px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    .sponsor-2{
+      width: 1000px;
+      height: 150px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    .sponsor-3{
+      width: 1000px;
+      height: 150px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+  }
+  .carousel-sponsor-mini{
+    width:320px;
+    height:200px;
+    color: #e5e5e5;
+    text-align: center;
+    z-index: 100;
+    overflow-y:hidden;
+    display: none;
+    div {
+      height: 100%;
+      width: 100%;
+    }
+    .mini-1,.mini-2,.mini-3,.mini-4,.mini-5,.mini-6{
+      width: 320px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      img{
+        height:80%;
+        width:80%;
+      }
+      a{
+        display:flex;
+        justify-content:center;
+        align-items: center;
+      }
+
+    }
+  }
+}
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+  #sponsors{
+    width: 100%;
+    height: 250px;
+    background-color: #0a0a0a;
+    .bg{
+      width: 100%;
+      height: 250px;
+      background: url("../img/background/StockSnap_N37RJ5IIPO.jpg") bottom center rgba(22, 22, 22, 0.5);
+      overflow: hidden;
+      position: absolute;
+    }
+    h2{
+      z-index: 100;
+    }
+    .carousel-sponsor{
+      width: 912px;
+      height: 150px;
+      color: #e5e5e5;
+      text-align: center;
+      z-index: 100;
+      .sponsor-1{
+        width: 912px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .sponsor-2{
+        width: 912px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .sponsor-3{
+        width: 912px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+    }
+  }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+  #sponsors{
+    height: 200px;
+    .bg{
+      width: 100%;
+      height: 200px;
+    }
+    .carousel-sponsor{
+      width: 693px;
+      height: 100px;
+      color: #e5e5e5;
+      text-align: center;
+      z-index: 100;
+      .sponsor-1{
+        width: 693px;
+        height: 100px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        a{
+          margin: 0 auto;
+          width: 200px;
+          height: auto;
+        }
+        img{
+          height: 76%;
+          width: 76%;
+          margin: 0 auto;
+        }
+      }
+      .sponsor-2{
+        width: 693px;
+        height: 100px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        a{
+          margin: 0 auto;
+          width: 200px;
+          height: auto;
+        }
+        img{
+          height: 76%;
+          width: 76%;
+          margin: 0 auto;
+        }
+      }
+      .sponsor-3{
+        width: 693px;
+        height: 100px;
+        display: flex;
+        justify-content: space-around;
+        a{
+          margin: 0 auto;
+          height: auto;
+        }
+        img{
+          height: 76%;
+          width: 76%;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+  #sponsors{
+    height: 150px;
+    font-size:12px;
+    .bg{
+      width: 100%;
+      height: 150px;
+    }
+    .carousel-sponsor{
+      width: 480px;
+      height: 75px;
+      .sponsor-1{
+        width: 480px;
+        height: 75px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        a{
+          margin: 0 auto;
+          height: auto;
+        }
+        img{
+          height: 63%;
+          width: 63%;
+          margin: 0 auto;
+        }
+      }
+      .sponsor-2{
+        width: 480px;
+        height: 75px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        a{
+          margin: 0 auto;
+          width: 200px;
+          height: auto;
+        }
+        img{
+          height: 63%;
+          width: 63%;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+  #sponsors {
+    height: 230px;
+    font-size: 12px;
+    h2{
+      margin-bottom:0;
+    }
+    .bg {
+      width: 100%;
+      height: 230px;
+    }
+    .carousel-sponsor {
+      display: none;
+    }
+    .carousel-sponsor-mini {
+      display: block;
+    }
+  }
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+}

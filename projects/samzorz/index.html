@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<!-----------DO NOT DELETE OR EDIT-------------
+
+AUTHOR: Robert Brown https://www.linkedin.com/in/therobertbrown/
+
+************READ FIRST!**************
+
+Special thanks and appreciation to:
+
+StockSnap.io https://stocksnap.io
+Font Awesome http://fontawesome.io
+jQuery UI https://jqueryui.com/
+Ken Wheeler http://kenwheeler.github.io/slick/
+FullCalendar https://fullcalendar.io/
+Nathan Rutzky https://github.com/nathco/jQuery.scrollSpeed
+Responsive Nav http://responsive-nav.com/
+
+*************************************
+
+Any recreation or copying of any website designs and any specific, recognizable scripting methods accessible through the client-side are prohibited.
+Please help fight against blatant plagiarism of intellectual property. Our creative world will thank you.
+
+-------------DO NOT DELETE OR EDIT------------>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Samzorz</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=1.0">
+    <link rel="icon" href="img/favicon.png" type="image/x-icon"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <link rel="stylesheet" href="jquery-ui-1.12.1.custom/jquery-ui.min.css">
+    <link rel='stylesheet' href='fullcalendar/fullcalendar.css' />
+    <link rel="stylesheet" href="fixed/css/fixed.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="loading">
+    <div id="load">
+        <div class="spinner">
+            <div class="rect1"></div>
+            <div class="rect2"></div>
+            <div class="rect3"></div>
+            <div class="rect4"></div>
+            <div class="rect5"></div>
+        </div>
+    </div>
+    <nav class="nav-pc">
+        <div class="logo">
+            <a href="http://samzorz.com" ><img src="img/samzorz-sm2.png" alt="samzorz-logo"></a>
+            <a href="#about">About Me</a>
+            <a href="#embedded">Twitch/Youtube</a>
+            <a href="#support">How To Support</a>
+            <a href="#equipment">Equipment</a>
+        </div>
+        <div class="links">
+            <a href="#schedule"><i class="fa fa-calendar" aria-hidden="true" title="Schedule"></i></a>
+            <a href="#music"><i class="fa fa-music" aria-hidden="true" title="Music"></i></a>
+            <a href="#sponsors"><i class="fa fa-handshake-o" aria-hidden="true" title="Sponsors"></i></a>
+            <a href="#contact"><i class="fa fa-envelope-o" aria-hidden="true" title="Contact Me"></i></a>
+        </div>
+    </nav>
+    <header class="nav-mobile">
+        <div class="logo">
+            <a href="http://samzorz.com" class="mobile-logo" ><img src="img/samzorz-sm2.png" alt="samzorz-logo"></a>
+        </div>
+        <nav class="nav-collapse">
+            <ul>
+                <li class="active"><a href="#about">About Me</a></li>
+                <li><a href="#embedded">Twitch/Youtube</a></li>
+                <li><a href="#support">How To Support</a></li>
+                <li><a href="#equipment">Equipment</a></li>
+                <li><a href="#schedule">Stream Schedule</a></li>
+                <li><a href="#music">Music Playlists</a></li>
+                <li><a href="#sponsors">Sponsors</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="about">
+            <div id="aboutLeft">
+                <div id="aboutText">
+                    <h1>About Me</h1>
+                    <h3>Hey! My name is <span style="color: #DD1A22">Sam Hall</span>.</h3>
+                    <p>More commonly referred to as <span style="color: #e62b32">Samzorz</span> here on the interwebs, I was born and raised in Phoenix, Arizona and now currently reside in Chandler, Arizona. I am a full-time broadcaster on TwitchTV, where I have just celebrated my five year anniversary. At 25 years old, I never thought I would be playing video games for a living, but here I am living the dream!</p>
+                    <p>I used to compete at the highest level possible for Call of Duty, but have since retired and created the amazing community of Sampires on Twitch. I’ve carried my love of shooters into my gaming broadcasts, playing a variety of them such as the Call of Duty franchise, Counterstrike: Global Offensive, H1Z1: King of the Kill, and many more.</p>
+                    <p>I hope you find your place amongst our community and enjoy your stay with us!</p>
+                </div>
+            </div>
+            <div id="aboutRight">
+                <div id="aboutImg"></div>
+            </div>
+    </section>
+    <section id="embedded">
+        <div class="carousel-embed">
+            <div data-thumb="Twitch">
+                <div class="twitch">
+                    <div class="panel">
+                        <iframe
+                                id="tw"
+                                src="http://player.twitch.tv/?channel=samzorz&muted=true&autoplay=false"
+                                height="647"
+                                width="895"
+                                frameborder="0"
+                                scrolling="no"
+                                allowfullscreen>
+                        </iframe>
+                        <iframe
+                                id="chat"
+                                frameborder="0"
+                                scrolling="no"
+                                src="http://www.twitch.tv/samzorz/chat"
+                                height="647"
+                                width="250">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+            <div data-thumb="Youtube">
+                <div class="youtube">
+                    <div class="panel-1">
+                        <div style="overflow:auto;-webkit-overflow-scrolling:touch">
+                            <h1>Counter-Strike</h1>
+                            <iframe id="player-1" width="500" height="281" src="https://www.youtube.com/embed/?list=PL3YSAT7O9F7MfBmJQrtKa5XlOi1lLJZk5&wmode=transparent&showinfo=0;enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+                        </div>
+
+                        <div style="overflow:auto;-webkit-overflow-scrolling:touch">
+                            <h1>Call of Duty</h1>
+                            <iframe id="player-2" width="500" height="281" src="https://www.youtube.com/embed/?list=PL3YSAT7O9F7ONwBakTmgjdcV-y43z4rNW&wmode=transparent&showinfo=0;enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+                        </div>
+
+                    </div>
+
+                    <div class="panel-2">
+                        <div style="overflow:auto;-webkit-overflow-scrolling:touch">
+                            <h1>Vlogs</h1>
+                            <iframe id="player-3" width="500" height="281" src="https://www.youtube.com/embed/?list=PL3YSAT7O9F7N4FjUUDodrnHbOizNbmwNR&wmode=transparent&showinfo=0;enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+                        </div>
+
+                        <div style="overflow:auto;-webkit-overflow-scrolling:touch">
+                            <h1>H1Z1</h1>
+                            <iframe id="player-4" width="500" height="281" src="https://www.youtube.com/embed/?list=UUjLGC7Okh29KqcIN9hBv1CA&wmode=transparent&showinfo=0;enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="support">
+        <div class="bg"></div>
+        <div class="supportContent">
+            <div class="supportPanel">
+                <div class="subscribe">
+                    <h2>Subscriptions</h2>
+                    <p>Subscribing is never required but it does help me continue streaming full time!</p>
+                    <p>Each sub will get the following:</p>
+                    <ul>
+                        <li>Name on the board in the color that you choose</li>
+                        <li>Subscriber-only Sampire badge next to your name in chat</li>
+                        <li>16 subscriber-only emotes</li>
+                        <li>Access to subscriber games with Samzorz</li>
+                        <li>Better odds in giveaways</li>
+                    </ul>
+                    <div class="subBtn"><a href="https://secure.twitch.tv/products/samzorz/ticket" target="_blank">Subscribe</a></div>
+                </div>
+            </div>
+            <div class="supportPanel">
+                <div class="donation">
+                    <h2>Donations</h2>
+                    <p>Donating helps me out in a lot of ways!</p>
+                    <ul>
+                        <li>Supports me to continue streaming full time</li>
+                        <li>Goes towards bills & living expenses</li>
+                        <li>Helps pay for new equipment</li>
+                    </ul>
+                    <p>$2+ donations trigger the alert on stream.</p>
+                    <p>$10+ donations go on the board!</p>
+                    <div class="tipBtn"><a href="https://twitch.streamlabs.com/samzorz#/" target="_blank">Donate</a></div>
+                </div>
+            </div>
+            <div class="supportPanel">
+                <div class="wishlist">
+                    <h2>Amazon Wishlist</h2>
+                    <p>Although NEVER required, purchasing an item(s) off of my wishlist helps me out a bunch by allowing me to save money for other expenses!</p>
+                    <p>Purchasing anything from the wishlist will put your name on the board! </p>
+                    <div class="wishBtn"><a href="http://a.co/bx0dSpL" target="_blank">Wishlist</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="equipment">
+        <div class="carousel-pc">
+            <div>
+                <h2 style="color: #e5e5e5">PC Specs</h2>
+                <div class="specs">
+                    <div class="panel">
+                     <p style="text-align: center"><a href="http://a.co/6Rza6q6" target="_blank"><span style="color: #DD1A22">PC Case </span><span style="color: #e5e5e5">/</span> NZXT Noctis 450 ATX Mid Tower Case</a></p>
+                     <p style="text-align: center"><a href="http://a.co/7qGAcBe" target="_blank"><span style="color: #DD1A22">Motherboard </span><span style="color: #e5e5e5">/</span> MSI X99S Gaming 7 ATX LGA2011-3 Motherboard</a></p>
+                     <p style="text-align: center"><a href="http://a.co/2Q26Rim" target="_blank"><span style="color: #DD1A22">CPU </span><span style="color: #e5e5e5">/</span> Intel Core i7-5820K</a></p>
+                     <p style="text-align: center"><a href="http://a.co/4AAG4kH" target="_blank"><span style="color: #DD1A22">CPU Cooler </span><span style="color: #e5e5e5">/</span> NZXT Kraken X41</a></p>
+                     <p style="text-align: center"><a href="http://a.co/iFMrML4" target="_blank"><span style="color: #DD1A22">HDD </span><span style="color: #e5e5e5">/</span> Western Digital Caviar Blue 1TB</a></p>
+                     <p style="text-align: center"><a href="http://a.co/jcdnw5l" target="_blank"><span style="color: #DD1A22">SSD </span><span style="color: #e5e5e5">/</span> Samsung 850 EVO-Series 250GB</a></p>
+                     <p style="text-align: center"><a href="http://a.co/cNlu1hT" target="_blank"><span style="color: #DD1A22">GPU </span><span style="color: #e5e5e5">/</span> EVGA GeForce GTX 980 Ti 6GB Superclocked ACX 2.0+</a></p>
+                     <p style="text-align: center"><a href="http://a.co/a18cHwR" target="_blank"><span style="color: #DD1A22">RAM </span><span style="color: #e5e5e5">/</span> Corsair Vengeance LPX 32GB (4 x 8GB) DDR4-2666</a></p>
+                     <p style="text-align: center"><a href="http://a.co/1SeiK5j" target="_blank"><span style="color: #DD1A22">PSU </span><span style="color: #e5e5e5">/</span> NZXT HALE90 V2 1200W 80+ Gold Certified Fully-Modular</a></p>
+                     <p style="text-align: center"><a href="http://a.co/bAcZvpp" target="_blank"><span style="color: #DD1A22">Capture Card </span><span style="color: #e5e5e5">/</span> Elgato Game Capture HD 60 Pro</a></p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h2 style="color: #e5e5e5">PC Peripherals</h2>
+                <div class="peripherals">
+                    <div class="panel-1">
+                        <p style="text-align: center"><a href="http://a.co/dkQfBt9" target="_blank"><span style="color: #DD1A22">Mouse </span><span style="color: #e5e5e5">/</span> Razer DeathAdder Chroma</a></p>
+                        <p style="text-align: center"><a href="http://a.co/bq0MGlM"><span style="color: #DD1A22">Keyboard </span><span style="color: #e5e5e5">/</span> Corsair Gaming K65 RGB</a></p>
+                        <p style="text-align: center"><a href="http://a.co/gSqel9I"><span style="color: #DD1A22">Cam </span><span style="color: #e5e5e5">/</span> Logitech HD Webcam C920</a></p>
+                        <p style="text-align: center"><a href="http://a.co/9PogUQU"><span style="color: #DD1A22">Headset </span><span style="color: #e5e5e5">/</span> Blue Lola Sealed Over-Ear High-Fidelity Headphones</a></p>
+                        <p style="text-align: center"><a href="http://a.co/bwbMa9u"><span style="color: #DD1A22">Headset Stand </span><span style="color: #e5e5e5">/</span> Farberware Stainless Steel Banana Hanger</a></p>
+                        <p style="text-align: center"><a href="http://a.co/9suZgyX"><span style="color: #DD1A22">MixAmp </span><span style="color: #e5e5e5">/</span> ASTRO Gaming MixAmp Pro TR</a></p>
+                        <p style="text-align: center"><a href="http://a.co/fBQ7c8C"><span style="color: #DD1A22">Microphone </span><span style="color: #e5e5e5">/</span> Blue Microphones Bluebird Cardioid Microphone</a></p>
+                        <p style="text-align: center"><a href="http://a.co/j3Co8Bg"><span style="color: #DD1A22">Pop Filter </span><span style="color: #e5e5e5">/</span> Blue The Pop Universal Pop Filter</a></p>
+                        <p style="text-align: center"><a href="http://a.co/956o1sH"><span style="color: #DD1A22">Audio Interface </span><span style="color: #e5e5e5">/</span> Focusrite Scarlett 2i2</a></p>
+                        <p style="text-align: center"><a href="http://a.co/3spBia7"><span style="color: #DD1A22">Pre-Amp </span><span style="color: #e5e5e5">/</span> DBX 286s Microphone Pre-amp Processor</a></p>
+                    </div>
+
+                    <div class="panel-2">
+                        <p style="text-align: center"><a href="http://a.co/eVjAe1l"><span style="color: #DD1A22">Main Monitor </span><span style="color: #e5e5e5">/</span> ASUS VG248QE 24'' 144Hz 1ms</a></p>
+                        <p style="text-align: center"><a href="http://a.co/5UAc93D"><span style="color: #DD1A22">Side Monitor </span><span style="color: #e5e5e5">/</span> ASUS VX238H 23'' 60Hz 1ms</a></p>
+                        <p style="text-align: center"><a href="http://a.co/4bt6IH8"><span style="color: #DD1A22">Chair </span><span style="color: #e5e5e5">/</span> DX Racer King Series OH/KS06/NW</a></p>
+                        <p style="text-align: center"><a href="https://scufgaming.com/?attachment_id=290512"><span style="color: #DD1A22">Controller </span><span style="color: #e5e5e5">/</span> SCUF Gaming Controller</a></p>
+                        <p style="text-align: center"><a href="http://a.co/j7ep5Ls"><span style="color: #DD1A22">Lights </span><span style="color: #e5e5e5">/</span> ePhoto Video Studio Photography Lighting Kit</a></p>
+                        <p style="text-align: center"><a href="http://a.co/76fOC2g"><span style="color: #DD1A22">LED Board </span><span style="color: #e5e5e5">/</span> Woodsam 32" x 24" LED Message Writing Board</a></p>
+                        <p style="text-align: center"><a href="http://www.ikea.com/us/en/catalog/products/S49022798/#/S79022810"><span style="color: #DD1A22">Desk </span><span style="color: #e5e5e5">/</span> IKEA BEKANT Desk, White/Black</a></p>
+                        <p style="text-align: center"><a href="http://a.co/6S0y6fM"><span style="color: #DD1A22">Fridge </span><span style="color: #e5e5e5">/</span> Danby Stainless Steel 120 Can Beverage Center</a></p>
+                        <p style="text-align: center"><a href="http://a.co/fNHLGBg"><span style="color: #DD1A22">Easel </span><span style="color: #e5e5e5">/</span> Ohuhu 66-Inch Aluminum Field Easel</a></p>
+                        <p style="text-align: center"><a href="http://a.co/fTntGQO"><span style="color: #DD1A22">HDMI Switch </span><span style="color: #e5e5e5">/</span> Sewell Lightwave 3x1 Optical Toslink Switch</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-mobile">
+            <div>
+                <h2 style="color: #e5e5e5">PC Specs</h2>
+                <div class="specs">
+                    <div class="panel">
+                        <p style="text-align: center"><a href="http://a.co/6Rza6q6" target="_blank"><span style="color: #DD1A22">PC Case </span><span style="color: #e5e5e5">/</span> NZXT Noctis 450 ATX Mid Tower</a></p>
+                        <p style="text-align: center"><a href="http://a.co/7qGAcBe" target="_blank"><span style="color: #DD1A22">Motherboard </span><span style="color: #e5e5e5">/</span> MSI X99S Gaming 7 ATX LGA2011-3</a></p>
+                        <p style="text-align: center"><a href="http://a.co/2Q26Rim" target="_blank"><span style="color: #DD1A22">CPU </span><span style="color: #e5e5e5">/</span> Intel Core i7-5820K</a></p>
+                        <p style="text-align: center"><a href="http://a.co/4AAG4kH" target="_blank"><span style="color: #DD1A22">CPU Cooler </span><span style="color: #e5e5e5">/</span> NZXT Kraken X41</a></p>
+                        <p style="text-align: center"><a href="http://a.co/iFMrML4" target="_blank"><span style="color: #DD1A22">HDD </span><span style="color: #e5e5e5">/</span> Western Digital Caviar Blue 1TB</a></p>
+                        <p style="text-align: center"><a href="http://a.co/jcdnw5l" target="_blank"><span style="color: #DD1A22">SSD </span><span style="color: #e5e5e5">/</span> Samsung 850 EVO-Series 250GB</a></p>
+                        <p style="text-align: center"><a href="http://a.co/cNlu1hT" target="_blank"><span style="color: #DD1A22">GPU </span><span style="color: #e5e5e5">/</span> EVGA GeForce GTX 980 Ti 6GB Superclocked ACX 2.0+</a></p>
+                        <p style="text-align: center"><a href="http://a.co/a18cHwR" target="_blank"><span style="color: #DD1A22">RAM </span><span style="color: #e5e5e5">/</span> Corsair Vengeance LPX 32GB (4 x 8) DDR4-2666</a></p>
+                        <p style="text-align: center"><a href="http://a.co/1SeiK5j" target="_blank"><span style="color: #DD1A22">PSU </span><span style="color: #e5e5e5">/</span> NZXT HALE90 V2 1200W 80+ Gold</a></p>
+                        <p style="text-align: center"><a href="http://a.co/bAcZvpp" target="_blank"><span style="color: #DD1A22">Capture Card </span><span style="color: #e5e5e5">/</span> Elgato Game Capture HD 60 Pro</a></p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h2 style="color: #e5e5e5">PC Peripherals</h2>
+                <div class="specs">
+                    <div class="panel">
+                        <p style="text-align: center"><a href="http://a.co/dkQfBt9" target="_blank"><span style="color: #DD1A22">Mouse </span><span style="color: #e5e5e5">/</span> Razer DeathAdder Chroma</a></p>
+                        <p style="text-align: center"><a href="http://a.co/bq0MGlM"><span style="color: #DD1A22">Keyboard </span><span style="color: #e5e5e5">/</span> Corsair Gaming K65 RGB</a></p>
+                        <p style="text-align: center"><a href="http://a.co/gSqel9I"><span style="color: #DD1A22">Cam </span><span style="color: #e5e5e5">/</span> Logitech HD Webcam C920</a></p>
+                        <p style="text-align: center"><a href="http://a.co/9PogUQU"><span style="color: #DD1A22">Headset </span><span style="color: #e5e5e5">/</span> Blue Lola Sealed Over-Ear High-Fidelity</a></p>
+                        <p style="text-align: center"><a href="http://a.co/bwbMa9u"><span style="color: #DD1A22">Headset Stand </span><span style="color: #e5e5e5">/</span> Farberware Stainless Steel Banana Hanger</a></p>
+                        <p style="text-align: center"><a href="http://a.co/9suZgyX"><span style="color: #DD1A22">MixAmp </span><span style="color: #e5e5e5">/</span> ASTRO Gaming MixAmp Pro TR</a></p>
+                        <p style="text-align: center"><a href="http://a.co/fBQ7c8C"><span style="color: #DD1A22">Microphone </span><span style="color: #e5e5e5">/</span> Blue Microphones Bluebird Cardioid</a></p>
+                        <p style="text-align: center"><a href="http://a.co/j3Co8Bg"><span style="color: #DD1A22">Pop Filter </span><span style="color: #e5e5e5">/</span> Blue The Pop Universal Pop Filter</a></p>
+                        <p style="text-align: center"><a href="http://a.co/956o1sH"><span style="color: #DD1A22">Audio Interface </span><span style="color: #e5e5e5">/</span> Focusrite Scarlett 2i2</a></p>
+                        <p style="text-align: center"><a href="http://a.co/3spBia7"><span style="color: #DD1A22">Pre-Amp </span><span style="color: #e5e5e5">/</span> DBX 286s Microphone Pre-amp Processor</a></p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h2 style="color: #e5e5e5">PC Peripherals Cont'd</h2>
+                <div class="specs">
+                    <div class="panel">
+                        <p style="text-align: center"><a href="http://a.co/eVjAe1l"><span style="color: #DD1A22">Main Monitor </span><span style="color: #e5e5e5">/</span> ASUS VG248QE 24'' 144Hz 1ms</a></p>
+                        <p style="text-align: center"><a href="http://a.co/5UAc93D"><span style="color: #DD1A22">Side Monitor </span><span style="color: #e5e5e5">/</span> ASUS VX238H 23'' 60Hz 1ms</a></p>
+                        <p style="text-align: center"><a href="http://a.co/4bt6IH8"><span style="color: #DD1A22">Chair </span><span style="color: #e5e5e5">/</span> DX Racer King Series OH/KS06/NW</a></p>
+                        <p style="text-align: center"><a href="https://scufgaming.com/?attachment_id=290512"><span style="color: #DD1A22">Controller </span><span style="color: #e5e5e5">/</span> SCUF Gaming Controller</a></p>
+                        <p style="text-align: center"><a href="http://a.co/j7ep5Ls"><span style="color: #DD1A22">Lights </span><span style="color: #e5e5e5">/</span> ePhoto Video Studio Photography Kit</a></p>
+                        <p style="text-align: center"><a href="http://a.co/76fOC2g"><span style="color: #DD1A22">LED Board </span><span style="color: #e5e5e5">/</span> Woodsam 32" x 24" LED Writing Board</a></p>
+                        <p style="text-align: center"><a href="http://www.ikea.com/us/en/catalog/products/S49022798/#/S79022810"><span style="color: #DD1A22">Desk </span><span style="color: #e5e5e5">/</span> IKEA BEKANT Desk, White/Black</a></p>
+                        <p style="text-align: center"><a href="http://a.co/6S0y6fM"><span style="color: #DD1A22">Fridge </span><span style="color: #e5e5e5">/</span> Danby Stainless Steel 120 Can Beverage Center</a></p>
+                        <p style="text-align: center"><a href="http://a.co/fNHLGBg"><span style="color: #DD1A22">Easel </span><span style="color: #e5e5e5">/</span> Ohuhu 66-Inch Aluminum Field Easel</a></p>
+                        <p style="text-align: center"><a href="http://a.co/fTntGQO"><span style="color: #DD1A22">HDMI Switch </span><span style="color: #e5e5e5">/</span> Sewell Lightwave 3x1 Optical Toslink</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="schedule">
+        <div id='calendar'></div>
+    </section>
+    <section id="music">
+        <div class="music-embed">
+            <h2>Music</h2>
+            <div class="panel-1">
+                <div style="overflow:auto;-webkit-overflow-scrolling:touch">
+                    <h1>EDM Playlist</h1>
+                    <iframe width="350" height="197" src="https://www.youtube.com/embed/?list=PL3YSAT7O9F7MfNrDN3srpo4d59eY1eKiq&wmode=transparent&showinfo=0;enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div>
+                    <h1>House Playlist</h1>
+                    <iframe width="350" height="197" src="https://www.youtube.com/embed/?list=PL3YSAT7O9F7N_-B3i4sVaI-ETHCIDZonn&wmode=transparent&showinfo=0;enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div>
+                    <h1>Chill Playlist</h1>
+                    <iframe width="350" height="197" src="https://www.youtube.com/embed/?list=PL3YSAT7O9F7NVUKGrG4_CXsoRbFKK2V6O&wmode=transparent&showinfo=0;enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="panel-2">
+                <div style="overflow:auto;-webkit-overflow-scrolling:touch">
+                    <h1>Trap Playlist</h1>
+                    <iframe width="350" height="197" src="https://www.youtube.com/embed/?list=PL3YSAT7O9F7OJXqoFrgYLsD4os8PMrDON&wmode=transparent&showinfo=0;enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div style="overflow:auto;-webkit-overflow-scrolling:touch">
+                    <h1>Hip Hop Playlist</h1>
+                    <iframe width="350" height="197" src="https://www.youtube.com/embed/?list=PL3YSAT7O9F7PthHyxQ0emTx17mutUevsk&wmode=transparent&showinfo=0;enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div>
+                    <h1>Alternative Playlist</h1>
+                    <iframe width="350" height="197" src="https://www.youtube.com/embed/?list=PL3YSAT7O9F7MqWFXDbhgrCQul4HJb3Ibo&wmode=transparent&showinfo=0;enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="sponsors">
+        <div class="bg"></div>
+        <h2>Powered By</h2>
+        <div class="carousel-sponsor">
+            <div>
+                <div class="sponsor-1">
+                    <a href="http://www.bluemic.com/" target="_blank"><img src="img/sponsors/blue.png" alt="Blue Microphones" class="blue"></a>
+                    <a href="https://discordapp.com/" target="_blank"><img src="img/sponsors/discord.png" alt="Discord" class="discord"></a>
+                    <a href="https://streamlabs.com/" target="_blank"><img src="img/sponsors/streamlabs.png" alt="Streamlabs" class="streamlabs"></a>
+                </div>
+            </div>
+            <div>
+                <div class="sponsor-2">
+                    <a href="https://www.twitch.tv/team/grinders" target="_blank"><img src="img/sponsors/grinders.png" alt="Grinders" class="grinders"></a>
+                    <a href="https://www.twitch.tv/" target="_blank"><img src="img/sponsors/twitch.png" alt="Twitch" class="twitch-logo"></a>
+                    <a href="https://scufgaming.com/" target="_blank"><img src="img/sponsors/scuf.png" alt="Scuf" class="scuf"></a>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-sponsor-mini">
+            <div>
+                <div class="mini-1">
+                    <a href="http://www.bluemic.com/" target="_blank"><img src="img/sponsors/blue.png" alt="Blue Microphones" class="blue"></a>
+                </div>
+            </div>
+            <div>
+                <div class="mini-2">
+                    <a href="https://discordapp.com/" target="_blank"><img src="img/sponsors/discord.png" alt="Discord" class="discord"></a>
+                </div>
+            </div>
+            <div>
+                <div class="mini-3">
+                    <a href="https://streamlabs.com/" target="_blank"><img src="img/sponsors/streamlabs.png" alt="Streamlabs" class="streamlabs"></a>
+                </div>
+            </div>
+            <div>
+                <div class="mini-4">
+                    <a href="https://www.twitch.tv/team/grinders" target="_blank"><img src="img/sponsors/grinders.png" alt="Grinders" class="grinders"></a>
+                </div>
+            </div>
+            <div>
+                <div class="mini-5">
+                    <a href="https://www.twitch.tv/" target="_blank"><img src="img/sponsors/twitch.png" alt="Twitch" class="twitch-logo"></a>
+                </div>
+            </div>
+            <div>
+                <div class="mini-6">
+                    <a href="https://scufgaming.com/" target="_blank"><img src="img/sponsors/scuf.png" alt="Scuf" class="scuf"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="contact-content">
+            <img src="img/samzorz-md.png" alt="Medium Samzorz">
+            <div class="contact-info">
+                <h1>Contact.</h1>
+                <h3>Samzorz</h3>
+                <h4>samhallbusiness @ gmail.com</h4>
+                <div class="social-media">
+                    <a href="https://twitter.com/samzorz" target="_blank" class="fa-stack fa-lg">
+                      <i class="fa fa-square fa-stack-2x fa-inverse"></i>
+                      <i class="fa fa-twitter fa-stack-1x"></i>
+                    </a>
+                    <a href="https://www.facebook.com/samzorzSH" target="_blank" class="fa-stack fa-lg">
+                      <i class="fa fa-square fa-stack-2x fa-inverse"></i>
+                      <i class="fa fa-facebook fa-stack-1x"></i>
+                    </a>
+                    <a href="https://www.instagram.com/samzorz/" target="_blank" class="fa-stack fa-lg">
+                      <i class="fa fa-square fa-stack-2x fa-inverse"></i>
+                      <i class="fa fa-instagram fa-stack-1x"></i>
+                    </a>
+                    <a href="https://www.youtube.com/user/samzorz" target="_blank" class="fa-stack fa-lg">
+                      <i class="fa fa-square fa-stack-2x fa-inverse"></i>
+                      <i class="fa fa-youtube-play fa-stack-1x"></i>
+                    </a>
+                    <a href="https://www.twitch.tv/samzorz" target="_blank" class="fa-stack fa-lg">
+                      <i class="fa fa-square fa-stack-2x fa-inverse"></i>
+                      <i class="fa fa-twitch fa-stack-1x"></i>
+                    </a>
+                    <a href="http://i.imgur.com/ZpTeX7W.jpg" target="_blank" class="fa-stack fa-lg">
+                      <i class="fa fa-square fa-stack-2x fa-inverse"></i>
+                      <i class="fa fa-snapchat-ghost fa-stack-1x"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="twitch-widget">
+        <a href="https://www.twitch.tv/samzorz" target="_blank">
+            <div class="twitch-content">
+                <div class="twitch-icon">
+                    <i class="fa fa-twitch" aria-hidden="true"></i>
+                </div>
+                <div class="live-check"></div>
+            </div>
+        </a>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="jquery-ui-1.12.1.custom/external/jquery/jquery.js"></script>
+    <script src="jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+    <script src="https://use.fontawesome.com/4f877a53c6.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script src='fullcalendar/lib/moment.min.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.js"></script>
+    <script src="fixed/js/fastclick.js"></script>
+    <script src="fixed/js/responsive-nav.js"></script>
+    <script src="fixed/js/fixed-responsive-nav.js"></script>
+    <script src="js/jQuery.scrollSpeed.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+#equipment {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0D0D0D;
+  width: 100%; }
+  #equipment .slick-active:focus {
+    outline: none; }
+  #equipment .slick-cloned {
+    outline: none; }
+  #equipment .slick-slide {
+    outline: none; }
+  #equipment .slick-current {
+    outline: none; }
+  #equipment .slick-list {
+    height: 485px !important; }
+  #equipment .carousel-pc {
+    width: 1000px;
+    height: 485px;
+    color: #e5e5e5;
+    text-align: center; }
+    #equipment .carousel-pc .specs {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      #equipment .carousel-pc .specs p {
+        font-weight: 600; }
+      #equipment .carousel-pc .specs a {
+        color: #e5e5e5;
+        text-decoration: none; }
+      #equipment .carousel-pc .specs a:focus {
+        outline: none;
+        border: none; }
+      #equipment .carousel-pc .specs a:hover {
+        color: #DD1A22; }
+    #equipment .carousel-pc .peripherals {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      #equipment .carousel-pc .peripherals .panel-1 p {
+        font-weight: 600; }
+      #equipment .carousel-pc .peripherals .panel-1 a {
+        color: #e5e5e5;
+        text-decoration: none; }
+      #equipment .carousel-pc .peripherals .panel-1 a:focus {
+        outline: none;
+        border: none; }
+      #equipment .carousel-pc .peripherals .panel-1 a:hover {
+        color: #DD1A22; }
+      #equipment .carousel-pc .peripherals .panel-2 p {
+        font-weight: 600;
+        color: #e5e5e5; }
+      #equipment .carousel-pc .peripherals .panel-2 a {
+        color: #e5e5e5;
+        text-decoration: none; }
+      #equipment .carousel-pc .peripherals .panel-2 a:focus {
+        outline: none;
+        border: none; }
+      #equipment .carousel-pc .peripherals .panel-2 a:hover {
+        color: #DD1A22; }
+  #equipment .carousel-mobile {
+    width: 600px;
+    height: 485px;
+    color: #e5e5e5;
+    text-align: center;
+    display: none; }
+    #equipment .carousel-mobile .specs {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      #equipment .carousel-mobile .specs .panel p {
+        font-weight: 600; }
+      #equipment .carousel-mobile .specs .panel a {
+        color: #e5e5e5;
+        text-decoration: none; }
+      #equipment .carousel-mobile .specs .panel a:focus {
+        outline: none;
+        border: none; }
+      #equipment .carousel-mobile .specs .panel a:hover {
+        color: #DD1A22; }
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px) {
+  #equipment {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0D0D0D;
+    width: 100%; }
+    #equipment .carousel-pc {
+      width: 912px;
+      height: 485px;
+      color: #e5e5e5;
+      text-align: center; } }
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+  .carousel-pc {
+    display: none; }
+
+  .carousel-mobile {
+    display: block !important;
+    width: 600px; } }
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+  #equipment {
+    font-size: 12px; }
+    #equipment .carousel-mobile {
+      display: block !important;
+      width: 410px;
+      height: 370px; }
+    #equipment .slick-list {
+      height: 370px !important; } }
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+  #equipment {
+    font-size: 11px; }
+    #equipment .carousel-mobile {
+      display: block !important;
+      width: 320px;
+      height: 360px; }
+      #equipment .carousel-mobile .slick-prev, #equipment .carousel-mobile .slick-next, #equipment .carousel-mobile .slick-arrow, #equipment .carousel-mobile button {
+        display: none !important; }
+    #equipment .slick-list {
+      height: 360px !important; } }
+/* Custom, iPhone Retina */
+
+/*# sourceMappingURL=equipment.css.map */

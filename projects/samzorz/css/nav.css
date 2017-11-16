@@ -1,0 +1,112 @@
+.nav-pc {
+  width: 100%;
+  height: 90px;
+  background-color: #0d0d0d;
+  top: 0;
+  z-index: 1000;
+  position: fixed;
+  clear: both;
+  border-bottom: 1px solid #DD1A22;
+  font-weight: 500; }
+  .nav-pc .logo {
+    height: 100%;
+    vertical-align: middle;
+    float: left;
+    margin-left: 20px;
+    line-height: 90px; }
+    .nav-pc .logo img {
+      vertical-align: middle; }
+    .nav-pc .logo a {
+      color: #e5e5e5;
+      text-decoration: none;
+      font-size: 16px;
+      margin: 0 10px;
+      text-transform: uppercase;
+      height: auto;
+      width: auto; }
+      .nav-pc .logo a .sam-logo {
+        vertical-align: middle;
+        margin-right: 15px; }
+    .nav-pc .logo a:hover {
+      color: #DD1A22;
+      transition: color .5s ease; }
+  .nav-pc .links {
+    height: 100%;
+    vertical-align: middle;
+    float: right;
+    margin-right: 30px;
+    line-height: 90px;
+    font-size: 16px; }
+    .nav-pc .links a {
+      color: #e5e5e5;
+      text-decoration: none;
+      margin: 0 10px; }
+    .nav-pc .links a:hover {
+      color: #DD1A22;
+      transition: color .5s ease; }
+
+.nav-mobile {
+  width: 100%;
+  height: 50px;
+  background-color: #0d0d0d;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  clear: both;
+  border-bottom: 1px solid #DD1A22;
+  visibility: hidden; }
+  .nav-mobile .fa {
+    font-size: 24px;
+    line-height: 50px; }
+  .nav-mobile .logo {
+    height: 100%;
+    vertical-align: middle;
+    float: left;
+    margin-left: 20px;
+    line-height: 46px; }
+    .nav-mobile .logo .mobile-logo {
+      display: inline-block;
+      height: 30px;
+      width: 30px;
+      vertical-align: middle; }
+    .nav-mobile .logo img {
+      height: 30px;
+      width: 30px; }
+    .nav-mobile .logo a {
+      color: #e5e5e5;
+      text-decoration: none;
+      font-size: 16px;
+      margin: 0;
+      text-transform: uppercase; }
+    .nav-mobile .logo a:hover {
+      color: #DD1A22;
+      transition: color .5s ease; }
+  .nav-mobile .links {
+    height: 100%;
+    vertical-align: middle;
+    float: right;
+    margin-right: 30px; }
+    .nav-mobile .links .js-toggle-left-slidebar {
+      cursor: pointer; }
+    .nav-mobile .links i {
+      vertical-align: middle; }
+    .nav-mobile .links a {
+      color: #e5e5e5;
+      text-decoration: none;
+      margin: 0; }
+    .nav-mobile .links a:hover {
+      color: #DD1A22;
+      transition: color .5s ease; }
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+  .nav-pc {
+    visibility: hidden; }
+
+  .nav-mobile {
+    visibility: visible; } }
+/* Small Devices, Tablets */
+/* Extra Small Devices, Phones */
+/* Custom, iPhone Retina */
+
+/*# sourceMappingURL=nav.css.map */
