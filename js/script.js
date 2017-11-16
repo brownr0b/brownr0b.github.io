@@ -161,14 +161,14 @@ function workModal(){
 
         //wraps links around the image and text to allow the user access to a live view of the web page.
         if(url.indexOf("workOne") > 0){
-            $('#img').wrap("<a href='http://cs.iupui.edu/~brownrob/samzorz-final'></a>");
-            $('.view h3').wrap("<a href='http://cs.iupui.edu/~brownrob/samzorz-final'></a>");
+            $('#img').wrap("<a href='projects/samzorz'></a>");
+            $('.view h3').wrap("<a href='projects/samzorz'></a>");
         }else if(url.indexOf("workTwo") >0){
-            $('#img').wrap("<a href='http://cs.iupui.edu/~brownrob/thebb2'></a>");
-            $('.view h3').wrap("<a href='http://cs.iupui.edu/~brownrob/thebb2'></a>");
+            $('#img').wrap("<a href='index.html'></a>");
+            $('.view h3').wrap("<a href='index.html'></a>");
         }else if(url.indexOf("workThree") >0){
-            $('#img').wrap("<a href='http://cs.iupui.edu/~brownrob/calmWeather'></a>");
-            $('.view h3').wrap("<a href='http://cs.iupui.edu/~brownrob/calmWeather'></a>");
+            $('#img').wrap("<a href='projects/calmWeather'></a>");
+            $('.view h3').wrap("<a href='projects/calmWeather'></a>");
         }
     });
 
