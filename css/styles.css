@@ -547,7 +547,7 @@ body {
     padding-bottom: 0; } }
 /* Medium Devices, Desktops */
 @media only screen and (min-width: 992px) {
-  body #top-nav .top-container {
+  body #top-nav {
     width: 100%;
     width: -webkit-calc(100% - 10px);
     width: -moz-calc(100% - 10px);

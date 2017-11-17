@@ -757,12 +757,10 @@ body{
   body{
 
     #top-nav{
-      .top-container{
-        width: 100%;
-        width: -webkit-calc(100% - 10px);
-        width: -moz-calc(100% - 10px);
-        width: calc(100% - 10px);
-      }
+      width: 100%;
+      width: -webkit-calc(100% - 10px);
+      width: -moz-calc(100% - 10px);
+      width: calc(100% - 10px);
     }
 
     #contact{

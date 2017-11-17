@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="62a20a56-9feb-4697-b916-bb6a92055e76" name="Default" comment="" />
+    <list default="true" id="62a20a56-9feb-4697-b916-bb6a92055e76" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,8 +29,8 @@
       <file leaf-file-name="styles.scss" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sass/styles.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-11994">
-              <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="41" selection-end-column="31" />
+            <state relative-caret-position="297">
+              <caret line="761" column="41" lean-forward="true" selection-start-line="761" selection-start-column="41" selection-end-line="761" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -307,12 +309,12 @@
       <workItem from="1507763553044" duration="620000" />
       <workItem from="1509052168627" duration="38000" />
       <workItem from="1510633544185" duration="3953000" />
-      <workItem from="1510870813463" duration="18445000" />
+      <workItem from="1510870813463" duration="18561000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="249699000" />
+    <option name="totallyTimeSpent" value="249815000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -734,8 +736,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sass/styles.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-11994">
-          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="41" selection-end-column="31" />
+        <state relative-caret-position="297">
+          <caret line="761" column="41" lean-forward="true" selection-start-line="761" selection-start-column="41" selection-end-line="761" selection-end-column="41" />
           <folding />
         </state>
       </provider>
