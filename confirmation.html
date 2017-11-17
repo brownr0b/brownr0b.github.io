@@ -2,7 +2,7 @@
 $email = $_POST['email'];
 if (isset($_POST['send'])) {
     $to = 'robertambrown@gmail.com';
-    $subject = 'New Message From BSQ';
+    $subject = $_POST['subject'] . "\r\n\r\n";
     $message = 'Name: ' . $_POST['name'] . "\r\n\r\n";
     $message .= 'Email: ' . $_POST['email'] . "\r\n\r\n";
     $message .= 'Comments: ' . $_POST['comments'];

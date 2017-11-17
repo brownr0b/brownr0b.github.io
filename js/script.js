@@ -1,4 +1,6 @@
 $(document).ready(function(){
+    //alert(navigator.appName);
+
     //$('#top').hide();
     $('.loading').fadeOut(1000, 'easeOutQuad');
 
@@ -98,10 +100,10 @@ function setBindings(){
             scrollTop: $($(this).attr('href')).offset().top
         }, 1500, 'easeInOutQuint');
 
-        //If the link that is selected has an href of "#contact", the first input field will come into focus for the user.
-        if($(this).attr('href') === '#contact'){
-            $('#name').focus();
-        }
+        ////If the link that is selected has an href of "#contact", the first input field will come into focus for the user.
+        // if($(this).attr('href') === '#contact'){
+        //     $('#name').focus();
+        // }
 
         return false;
     });
@@ -122,9 +124,9 @@ function setBindings(){
             scrollTop: $($(this).attr('href')).offset().top
         }, 1500, 'easeInOutQuint');
 
-        if($(this).attr('href') === '#contact'){
-            $('#name').focus();
-        }
+        // if($(this).attr('href') === '#contact'){
+        //     $('#name').focus();
+        // }
 
         return false;
     });
@@ -150,6 +152,7 @@ function workModal(){
         $('.openWork').css('display','flex').hide().fadeIn('slow');
         $('.modal-bg').css('display','block').hide().fadeIn('slow');
         $('.modal-content').css('display','block').hide().fadeIn('slow');
+        $('.modal-content').css('paddingRight', '17px');
 
         //Obtains the src of the img in the ".work" element that is closest to the clicked object.
         var url = $(this).closest('.work').find('img.preview').attr('src');
@@ -174,6 +177,7 @@ function workModal(){
 
     //Closes the modal if the user clicks outside it.
     $('.modal-bg').click(function(){
+        $('.modal-content').css('paddingRight', '0');
         $('.openWork').fadeOut(500);
         $('.modal-img a').fadeOut(500, function() { $(this).remove(); });
         $('.view h3').unwrap();

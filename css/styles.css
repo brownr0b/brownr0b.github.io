@@ -19,7 +19,7 @@ body {
   body #top-nav {
     width: calc(100% - 10px);
     height: 75px;
-    background-color: rgba(34, 34, 34, 0.8);
+    background-color: rgba(0, 0, 0, 0.8);
     position: fixed;
     margin-top: -75px;
     z-index: 1;
@@ -51,10 +51,9 @@ body {
         transition: all .3s ease;
         padding: 0 30px;
         height: 100%; }
-        body #top-nav .top-container a .fa {
-          margin: 0 10px 0 0; }
       body #top-nav .top-container a:hover {
-        background-color: rgba(255, 255, 255, 0.1);
+        background-color: rgba(255, 255, 255, 0.05);
+        color: #43C6AC;
         transition: all .3s ease; }
   body #menu {
     position: fixed;
@@ -74,10 +73,13 @@ body {
       opacity: 1;
       height: 50px;
       width: 50px;
-      transition: all .3s ease;
+      transition: color .3s ease;
       display: flex;
       justify-content: center;
       align-items: center; }
+    body #menu i:hover {
+      color: #43C6AC;
+      transition: color .3s ease; }
   body .overlay {
     height: 100%;
     width: 100%; }
@@ -101,7 +103,7 @@ body {
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        background: linear-gradient(315deg, rgba(233, 100, 67, 0.5), rgba(144, 78, 149, 0.5)); }
+        background: linear-gradient(315deg, rgba(67, 198, 172, 0.75), rgba(25, 22, 84, 0.75)); }
         body .overlay #homeSection .homeContent h1 {
           font-size: 64px;
           text-align: center;
@@ -233,13 +235,13 @@ body {
             transition: all .5s ease;
             text-decoration: none;
             padding: 14px;
-            color: #904e95;
+            color: #43C6AC;
             text-transform: uppercase;
             font-weight: 700;
-            border: 2px solid #904e95; }
+            border: 2px solid #43C6AC; }
           body .overlay #workSection .workContent .view-all a:hover {
-            color: #e96443;
-            border-color: #e96443;
+            color: #191654;
+            border-color: #191654;
             transition: all .5s ease;
             cursor: pointer; }
     body .overlay #aboutSection {
@@ -287,7 +289,7 @@ body {
             body .overlay #aboutSection .aboutContent .aboutStuff .stuff .aboutImg {
               height: 50px;
               width: 50px;
-              background: linear-gradient(315deg, rgba(233, 100, 67, 0.75), rgba(144, 78, 149, 0.75));
+              background: linear-gradient(315deg, rgba(67, 198, 172, 0.75), rgba(25, 22, 84, 0.75));
               color: #fdfdfd;
               border-radius: 50%;
               display: flex;
@@ -302,10 +304,10 @@ body {
           font-size: 14px;
           font-weight: 500; }
           body .overlay #aboutSection .aboutContent p a {
-            color: #904e95;
+            color: #43C6AC;
             transition: all .3s ease; }
           body .overlay #aboutSection .aboutContent p a:hover {
-            color: #e96443;
+            color: #191654;
             transition: all .3s ease; }
     body .overlay #contact {
       background: none;
@@ -313,10 +315,23 @@ body {
       background-size: cover;
       width: 100%;
       position: relative; }
+      body .overlay #contact #phpNotice {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; }
+        body .overlay #contact #phpNotice h2 {
+          margin: 10px;
+          max-width: 90%; }
       body .overlay #contact .contactContent {
         width: 100%;
         height: 100%;
-        background: linear-gradient(315deg, rgba(233, 100, 67, 0.4), rgba(144, 78, 149, 0.4));
+        background: linear-gradient(315deg, rgba(67, 198, 172, 0.4), rgba(25, 22, 84, 0.4));
         display: flex;
         justify-content: center;
         align-items: center;
@@ -346,7 +361,7 @@ body {
         body .overlay #contact .contactContent .contact .form-container .feedback-input:focus {
           background: #fff;
           box-shadow: 0;
-          border: 2px solid #904e95;
+          border: 2px solid #43C6AC;
           color: #444444;
           outline: none;
           padding: 13px 13px 13px 13px;
@@ -368,7 +383,7 @@ body {
           border: none;
           cursor: pointer;
           background-color: #f2f2f2;
-          color: #904e95;
+          color: #43C6AC;
           font-size: 24px;
           padding-top: 14px;
           padding-bottom: 14px;
@@ -378,8 +393,8 @@ body {
           letter-spacing: 2px;
           -webkit-appearance: none; }
         body .overlay #contact .contactContent .contact .form-container #button:hover {
-          color: #e96443;
-          border-color: #e96443;
+          color: #191654;
+          border-color: #191654;
           transition: all .5s ease; }
     body .overlay #footer {
       background-color: #fdfdfd;
@@ -420,7 +435,7 @@ body {
             body .overlay #footer .social #top a i {
               cursor: pointer; }
           body .overlay #footer .social #top a:hover {
-            color: #904e95;
+            color: #43C6AC;
             transition: color .3s ease; }
         body .overlay #footer .social .media {
           width: 140px;
@@ -431,7 +446,7 @@ body {
             color: #222222;
             transition: color .3s ease; }
           body .overlay #footer .social .media .fa-inverse:hover {
-            color: #904e95;
+            color: #43C6AC;
             transition: color .3s ease; }
 
 .loading {
@@ -464,6 +479,9 @@ body {
     position: relative;
     z-index: 99;
     overflow: hidden; }
+    .openWork .modal-content h3 {
+      width: auto;
+      font-weight: 300; }
     .openWork .modal-content .modal-img {
       width: 100%;
       height: 100%;
@@ -482,9 +500,6 @@ body {
         color: #f2f2f2;
         transition: opacity .3s ease;
         text-decoration: none; }
-        .openWork .modal-content .view a h3 {
-          width: auto;
-          font-weight: 300; }
       .openWork .modal-content .view a:hover {
         opacity: 1;
         transition: opacity .3s ease; }
