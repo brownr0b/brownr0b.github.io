@@ -162,7 +162,7 @@ h2{
 }
 
 /* Custom, iPhone Retina */
-@media only screen and (min-width : 320px) {
+@media only screen and (min-width : 320px) and (orientation: landscape){
     input{
         width: 100%;
     }
