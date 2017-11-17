@@ -176,7 +176,7 @@ body {
         -webkit-align-items: center;
         flex-direction: column;
         -webkit-flex-direction: column;
-        padding: 40px 0 50px 0; }
+        padding: 40px 0 40px 0; }
         body .overlay #workSection .workContent h1 {
           padding-bottom: 40px;
           font-size: 32px;
@@ -230,7 +230,7 @@ body {
           height: auto;
           width: 100%;
           text-align: center;
-          margin: 45px 0 0 0; }
+          margin: 45px 0 10px 0; }
           body .overlay #workSection .workContent .view-all a {
             display: inline-block;
             transition: all .5s ease;

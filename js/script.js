@@ -13,7 +13,7 @@ $(document).ready(function(){
         $('#menu').css("color", "#f2f2f2");
     }
 
-    if(scrolltop >= $("#workSection").offset().top + $("#workSection").height()){
+    if(scrolltop >= $(".view-all").offset().top + $(".view-all").height()){
         $('#menu').css("color", "#f2f2f2");
     }
 
@@ -27,7 +27,7 @@ $(document).ready(function(){
              $('#menu').css("color", "#f2f2f2");
         }
 
-        if(scrolltop >= $("#workSection").offset().top + $("#workSection").height()){
+        if(scrolltop >= $(".view-all").offset().top + $(".view-all").height()){
             $('#menu').css("color", "#f2f2f2");
         }
     });
