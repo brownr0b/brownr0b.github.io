@@ -13,15 +13,22 @@ $(document).ready(function(){
         $('#menu').css("color", "#f2f2f2");
     }
 
+    if(scrolltop >= $("#workSection").offset().top + $("#workSection").height()){
+        $('#menu').css("color", "#f2f2f2");
+    }
+
     //Changes the color of the menu button after a certain point in the web page.
     $(window).on('scroll',function() {
          var scrolltop = $(this).scrollTop();
 
          if(scrolltop >= $("#homeSection").offset().top + $("#homeSection").height()) {
              $('#menu').css("color", "rgba(34,34,34,.8)");
-        }
-        else {
+        }else {
              $('#menu').css("color", "#f2f2f2");
+        }
+
+        if(scrolltop >= $("#workSection").offset().top + $("#workSection").height()){
+            $('#menu').css("color", "#f2f2f2");
         }
     });
 
