@@ -371,7 +371,7 @@ body{
         .aboutStuff{
           display:flex;
           flex-direction: row;
-          -webkit-flex-direction: column;
+          -webkit-flex-direction: row;
           justify-content: center;
           -webkit-justify-content: center;
           flex-wrap: wrap;
