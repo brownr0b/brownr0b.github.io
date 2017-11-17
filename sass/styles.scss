@@ -70,7 +70,7 @@ body{
         color: $offwhite;
         text-decoration: none;
         transition: all .3s ease;
-        padding: 0 30px;
+        padding: 0 15px;
         height: 100%;
       }
 
@@ -697,6 +697,14 @@ body{
             flex-wrap: wrap;
             -webkit-flex-wrap: wrap;
           }
+        }
+      }
+    }
+
+    #top-nav{
+      .top-container{
+        a{
+          padding: 0 30px;
         }
       }
     }
