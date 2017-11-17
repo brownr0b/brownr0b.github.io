@@ -11,8 +11,6 @@ StockSnap.io https://stocksnap.io
 Font Awesome http://fontawesome.io
 jQuery UI https://jqueryui.com/
 Ken Wheeler http://kenwheeler.github.io/slick/
-FullCalendar https://fullcalendar.io/
-Nathan Rutzky https://github.com/nathco/jQuery.scrollSpeed
 Responsive Nav http://responsive-nav.com/
 
 *************************************
@@ -32,7 +30,6 @@ Please help fight against blatant plagiarism of intellectual property. Our creat
     <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
     <link rel="stylesheet" href="jquery-ui-1.12.1.custom/jquery-ui.min.css">
-    <link rel='stylesheet' href='fullcalendar/fullcalendar.css' />
     <link rel="stylesheet" href="fixed/css/fixed.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -48,14 +45,13 @@ Please help fight against blatant plagiarism of intellectual property. Our creat
     </div>
     <nav class="nav-pc">
         <div class="logo">
-            <a href="http://samzorz.com" ><img src="img/samzorz-sm2.png" alt="samzorz-logo"></a>
+            <a href="index.html" ><img src="img/samzorz-sm2.png" alt="samzorz-logo"></a>
             <a href="#about">About Me</a>
-            <a href="#embedded">Twitch/Youtube</a>
+            <a href="#embedded">Twitch</a>
             <a href="#support">How To Support</a>
             <a href="#equipment">Equipment</a>
         </div>
         <div class="links">
-            <a href="#schedule"><i class="fa fa-calendar" aria-hidden="true" title="Schedule"></i></a>
             <a href="#music"><i class="fa fa-music" aria-hidden="true" title="Music"></i></a>
             <a href="#sponsors"><i class="fa fa-handshake-o" aria-hidden="true" title="Sponsors"></i></a>
             <a href="#contact"><i class="fa fa-envelope-o" aria-hidden="true" title="Contact Me"></i></a>
@@ -68,10 +64,9 @@ Please help fight against blatant plagiarism of intellectual property. Our creat
         <nav class="nav-collapse">
             <ul>
                 <li class="active"><a href="#about">About Me</a></li>
-                <li><a href="#embedded">Twitch/Youtube</a></li>
+                <li><a href="#embedded">Twitch</a></li>
                 <li><a href="#support">How To Support</a></li>
                 <li><a href="#equipment">Equipment</a></li>
-                <li><a href="#schedule">Stream Schedule</a></li>
                 <li><a href="#music">Music Playlists</a></li>
                 <li><a href="#sponsors">Sponsors</a></li>
                 <li><a href="#contact">Contact Me</a></li>
@@ -84,7 +79,7 @@ Please help fight against blatant plagiarism of intellectual property. Our creat
                     <h1>About Me</h1>
                     <h3>Hey! My name is <span style="color: #DD1A22">Sam Hall</span>.</h3>
                     <p>More commonly referred to as <span style="color: #e62b32">Samzorz</span> here on the interwebs, I was born and raised in Phoenix, Arizona and now currently reside in Chandler, Arizona. I am a full-time broadcaster on TwitchTV, where I have just celebrated my five year anniversary. At 25 years old, I never thought I would be playing video games for a living, but here I am living the dream!</p>
-                    <p>I used to compete at the highest level possible for Call of Duty, but have since retired and created the amazing community of Sampires on Twitch. I’ve carried my love of shooters into my gaming broadcasts, playing a variety of them such as the Call of Duty franchise, Counterstrike: Global Offensive, H1Z1: King of the Kill, and many more.</p>
+                    <p>I used to compete at the highest level possible for Call of Duty, but have since retired and created the amazing community on Twitch know as the Sampires. I’ve carried my love of shooters into my gaming broadcasts, playing a variety of them such as the Call of Duty franchise, Counterstrike: Global Offensive, H1Z1: King of the Kill, and many more.</p>
                     <p>I hope you find your place amongst our community and enjoy your stay with us!</p>
                 </div>
             </div>
@@ -93,57 +88,24 @@ Please help fight against blatant plagiarism of intellectual property. Our creat
             </div>
     </section>
     <section id="embedded">
-        <div class="carousel-embed">
-            <div data-thumb="Twitch">
-                <div class="twitch">
-                    <div class="panel">
-                        <iframe
-                                id="tw"
-                                src="http://player.twitch.tv/?channel=samzorz&muted=true&autoplay=false"
-                                height="647"
-                                width="895"
-                                frameborder="0"
-                                scrolling="no"
-                                allowfullscreen>
-                        </iframe>
-                        <iframe
-                                id="chat"
-                                frameborder="0"
-                                scrolling="no"
-                                src="http://www.twitch.tv/samzorz/chat"
-                                height="647"
-                                width="250">
-                        </iframe>
-                    </div>
-                </div>
-            </div>
-            <div data-thumb="Youtube">
-                <div class="youtube">
-                    <div class="panel-1">
-                        <div style="overflow:auto;-webkit-overflow-scrolling:touch">
-                            <h1>Counter-Strike</h1>
-                            <iframe id="player-1" width="500" height="281" src="https://www.youtube.com/embed/?list=PL3YSAT7O9F7MfBmJQrtKa5XlOi1lLJZk5&wmode=transparent&showinfo=0;enablejsapi=1" frameborder="0" allowfullscreen></iframe>
-                        </div>
-
-                        <div style="overflow:auto;-webkit-overflow-scrolling:touch">
-                            <h1>Call of Duty</h1>
-                            <iframe id="player-2" width="500" height="281" src="https://www.youtube.com/embed/?list=PL3YSAT7O9F7ONwBakTmgjdcV-y43z4rNW&wmode=transparent&showinfo=0;enablejsapi=1" frameborder="0" allowfullscreen></iframe>
-                        </div>
-
-                    </div>
-
-                    <div class="panel-2">
-                        <div style="overflow:auto;-webkit-overflow-scrolling:touch">
-                            <h1>Vlogs</h1>
-                            <iframe id="player-3" width="500" height="281" src="https://www.youtube.com/embed/?list=PL3YSAT7O9F7N4FjUUDodrnHbOizNbmwNR&wmode=transparent&showinfo=0;enablejsapi=1" frameborder="0" allowfullscreen></iframe>
-                        </div>
-
-                        <div style="overflow:auto;-webkit-overflow-scrolling:touch">
-                            <h1>H1Z1</h1>
-                            <iframe id="player-4" width="500" height="281" src="https://www.youtube.com/embed/?list=UUjLGC7Okh29KqcIN9hBv1CA&wmode=transparent&showinfo=0;enablejsapi=1" frameborder="0" allowfullscreen></iframe>
-                        </div>
-
-                    </div>
+        <div class="embed">
+            <div class="twitch">
+                <div class="panel">
+                    <iframe id="tw"
+                            src="http://player.twitch.tv/?channel=samzorz&muted=true&autoplay=false"
+                            height="647"
+                            width="895"
+                            frameborder="0"
+                            scrolling="no"
+                            allowfullscreen>
+                    </iframe>
+                    <iframe id="chat"
+                            frameborder="0"
+                            scrolling="no"
+                            src="http://www.twitch.tv/samzorz/chat"
+                            height="647"
+                            width="250">
+                    </iframe>
                 </div>
             </div>
         </div>
@@ -294,12 +256,9 @@ Please help fight against blatant plagiarism of intellectual property. Our creat
             </div>
         </div>
     </section>
-    <section id="schedule">
-        <div id='calendar'></div>
-    </section>
     <section id="music">
         <div class="music-embed">
-            <h2>Music</h2>
+            <h2>Music Playlists</h2>
             <div class="panel-1">
                 <div style="overflow:auto;-webkit-overflow-scrolling:touch">
                     <h1>EDM Playlist</h1>
@@ -433,12 +392,10 @@ Please help fight against blatant plagiarism of intellectual property. Our creat
     <script src="jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
     <script src="https://use.fontawesome.com/4f877a53c6.js"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
-    <script src='fullcalendar/lib/moment.min.js'></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.js"></script>
     <script src="fixed/js/fastclick.js"></script>
     <script src="fixed/js/responsive-nav.js"></script>
     <script src="fixed/js/fixed-responsive-nav.js"></script>
-    <script src="js/jQuery.scrollSpeed.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.6/SmoothScroll.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

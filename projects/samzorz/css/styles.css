@@ -134,7 +134,6 @@ body {
   z-index: 1000;
   position: fixed;
   clear: both;
-  border-bottom: 1px solid #DD1A22;
   font-weight: 500; }
   .nav-pc .logo {
     height: 100%;
@@ -240,7 +239,6 @@ body {
   background-color: #0a0a0a;
   width: 100%;
   min-height: 100%;
-  margin-top: 91px;
   display: flex;
   flex-direction: row; }
   #about #aboutLeft {
@@ -259,7 +257,8 @@ body {
       #about #aboutLeft #aboutText h1 {
         font-family: Lombok, sans-serif;
         font-size: 48px;
-        margin-top: 0;
+        margin-top: 90px;
+        margin-bottom: 20px;
         width: 100%; }
       #about #aboutLeft #aboutText h3 {
         padding: 0;
@@ -300,7 +299,8 @@ body {
         width: 80%;
         margin: 10px; }
         #about #aboutLeft #aboutText h1 {
-          margin-bottom: 20px; }
+          margin-bottom: 20px;
+          margin-top: 0; }
     #about #aboutRight {
       width: 100%; }
       #about #aboutRight #aboutImg {
@@ -495,69 +495,25 @@ body {
         transition: color .5s ease; }
     #embedded .slick-dots li:nth-child(2) {
       margin-left: 20px; }
-  #embedded .carousel-embed {
+  #embedded .embed {
     width: 1150px;
     height: 647px;
     color: #e5e5e5;
     text-align: center;
-    margin-top: 65px; }
-    #embedded .carousel-embed .twitch {
+    margin: 65px; }
+    #embedded .embed .twitch {
       display: flex;
       justify-content: center;
       align-items: center;
       height: 647px;
       width: 1150px; }
-      #embedded .carousel-embed .twitch p {
+      #embedded .embed .twitch p {
         font-weight: 600; }
-      #embedded .carousel-embed .twitch a {
+      #embedded .embed .twitch a {
         color: #e5e5e5;
         text-decoration: none; }
-      #embedded .carousel-embed .twitch a:hover {
+      #embedded .embed .twitch a:hover {
         color: #DD1A22; }
-    #embedded .carousel-embed .youtube {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      align-items: center;
-      height: 647px;
-      width: 1150px; }
-      #embedded .carousel-embed .youtube .panel-1 {
-        height: 335px;
-        width: 1150px;
-        display: flex;
-        justify-content: space-around;
-        align-items: center; }
-        #embedded .carousel-embed .youtube .panel-1 div h1 {
-          margin-top: 0;
-          margin-bottom: 10px;
-          color: #e5e5e5;
-          font-size: 16px; }
-        #embedded .carousel-embed .youtube .panel-1 p {
-          font-weight: 600; }
-        #embedded .carousel-embed .youtube .panel-1 a {
-          color: #e5e5e5;
-          text-decoration: none; }
-        #embedded .carousel-embed .youtube .panel-1 a:hover {
-          color: #DD1A22; }
-      #embedded .carousel-embed .youtube .panel-2 {
-        height: 335px;
-        width: 1150px;
-        display: flex;
-        justify-content: space-around;
-        align-items: center; }
-        #embedded .carousel-embed .youtube .panel-2 div h1 {
-          margin-top: 0;
-          margin-bottom: 10px;
-          color: #e5e5e5;
-          font-size: 16px; }
-        #embedded .carousel-embed .youtube .panel-2 p {
-          font-weight: 600;
-          color: #e5e5e5; }
-        #embedded .carousel-embed .youtube .panel-2 a {
-          color: #e5e5e5;
-          text-decoration: none; }
-        #embedded .carousel-embed .youtube .panel-2 a:hover {
-          color: #DD1A22; }
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
@@ -593,197 +549,75 @@ body {
         color: #DD1A22; }
     #embedded .slick-dots li:nth-child(2) {
       margin-left: 20px; }
-  #embedded .carousel-embed {
+  #embedded .embed {
     width: 962px;
     max-height: 558px;
     color: #e5e5e5;
     text-align: center;
-    margin-top: 65px; }
-    #embedded .carousel-embed .twitch {
+    margin: 65px; }
+    #embedded .embed .twitch {
       display: flex;
       justify-content: center;
       align-items: center;
       height: 558px;
       width: 962px; }
-      #embedded .carousel-embed .twitch .panel #tw {
+      #embedded .embed .twitch .panel #tw {
         width: 707px;
         height: 558px; }
-      #embedded .carousel-embed .twitch .panel #chat {
-        height: 558px; }
-    #embedded .carousel-embed .youtube {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      align-items: center;
-      height: 558px;
-      width: 962px; }
-      #embedded .carousel-embed .youtube .panel-1 {
-        height: 233px;
-        width: 962px;
-        display: flex;
-        justify-content: space-around;
-        align-items: center; }
-        #embedded .carousel-embed .youtube .panel-1 iframe {
-          width: 413px;
-          height: 233px; }
-      #embedded .carousel-embed .youtube .panel-2 {
-        height: 233px;
-        width: 962px;
-        display: flex;
-        justify-content: space-around;
-        align-items: center; }
-        #embedded .carousel-embed .youtube .panel-2 iframe {
-          width: 413px;
-          height: 233px; } }
+      #embedded .embed .twitch .panel #chat {
+        height: 558px; } }
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
-  #embedded .carousel-embed {
+  #embedded .embed {
     width: 700px;
     max-height: 394px;
     color: #e5e5e5;
     text-align: center;
-    margin-top: 65px; }
-    #embedded .carousel-embed .twitch {
+    margin: 65px; }
+    #embedded .embed .twitch {
       display: flex;
       justify-content: center;
       align-items: center;
       height: 394px;
       width: 700px; }
-      #embedded .carousel-embed .twitch .panel #tw {
+      #embedded .embed .twitch .panel #tw {
         width: 700px;
         height: 395px; }
-      #embedded .carousel-embed .twitch .panel #chat {
-        display: none; }
-    #embedded .carousel-embed .youtube {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      align-items: center;
-      height: 394px;
-      width: 700px; }
-      #embedded .carousel-embed .youtube .panel-1 {
-        height: 176px;
-        width: 700px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center; }
-        #embedded .carousel-embed .youtube .panel-1 iframe {
-          width: 291px;
-          height: 164px; }
-      #embedded .carousel-embed .youtube .panel-2 {
-        height: 176px;
-        width: 700px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center; }
-        #embedded .carousel-embed .youtube .panel-2 iframe {
-          width: 291px;
-          height: 164px; } }
+      #embedded .embed .twitch .panel #chat {
+        display: none; } }
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
   #embedded {
     background-color: #161616; }
-    #embedded .carousel-embed {
+    #embedded .embed {
       width: 480px;
-      max-height: 290px;
+      max-height: 271px;
       color: #e5e5e5;
       text-align: center;
-      margin-top: 65px;
-      margin-bottom: 5px; }
-      #embedded .carousel-embed .twitch {
+      margin: 30px; }
+      #embedded .embed .twitch {
         display: flex;
         justify-content: center;
         align-items: center;
         height: 271px;
         width: 480px; }
-        #embedded .carousel-embed .twitch .panel #tw {
+        #embedded .embed .twitch .panel #tw {
           width: 480px;
-          height: 271px; }
-      #embedded .carousel-embed .youtube {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        height: 271px;
-        width: 480px; }
-        #embedded .carousel-embed .youtube .panel-1 {
-          height: 135px;
-          width: 100%;
-          display: flex;
-          justify-content: space-around;
-          align-items: center; }
-          #embedded .carousel-embed .youtube .panel-1 div h1 {
-            margin-top: 0;
-            margin-bottom: 5px;
-            color: #e5e5e5;
-            font-size: 16px; }
-          #embedded .carousel-embed .youtube .panel-1 iframe {
-            width: 190px;
-            height: 107px; }
-        #embedded .carousel-embed .youtube .panel-2 {
-          height: 135px;
-          width: 100%;
-          display: flex;
-          justify-content: space-around;
-          align-items: center; }
-          #embedded .carousel-embed .youtube .panel-2 div h1 {
-            margin-top: 10px;
-            margin-bottom: 5px;
-            color: #e5e5e5;
-            font-size: 16px; }
-          #embedded .carousel-embed .youtube .panel-2 iframe {
-            width: 190px;
-            height: 107px; } }
+          height: 271px; } }
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
-  #embedded .carousel-embed {
+  #embedded .embed {
     width: 320px;
-    max-height: 200px;
+    max-height: 181px;
     color: #e5e5e5;
     text-align: center;
-    margin-top: 65px;
-    margin-bottom: 5px; }
-    #embedded .carousel-embed .twitch {
+    margin: 30px; }
+    #embedded .embed .twitch {
       height: 181px;
       width: 320px; }
-      #embedded .carousel-embed .twitch .panel #tw {
+      #embedded .embed .twitch .panel #tw {
         width: 320px;
-        height: 181px; }
-    #embedded .carousel-embed .youtube {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      align-items: center;
-      height: 181px;
-      width: 320px; }
-      #embedded .carousel-embed .youtube .panel-1 {
-        height: 90px;
-        width: 100%;
-        display: flex;
-        justify-content: space-around;
-        align-items: center; }
-        #embedded .carousel-embed .youtube .panel-1 div h1 {
-          margin-top: 0;
-          margin-bottom: 5px;
-          color: #e5e5e5;
-          font-size: 16px; }
-        #embedded .carousel-embed .youtube .panel-1 iframe {
-          width: 106px;
-          height: 60px; }
-      #embedded .carousel-embed .youtube .panel-2 {
-        height: 90px;
-        width: 100%;
-        display: flex;
-        justify-content: space-around;
-        align-items: center; }
-        #embedded .carousel-embed .youtube .panel-2 div h1 {
-          margin-top: 10px;
-          margin-bottom: 5px;
-          color: #e5e5e5;
-          font-size: 16px; }
-        #embedded .carousel-embed .youtube .panel-2 iframe {
-          width: 106px;
-          height: 60px; } }
+        height: 181px; } }
 /* Custom, iPhone Retina */
 #support {
   width: 100%;
@@ -1298,122 +1132,6 @@ body {
       #support .supportContent .supportPanel:nth-child(3) {
         height: 275px; } }
 /* Custom, iPhone Retina */
-#schedule {
-  width: 100%;
-  height: 360px;
-  background-color: #0a0a0a;
-  display: flex;
-  align-items: center;
-  justify-content: center; }
-  #schedule #calendar {
-    width: 1150px;
-    font-size: 14px; }
-    #schedule #calendar .fc-more-popover {
-      background-color: #0a0a0a;
-      color: #e5e5e5;
-      border-color: #0a0a0a; }
-      #schedule #calendar .fc-more-popover .fc-header {
-        background-color: #0a0a0a; }
-      #schedule #calendar .fc-more-popover .fc-close {
-        color: #DD1A22; }
-      #schedule #calendar .fc-more-popover .fc-close:hover {
-        color: #e5e5e5;
-        transition: color .5s ease; }
-    #schedule #calendar button:focus {
-      outline: 0; }
-    #schedule #calendar .fc-event {
-      padding: 10px;
-      text-align: center;
-      border-radius: 0; }
-    #schedule #calendar .fc-today {
-      background: #0a0a0a;
-      border-style: solid;
-      color: #DD1A22; }
-      #schedule #calendar .fc-today span {
-        color: #DD1A22; }
-
-/* Large Devices, Wide Screens */
-@media only screen and (max-width: 1200px) {
-  #schedule {
-    width: 100%;
-    height: 360px;
-    background-color: #0a0a0a;
-    display: flex;
-    align-items: center;
-    justify-content: center; }
-    #schedule #calendar {
-      width: 932px;
-      font-size: 14px; }
-      #schedule #calendar .fc-more-popover {
-        background-color: #0a0a0a;
-        color: #e5e5e5;
-        border-color: #0a0a0a; }
-        #schedule #calendar .fc-more-popover .fc-header {
-          background-color: #0a0a0a; }
-        #schedule #calendar .fc-more-popover .fc-close {
-          color: #DD1A22; }
-        #schedule #calendar .fc-more-popover .fc-close:hover {
-          color: #e5e5e5;
-          transition: color .5s ease; }
-      #schedule #calendar button:focus {
-        outline: 0; }
-      #schedule #calendar .fc-event {
-        padding: 10px;
-        text-align: center;
-        border-radius: 0; } }
-/* Medium Devices, Desktops */
-@media only screen and (max-width: 992px) {
-  #schedule {
-    width: 100%;
-    height: 360px;
-    background-color: #0a0a0a;
-    display: flex;
-    align-items: center;
-    justify-content: center; }
-    #schedule #calendar {
-      width: 708px;
-      font-size: 14px; }
-      #schedule #calendar .fc-more-popover {
-        background-color: #0a0a0a;
-        color: #e5e5e5;
-        border-color: #0a0a0a; }
-        #schedule #calendar .fc-more-popover .fc-header {
-          background-color: #0a0a0a; }
-        #schedule #calendar .fc-more-popover .fc-close {
-          color: #DD1A22; }
-        #schedule #calendar .fc-more-popover .fc-close:hover {
-          color: #e5e5e5;
-          transition: color .5s ease; }
-      #schedule #calendar button:focus {
-        outline: 0; }
-      #schedule #calendar .fc-event {
-        padding: 10px;
-        text-align: center;
-        border-radius: 0; } }
-/* Small Devices, Tablets */
-@media only screen and (max-width: 768px) {
-  #schedule {
-    font-size: 12px; }
-    #schedule #calendar {
-      width: 480px;
-      font-size: 12px; } }
-/* Extra Small Devices, Phones */
-@media only screen and (max-width: 480px) {
-  #schedule {
-    font-size: 12px; }
-    #schedule #calendar {
-      width: 100%;
-      font-size: 12px; }
-      #schedule #calendar .fc-toolbar {
-        margin-left: 10px;
-        margin-right: 10px; } }
-/* Custom, iPhone Retina */
-@media only screen and (max-width: 320px) {
-  #schedule {
-    font-size: 12px; }
-    #schedule #calendar {
-      width: 100%;
-      font-size: 12px; } }
 #music {
   width: 100%;
   height: 615px;
@@ -1897,3 +1615,5 @@ body {
 @media only screen and (max-width: 320px) {
   #contact .contact-content {
     width: 240px; } }
+
+/*# sourceMappingURL=styles.css.map */

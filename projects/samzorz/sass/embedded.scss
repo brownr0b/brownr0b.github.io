@@ -63,12 +63,12 @@
       margin-left: 20px;
     }
   }
-  .carousel-embed {
+  .embed {
     width: 1150px;
     height: 647px;
     color: #e5e5e5;
     text-align: center;
-    margin-top: 65px;
+    margin: 65px;
     .twitch {
       display: flex;
       justify-content: center;
@@ -88,65 +88,6 @@
       a:hover {
         color: #DD1A22;
 
-      }
-    }
-    .youtube {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      align-items: center;
-      height: 647px;
-      width: 1150px;
-      .panel-1 {
-        height: 335px;
-        width: 1150px;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        div {
-          h1{
-            margin-top: 0;
-            margin-bottom: 10px;
-            color: #e5e5e5;
-            font-size: 16px;
-          }
-        }
-        p {
-          font-weight: 600;
-        }
-        a {
-          color: #e5e5e5;
-          text-decoration: none;
-        }
-        a:hover {
-          color: #DD1A22;
-        }
-      }
-      .panel-2 {
-        height: 335px;
-        width: 1150px;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        div {
-          h1{
-            margin-top: 0;
-            margin-bottom: 10px;
-            color: #e5e5e5;
-            font-size: 16px;
-          }
-        }
-        p {
-          font-weight: 600;
-          color: #e5e5e5;
-        }
-        a {
-          color: #e5e5e5;
-          text-decoration: none;
-        }
-        a:hover {
-          color: #DD1A22;
-        }
       }
     }
   }
@@ -196,12 +137,12 @@
         margin-left: 20px;
       }
     }
-    .carousel-embed {
+    .embed {
       width: 962px;
       max-height: 558px;
       color: #e5e5e5;
       text-align: center;
-      margin-top: 65px;
+      margin: 65px;
       .twitch {
         display: flex;
         justify-content: center;
@@ -218,36 +159,6 @@
           }
         }
       }
-      .youtube {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        height: 558px;
-        width: 962px;
-        .panel-1 {
-          height: 233px;
-          width: 962px;
-          display: flex;
-          justify-content: space-around;
-          align-items: center;
-          iframe {
-            width: 413px;
-            height: 233px;
-          }
-        }
-        .panel-2 {
-          height: 233px;
-          width: 962px;
-          display: flex;
-          justify-content: space-around;
-          align-items: center;
-          iframe {
-            width: 413px;
-            height: 233px;
-          }
-        }
-      }
     }
   }
 }
@@ -255,12 +166,12 @@
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
   #embedded {
-    .carousel-embed {
+    .embed {
       width: 700px;
       max-height: 394px;
       color: #e5e5e5;
       text-align: center;
-      margin-top: 65px;
+      margin: 65px;
       .twitch {
         display: flex;
         justify-content: center;
@@ -277,36 +188,6 @@
           }
         }
       }
-      .youtube {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        height: 394px;
-        width: 700px;
-        .panel-1 {
-          height: 176px;
-          width: 700px;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          iframe {
-            width: 291px;
-            height: 164px;
-          }
-        }
-        .panel-2 {
-          height: 176px;
-          width: 700px;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          iframe{
-            width: 291px;
-            height: 164px;
-          }
-        }
-      }
     }
   }
 }
@@ -315,13 +196,12 @@
 @media only screen and (max-width : 768px) {
   #embedded {
     background-color: #161616;
-    .carousel-embed {
+    .embed {
       width: 480px;
-      max-height: 290px;
+      max-height: 271px;
       color: #e5e5e5;
       text-align: center;
-      margin-top: 65px;
-      margin-bottom: 5px;
+      margin: 30px;
       .twitch {
         display: flex;
         justify-content: center;
@@ -335,53 +215,6 @@
           }
         }
       }
-      .youtube {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        height: 271px;
-        width: 480px;
-        .panel-1 {
-          height: 135px;
-          width: 100%;
-          display: flex;
-          justify-content: space-around;
-          align-items: center;
-          div {
-            h1{
-              margin-top: 0;
-              margin-bottom: 5px;
-              color: #e5e5e5;
-              font-size: 16px;
-            }
-          }
-          iframe {
-            width: 190px;
-            height: 107px;
-
-          }
-        }
-        .panel-2 {
-          height: 135px;
-          width: 100%;
-          display: flex;
-          justify-content: space-around;
-          align-items: center;
-          div {
-            h1{
-              margin-top: 10px;
-              margin-bottom: 5px;
-              color: #e5e5e5;
-              font-size: 16px;
-            }
-          }
-          iframe {
-            width: 190px;
-            height: 107px;
-          }
-        }
-      }
     }
   }
 }
@@ -389,13 +222,12 @@
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
   #embedded {
-    .carousel-embed {
+    .embed {
       width: 320px;
-      max-height: 200px;
+      max-height: 181px;
       color: #e5e5e5;
       text-align: center;
-      margin-top: 65px;
-      margin-bottom: 5px;
+      margin: 30px;
       .twitch {
         height: 181px;
         width: 320px;
@@ -403,53 +235,6 @@
           #tw{
             width: 320px;
             height: 181px;
-          }
-        }
-      }
-      .youtube {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        height: 181px;
-        width: 320px;
-        .panel-1 {
-          height: 90px;
-          width: 100%;
-          display: flex;
-          justify-content: space-around;
-          align-items: center;
-          div {
-            h1{
-              margin-top: 0;
-              margin-bottom: 5px;
-              color: #e5e5e5;
-              font-size: 16px;
-            }
-          }
-          iframe {
-            width: 106px;
-            height: 60px;
-
-          }
-        }
-        .panel-2 {
-          height: 90px;
-          width: 100%;
-          display: flex;
-          justify-content: space-around;
-          align-items: center;
-          div {
-            h1{
-              margin-top: 10px;
-              margin-bottom: 5px;
-              color: #e5e5e5;
-              font-size: 16px;
-            }
-          }
-          iframe {
-            width: 106px;
-            height: 60px;
           }
         }
       }

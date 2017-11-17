@@ -2,7 +2,6 @@
   background-color: #0a0a0a;
   width: 100%;
   min-height: 100%;
-  margin-top: 91px;
   display:flex;
   flex-direction: row;
     #aboutLeft{
@@ -21,7 +20,8 @@
         h1{
           font-family: Lombok, sans-serif;
           font-size: 48px;
-          margin-top: 0;
+          margin-top: 90px;
+          margin-bottom: 20px;
           width:100%;
         }
         h3{
@@ -78,6 +78,7 @@
             margin: 10px;
             h1{
               margin-bottom:20px;
+              margin-top: 0;
             }
           }
         }
