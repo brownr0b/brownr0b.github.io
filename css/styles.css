@@ -13,6 +13,8 @@ html {
   width: 100%; }
 
 body {
+  height: 100%;
+  width: 100%;
   background-color: #343434;
   display: flex;
   justify-content: center; }
