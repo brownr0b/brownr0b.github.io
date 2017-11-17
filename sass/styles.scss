@@ -756,6 +756,15 @@ body{
 @media only screen and (min-width : 992px) {
   body{
 
+    #top-nav{
+      .top-container{
+        width: 100%;
+        width: -webkit-calc(100% - 10px);
+        width: -moz-calc(100% - 10px);
+        width: calc(100% - 10px);
+      }
+    }
+
     #contact{
       background: url("../img/bg/StockSnap_BTG0UZK1NX.jpg") no-repeat top center fixed !important;
       -webkit-background-size: cover !important;
