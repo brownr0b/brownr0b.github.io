@@ -17,6 +17,8 @@ $(document).ready(function(){
     $(".form").submit(function(){
         event.preventDefault();
 
+        $("input").blur();
+
         //sets x as the value for the city/zip input by the user
         var x = $("#place").val();
 
