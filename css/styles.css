@@ -18,6 +18,8 @@ body {
   justify-content: center; }
   body #top-nav {
     width: calc(100% - 10px);
+    width: -webkit-calc(100% - 10px);
+    width: -moz-calc(100% - 10px);
     height: 75px;
     background-color: rgba(0, 0, 0, 0.8);
     position: fixed;
