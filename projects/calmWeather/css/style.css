@@ -60,6 +60,7 @@ html, body{
 .back{
     position: absolute;
     left: 0;
+    top: 0;
 }
 
 .back:hover{
@@ -74,13 +75,15 @@ html, body{
 }
 
 input{
-    width: 350px;
+    width: 100%;
     padding: 10px;
-    margin: 10px;
+    margin: 10px 0;
     font-size: 20px;
     background: white;
     border: 2px solid white;
     box-sizing: border-box;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
 }
 
 input:focus{
@@ -117,13 +120,15 @@ input[type=submit]:hover{
 }
 
 .cityName{
-    font-size: 96px;
+    font-size: 2em;
+    width: 100%;
 }
 
 .greeting{
-    font-size: 96px;
+    font-size: 48px;
     margin: 5px;
     color: white;
+    text-align: center;
 }
 
 h2{
@@ -148,4 +153,65 @@ h2{
     height: 22px;
     text-align: center;
     font-size: 16px;
+}
+
+.cityName, .temp, .sky, .wind, .humidity{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+    input{
+        width: 100%;
+    }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+    input{
+        width: 350px;
+    }
+
+    .greeting{
+        font-size: 58px;
+    }
+
+    .cityName{
+        font-size: 58px;
+    }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+    input{
+        width: 350px;
+    }
+
+    .greeting{
+        font-size: 96px;
+    }
+
+    .temp, .sky, .wind, .humidity{
+        display: block;
+    }
+
+    .cityName{
+
+        font-size: 96px;
+    }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+    .back{
+        top: initial;
+    }
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
 }
