@@ -91,21 +91,19 @@ Please help fight against blatant plagiarism of intellectual property. Our creat
         <div class="embed">
             <div class="twitch">
                 <div class="panel">
-                    <iframe id="tw"
-                            src="http://player.twitch.tv/?channel=samzorz&muted=true&autoplay=false"
-                            height="647"
-                            width="895"
-                            frameborder="0"
-                            scrolling="no"
-                            allowfullscreen>
-                    </iframe>
-                    <iframe id="chat"
-                            frameborder="0"
-                            scrolling="no"
-                            src="http://www.twitch.tv/samzorz/chat"
-                            height="647"
-                            width="250">
-                    </iframe>
+
+                    <div id="tw"></div>
+
+                    <script src="https://embed.twitch.tv/embed/v1.js"></script>
+                    <script type="text/javascript">
+                        new Twitch.Embed("tw", {
+                            width: 1145,
+                            height: 647,
+                            channel: "samzorz",
+                            layout: "video",
+                            autoplay: false
+                        });
+                    </script>
                 </div>
             </div>
         </div>

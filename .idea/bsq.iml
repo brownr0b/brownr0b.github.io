@@ -8,5 +8,6 @@
     <orderEntry type="library" name="jquery-ui" level="application" />
     <orderEntry type="library" name="jquery.fancybox" level="application" />
     <orderEntry type="library" name="smooth-scroll" level="application" />
+    <orderEntry type="library" name="v1" level="application" />
   </component>
 </module>

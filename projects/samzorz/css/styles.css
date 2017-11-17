@@ -450,51 +450,6 @@ body {
   align-items: center;
   background-color: #0a0a0a;
   width: 100%; }
-  #embedded .slick-next, #embedded .slick-prev {
-    margin-top: 35px; }
-  #embedded .slick-active {
-    color: #DD1A22; }
-  #embedded .slick-active:focus {
-    outline: none; }
-  #embedded .slick-cloned {
-    outline: none; }
-  #embedded .slick-slide {
-    outline: none; }
-  #embedded .slick-current {
-    outline: none; }
-  #embedded .slick-dots {
-    position: absolute;
-    top: -70px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 70px;
-    margin: 0;
-    list-style: none; }
-    #embedded .slick-dots #slick-slide20 {
-      display: flex;
-      justify-content: center; }
-      #embedded .slick-dots #slick-slide20 h1 {
-        margin: 0;
-        height: 33px; }
-    #embedded .slick-dots #slick-slide21 {
-      display: flex;
-      justify-content: center; }
-      #embedded .slick-dots #slick-slide21 h1 {
-        margin: 0;
-        height: 33px; }
-    #embedded .slick-dots li {
-      margin: 0;
-      display: block;
-      height: 33px;
-      width: auto; }
-      #embedded .slick-dots li h1:hover {
-        color: #DD1A22;
-        transition: color .5s ease; }
-    #embedded .slick-dots li:nth-child(2) {
-      margin-left: 20px; }
   #embedded .embed {
     width: 1150px;
     height: 647px;
@@ -517,41 +472,9 @@ body {
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
-  #embedded .slick-next, #embedded .slick-prev {
-    margin-top: 35px; }
-  #embedded .slick-dots {
-    position: absolute;
-    top: -70px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-    height: 70px;
-    margin: 0;
-    list-style: none; }
-    #embedded .slick-dots #slick-slide20 {
-      display: flex;
-      justify-content: center;
-      align-items: center; }
-    #embedded .slick-dots #slick-slide21 {
-      display: flex;
-      justify-content: center;
-      align-items: center; }
-    #embedded .slick-dots li {
-      margin: 0;
-      display: block;
-      height: 33px;
-      width: auto; }
-      #embedded .slick-dots li h1:hover {
-        color: #DD1A22;
-        transition: color .5s ease; }
-      #embedded .slick-dots li h1:active {
-        color: #DD1A22; }
-    #embedded .slick-dots li:nth-child(2) {
-      margin-left: 20px; }
   #embedded .embed {
-    width: 962px;
-    max-height: 558px;
+    width: 932px;
+    max-height: 527px;
     color: #e5e5e5;
     text-align: center;
     margin: 65px; }
@@ -562,10 +485,11 @@ body {
       height: 558px;
       width: 962px; }
       #embedded .embed .twitch .panel #tw {
-        width: 707px;
-        height: 558px; }
-      #embedded .embed .twitch .panel #chat {
-        height: 558px; } }
+        width: 932px;
+        height: 527px; }
+        #embedded .embed .twitch .panel #tw iframe {
+          width: 100%;
+          height: 100%; } }
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
   #embedded .embed {
@@ -583,8 +507,9 @@ body {
       #embedded .embed .twitch .panel #tw {
         width: 700px;
         height: 395px; }
-      #embedded .embed .twitch .panel #chat {
-        display: none; } }
+        #embedded .embed .twitch .panel #tw iframe {
+          width: 100%;
+          height: 100%; } }
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
   #embedded {
@@ -603,7 +528,10 @@ body {
         width: 480px; }
         #embedded .embed .twitch .panel #tw {
           width: 480px;
-          height: 271px; } }
+          height: 271px; }
+          #embedded .embed .twitch .panel #tw iframe {
+            width: 100%;
+            height: 100%; } }
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
   #embedded .embed {
