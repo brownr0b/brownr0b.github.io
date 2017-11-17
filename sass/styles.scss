@@ -32,6 +32,7 @@ body{
   background-color: #343434;
   display: flex;
   justify-content: center;
+  -webkit-justify-content: center;
 
 
   #top-nav{
@@ -49,6 +50,7 @@ body{
     -webkit-justify-content: center;
     justify-content:center;
     flex-direction: column;
+    -webkit-flex-direction: column;
 
     .top-container{
       display:flex;
@@ -105,7 +107,9 @@ body{
       width:50px;
       display:flex;
       justify-content:center;
+      -webkit-justify-content: center;
       align-items: center;
+      -webkit-align-items: center;
     }
   }
 
@@ -135,8 +139,11 @@ body{
         width:100%;
         display:flex;
         justify-content: center;
+        -webkit-justify-content: center;
         align-items: center;
+        -webkit-align-items: center;
         flex-direction: column;
+        -webkit-flex-direction: column;
         background: linear-gradient(315deg, rgba(67,198,172, .75), rgba(25,22,84, .75));
 
         h1 {
@@ -259,7 +266,9 @@ body{
             position: relative;
             display: flex;
             align-items: center;
+            -webkit-align-items: center;
             justify-content:center;
+            -webkit-justify-content: center;
             margin: 5px;
             img {
               width: 100%;
@@ -349,6 +358,7 @@ body{
           width: 75%;
           display: flex;
           flex-direction: column;
+          -webkit-flex-direction: column;
 
           div{
             img{
@@ -361,7 +371,9 @@ body{
         .aboutStuff{
           display:flex;
           flex-direction: row;
+          -webkit-flex-direction: column;
           justify-content: center;
+          -webkit-justify-content: center;
           flex-wrap: wrap;
           width: 100%;
           padding: 80px 0 35px 0;
@@ -369,8 +381,10 @@ body{
             width: 425px;
             display:flex;
             align-items: center;
+            -webkit-align-items: center;
             font-size: 24px;
             flex-direction: column;
+            -webkit-flex-direction: column;
             padding: 10px 0;
 
             .aboutImg{
@@ -381,7 +395,9 @@ body{
               border-radius: 50%;
               display:flex;
               justify-content:center;
+              -webkit-justify-content: center;
               align-items: center;
+              -webkit-align-items: center;
             }
 
             p{
@@ -425,8 +441,11 @@ body{
         background-color: rgba(0,0,0,0.9);
         display: flex;
         justify-content:center;
+        -webkit-justify-content: center;
         align-items: center;
+        -webkit-align-items: center;
         flex-direction: column;
+        -webkit-flex-direction: column;
 
         h2{
           margin: 10px;
@@ -440,7 +459,9 @@ body{
         background: linear-gradient(315deg, rgba(67,198,172, .4), rgba(25,22,84, .4));
         display:flex;
         justify-content: center;
+        -webkit-justify-content: center;
         align-items: center;
+        -webkit-align-items: center;
         padding: 43px 0 50px 0;
 
         .contact{
@@ -558,7 +579,9 @@ body{
             text-decoration: none;
             display: flex;
             justify-content: center;
+            -webkit-justify-content: center;
             align-items: center;
+            -webkit-align-items: center;
             width: 100%;
             height: 100%;
             transition: color .3s ease;
@@ -614,7 +637,9 @@ body{
   right: 0;
   display: none;
   align-items: center;
+  -webkit-align-items: center;
   justify-content: center;
+  -webkit-justify-content: center;
   overflow-x: hidden;
 
   .modal-bg{
