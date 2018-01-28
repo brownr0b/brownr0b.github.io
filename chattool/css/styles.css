@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html,body{
+    font-family: 'Quicksand', sans-serif;
+    color: #444;
+}
+
+#container{
+    margin: 10px;
+}
+
+h2{
+    margin: 20px 0;
+}
+
+button{
+    display: block;
+    margin: 5px 0;
+}
+
+#btn-twitch{
+    background-color: #6441A5;
+    color: #fff;
+    text-decoration: none;
+    padding: 6px 100px;
+    border: 1px solid #6D51A0;
+    border-radius:3px;
+    transition: background-color .3s ease;
+}
+
+#btn-twitch:hover{
+    background-color: #7A55BD;
+    cursor: pointer;
+    transition: background-color .3s ease;
+}
