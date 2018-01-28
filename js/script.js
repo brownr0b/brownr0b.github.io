@@ -5,37 +5,23 @@ $(document).ready(function(){
     $('.loading').fadeOut(1000, 'easeOutQuad');
 
     //Decides what color the menu button is on load based on the current location.
-    var scrolltop = $(this).scrollTop();
-    if(scrolltop >= $("#homeSection").offset().top + $("#homeSection").height()) {
-        $('#menu').css("color", "rgba(34,34,34,.8)");
-    }
-    else {
-        $('#menu').css("color", "#f2f2f2");
-    }
-
-    if(scrolltop >= $(".view-all").offset().top + $(".view-all").height()){
-        $('#menu').css("color", "#f2f2f2");
-    }
-
-    //Changes the color of the menu button after a certain point in the web page.
-    $(window).on('scroll',function() {
-         var scrolltop = $(this).scrollTop();
-
-         if(scrolltop >= $("#homeSection").offset().top + $("#homeSection").height()) {
-             $('#menu').css("color", "rgba(34,34,34,.8)");
-        }else {
-             $('#menu').css("color", "#f2f2f2");
-        }
-
-        if(scrolltop >= $(".view-all").offset().top + $(".view-all").height()){
-            $('#menu').css("color", "#f2f2f2");
-        }
-    });
+    // var scrolltop = $(this).scrollTop();
+    // if(scrolltop >= $("#homeSection").offset().top + $("#homeSection").height()) {
+    //     $('#menu').css("color", "rgba(34,34,34,.8)");
+    // }
+    // else {
+    //     $('#menu').css("color", "#f2f2f2");
+    // }
+    //
+    // if(scrolltop >= $(".view-all").offset().top + $(".view-all").height()){
+    //     $('#menu').css("color", "#f2f2f2");
+    // }
 
      pushOpen();
      setBindings();
      workModal();
      allFade();
+
 });
 
 function pushOpen(){
@@ -49,7 +35,7 @@ function pushOpen(){
             $('#menu').find('i').removeClass('fa-times');
             $('#menu').find('i').addClass('fa-bars');
             $('#top-nav').animate({
-                marginTop: "-75px"
+                marginTop: "-60px"
             },250);
             $('#menu').animate({
                 marginTop: "0"
@@ -61,10 +47,10 @@ function pushOpen(){
             $('#menu').find('i').addClass('fa-times');
             $('#top-nav').animate({
                 marginTop: "5px"
-            },250);
+            },300);
             $('#menu').animate({
-                marginTop: "80px"
-            },250);
+                marginTop: "65px"
+            },300);
         }
     });
 
@@ -76,11 +62,11 @@ function pushOpen(){
                 $('#menu').find('i').removeClass('fa-times');
                 $('#menu').find('i').addClass('fa-bars');
                 $('#top-nav').animate({
-                    marginTop: "-75px"
-                },250);
+                    marginTop: "-60px"
+                },300);
                 $('#menu').animate({
                     marginTop: "0"
-                },250);
+                },300);
             }
         }
     })
@@ -96,11 +82,11 @@ function setBindings(){
             $('#menu').find('i').removeClass('fa-times');
             $('#menu').find('i').addClass('fa-bars');
             $('#top-nav').animate({
-                marginTop: "-75px"
-            },250);
+                marginTop: "-60px"
+            },300);
             $('#menu').animate({
                 marginTop: "0"
-            },250);
+            },300);
         }
 
         $('html,body').animate({
@@ -121,11 +107,11 @@ function setBindings(){
         $('#menu').find('i').removeClass('fa-times');
         $('#menu').find('i').addClass('fa-bars');
         $('#top-nav').animate({
-            marginTop: "-75px"
-        },250);
+            marginTop: "-60px"
+        },300);
         $('#menu').animate({
             marginTop: "0"
-        },250);
+        },300);
 
         $('html,body').animate({
             scrollTop: $($(this).attr('href')).offset().top
@@ -154,12 +140,19 @@ function allFade(){
 
 //A popup section that provides a closer look at each individual project.
 function workModal(){
-    $('.work .zoom').click(function(){
+    $('.work .zoom').click( function(){
 
-        $('.openWork').css('display','flex').hide().fadeIn('slow');
-        $('.modal-bg').css('display','block').hide().fadeIn('slow');
-        $('.modal-content').css('display','block').hide().fadeIn('slow');
-        $('.modal-content').css('paddingRight', '17px');
+        $('.openWork').css('display','flex').hide().fadeIn(500);
+        $('.modal-bg').css('display','block').hide().fadeIn(500);
+        $('.modal-content').css('display','block').hide().fadeIn(500);
+        $('body').css('overflow','hidden');
+        $('body > *').css('marginRight', '8px');
+        $('.openWork').css('marginRight', '0');
+        $('.modal-content').css('marginRight', '17px');
+        $('.contactContent').css('paddingRight', '17px');
+        $('#phpNotice').css('paddingRight', '17px');
+        $('#homeSection .social').css('paddingRight', '17px');
+
 
         //Obtains the src of the img in the ".work" element that is closest to the clicked object.
         var url = $(this).closest('.work').find('img.preview').attr('src');
@@ -167,27 +160,26 @@ function workModal(){
         //Removes the file extension from the variable url
         url = url.substring(0, url.length - 4);
         $('.modal-img').prepend('<img id="img" src="' + url +'Full.jpg" />');
-        $('body').css('overflow','hidden');
 
         //wraps links around the image and text to allow the user access to a live view of the web page.
         if(url.indexOf("workOne") > 0){
             $('#img').wrap("<a href='projects/samzorz'></a>");
-            $('.view h3').wrap("<a href='projects/samzorz'></a>");
         }else if(url.indexOf("workTwo") >0){
             $('#img').wrap("<a href='https://brownr0b.github.io'></a>");
-            $('.view h3').wrap("<a href='https://brownr0b.github.io'></a>");
         }else if(url.indexOf("workThree") >0){
             $('#img').wrap("<a href='projects/calmWeather'></a>");
-            $('.view h3').wrap("<a href='projects/calmWeather'></a>");
         }
     });
 
     //Closes the modal if the user clicks outside it.
     $('.modal-bg').click(function(){
-        $('.modal-content').css('paddingRight', '0');
         $('.openWork').fadeOut(500);
         $('.modal-img a').fadeOut(500, function() { $(this).remove(); });
-        $('.view h3').unwrap();
+        $('body > *').css('marginRight', '0');
         $('body').css('overflow','auto');
+        $('.modal-content').css('marginRight', '0');
+        $('.contactContent').css('paddingRight', '0');
+        $('#phpNotice').css('paddingRight', '0');
+        $('#homeSection .social').css('paddingRight', '0');
     });
 }

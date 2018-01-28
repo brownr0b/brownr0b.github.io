@@ -152,7 +152,7 @@ $(document).ready(function(){
                     "<div class='dataTime'><p>As of " + date + " </p></div>" +
                     "<div>" +
                     "<h1 class='cityName'>" + data.name + ", " + data.sys.country + "</h1>" +
-                    "<div class='temp'><h2>" + Math.round(data.main.temp) +  "F / " + Math.round( (data.main.temp - 32) * (5/9)) + "C</h2></div>" +
+                    "<div class='temp'><h2>" + Math.round(data.main.temp) +  "°F / " + Math.round( (data.main.temp - 32) * (5/9)) + "°C</h2></div>" +
                     "<div class='sky'><img src='http://openweathermap.org/img/w/" + data.weather[0].icon + ".png'>" + "<h2>" + data.weather[0].description.charAt(0).toUpperCase() + data.weather[0].description.slice(1).toLowerCase() + "</h2> " + "</div>" +                    "<div class='wind'><h2>Winds: " + wind + " " + Math.round( data.wind.speed ) + "MPH</h2></div>" +
                     "<div class='humidity'><h2>" + data.main.humidity + "% humidity</h2></div>" +
                     "</div>"
@@ -240,7 +240,7 @@ $(document).ready(function(){
                     "<div class='dataTime'><p>As of " + date + " </p></div>" +
                     "<div>" +
                     "<h1 class='cityName'>" + data.name + ", " + data.sys.country + "</h1>" +
-                    "<div class='temp'><h2>" + Math.round(data.main.temp) +  "F / " + Math.round( (data.main.temp - 32) * (5/9)) + "C</h2></div>" +
+                    "<div class='temp'><h2>" + Math.round(data.main.temp) +  "°F / " + Math.round( (data.main.temp - 32) * (5/9)) + "°C</h2></div>" +
                     "<div class='sky'><img src='http://openweathermap.org/img/w/" + data.weather[0].icon + ".png'>" + "<h2>" + data.weather[0].description.charAt(0).toUpperCase() + data.weather[0].description.slice(1).toLowerCase() + "</h2> " + "</div>" +
                     "<div class='wind'><h2>Winds: " + wind + " " + Math.round( data.wind.speed ) + "MPH</h2></div>" +
                     "<div class='humidity'><h2>" + data.main.humidity + "% humidity</h2></div>" +
