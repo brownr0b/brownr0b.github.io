@@ -9,18 +9,22 @@ $(window).load(function(){
 
 $(document).ready(function(){
     $.ajax({
-        url: "https://api.twitch.tv/kraken/streams/samzorz",
+        url: "https://api.twitch.tv/helix/streams?user_login=samzorz",
         dataType: 'json',
         headers: {
             'Client-ID': 'p9p2mqw3zxh97azwtp26yjr89o6q8xk'
         },
         success: function(channel)
         {
-            if (channel["stream"] == null)
-            {
+	console.log(channel);
+            if (channel.data.length <= 0) {
                 $(".live-check").append("<div class='offline'><p>Stream Offline</p></div>");
             } else {
-                $(".live-check").append("<div class='live'><p><i class='fa fa-circle live-ticker' aria-hidden='true'></i>Live on Twitch!</p></div>");
+                if(channel.data[0].type == "live"){
+                    $(".live-check").append("<div class='live'><p><i class='fa fa-circle live-ticker' aria-hidden='true'></i>Live on Twitch!</p></div>");
+                }else{
+                    $(".live-check").append("<div class='offline'><p>Stream Offline</p></div>");
+                }
             }
         }
     });
