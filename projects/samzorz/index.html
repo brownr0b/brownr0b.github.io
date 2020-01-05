@@ -93,16 +93,17 @@ Please help fight against blatant plagiarism of intellectual property. Our creat
                 <div class="panel">
 
                     <div id="tw"></div>
-
-                    <script src="https://embed.twitch.tv/embed/v1.js"></script>
+                    <script src="https://player.twitch.tv/js/embed/v1.js"></script>
                     <script type="text/javascript">
-                        new Twitch.Embed("tw", {
+                        var options = {
                             width: 1145,
                             height: 647,
-                            channel: "samzorz",
-                            layout: "video",
+                            channel: "pestily",
+                            //layout: "video",
                             autoplay: false
-                        });
+                        };
+                        var player = new Twitch.Player("tw", options);
+                        player.setVolume(0.25);
                     </script>
                 </div>
             </div>
@@ -385,7 +386,7 @@ Please help fight against blatant plagiarism of intellectual property. Our creat
             </div>
         </a>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="jquery-ui-1.12.1.custom/external/jquery/jquery.js"></script>
     <script src="jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
     <script src="https://use.fontawesome.com/4f877a53c6.js"></script>
