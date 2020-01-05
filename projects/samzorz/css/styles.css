@@ -128,7 +128,7 @@ body {
 
 .nav-pc {
   width: 100%;
-  height: 90px;
+  height: 75px;
   background-color: #0d0d0d;
   top: 0;
   z-index: 1000;
@@ -140,7 +140,7 @@ body {
     vertical-align: middle;
     float: left;
     margin-left: 20px;
-    line-height: 90px; }
+    line-height: 75px; }
     .nav-pc .logo img {
       vertical-align: middle; }
     .nav-pc .logo a {
@@ -162,7 +162,7 @@ body {
     vertical-align: middle;
     float: right;
     margin-right: 30px;
-    line-height: 90px;
+    line-height: 75px;
     font-size: 16px; }
     .nav-pc .links a {
       color: #e5e5e5;
@@ -257,7 +257,7 @@ body {
       #about #aboutLeft #aboutText h1 {
         font-family: Lombok, sans-serif;
         font-size: 48px;
-        margin-top: 90px;
+        margin-top: 75px;
         margin-bottom: 20px;
         width: 100%; }
       #about #aboutLeft #aboutText h3 {

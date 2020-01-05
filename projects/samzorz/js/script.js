@@ -80,7 +80,7 @@ $(document).ready(function(){
 function setBindings() {
     $('nav.nav-pc a').click(function (e) {
         $('html, body').animate({
-            scrollTop: $($(this).attr('href')).offset().top - 90
+            scrollTop: $($(this).attr('href')).offset().top - 75
         }, 1250, "easeInOutQuint");
         return false;
     });
