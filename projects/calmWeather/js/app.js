@@ -30,6 +30,7 @@ $(document).ready(function(){
 
             //displays a red border around the input if the user tries to search with an empty input field
             $('input[type=text]').css("border", "2px solid red");
+            $(".error").html("Please enter a city to search for.");
         }else{
             weatherZip();
         }
