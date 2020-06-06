@@ -231,6 +231,8 @@ $(document).ready(function(){
                     wind = "NNW"
                 }else if(wind > 348.75 && wind <= 360){
                     wind = "N"
+                }else{
+                    wind = "" //API outputs 'undefined' if a wind direction isn't observed. this circumvents that.
                 }
 
                 var date = new Date(data.dt * 1000); //converts unix time to a readable format
