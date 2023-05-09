@@ -92,16 +92,25 @@ nav a>i{
 #container h1{
     font-size:64px;
     margin-top: 60px;
-    margin-bottom: 0;
+    margin-bottom: 17px;
     text-align: center;
+    max-width: 67%;
+    line-height:50px;
 }
 #container h3{
     font-size:32px;
     text-align: center;
+    max-width: 67%;
+    margin: 17px 0;
 }
 
-.guide{
-    margin: 10px auto;
+#container p{
+    max-width: 67%;
+    text-align: center;
+}
+
+.help{
+    margin: 17px auto;
     font-size: 24px;
     font-weight: 400;
     text-transform: uppercase;
@@ -112,11 +121,23 @@ nav a>i{
     -webkit-transition: all .3s ease;
 }
 
-.guide:hover{
+.help:hover{
     color:rgba(255, 255, 255, 0.5);
     border: 2px solid rgba(255, 255, 255, 0.5);
     transition: all .3s ease;
     -webkit-transition: all .3s ease;
+}
+
+.guide, .guide:visited{
+    color: #5865F2;
+    transition: color .3s ease;
+    -webkit-transition: color .3s ease;
+}
+
+.guide:hover{
+    color: rgba(88, 101, 242, 0.5);
+    transition: color .3s ease;
+    -webkit-transition: color .3s ease;
 }
 
 #background{
