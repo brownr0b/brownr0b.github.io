@@ -19,7 +19,9 @@ $(function(){
     // });
 
     async function loadstats(){
-        const response = await fetch('http://beta.openspy.net/api/servers/bfield1942ps2');
+        const response = await fetch('http://beta.openspy.net/api/servers/bfield1942ps2', {
+            referrerPolicy: "unsafe_url" 
+        });
         const data = await response.json();
         $('.servercount').html(data.length + " active servers");
         const players = data.map(data => data.numplayers).reduce((a, b) => a + b);
