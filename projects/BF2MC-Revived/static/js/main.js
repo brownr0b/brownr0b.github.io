@@ -18,23 +18,21 @@ $(function(){
     //
     // });
 
-    // function loadstats(){
-    //     $.getJSON('http://beta.openspy.net/api/servers/bfield1942ps2', function(data) {
-    //         //console.log(data);
-    //         $('.servercount').html(data.length + " active servers");
-    //         var players = data.map(data => data.numplayers).reduce((a, b) => a + b);
-    //         $('.playercount').html(players + " players in-game");
-    //     });
-    // }
+     function loadstats(){
+         $.getJSON('http://beta.openspy.net/api/servers/bfield1942ps2', function(data) {
+             //console.log(data);
+             $('.counts').html(data.length + " active servers");
+         });
+     }
 
-    async function loadstats(){
-        const response = await fetch('http://beta.openspy.net/api/servers/bfield1942ps2');
-        const data = await response.json();
+    //async function loadstats(){
+        //const response = await fetch('http://beta.openspy.net/api/servers/bfield1942ps2');
+        //const data = await response.json();
         // $('.servercount').html(data.length + " active servers");
-        const players = data.map(data => data.numplayers).reduce((a, b) => a + b);
-        if(players === 1) return $('.counts').html(data.length + " active servers | " + players + " player in-game");
-        if(players != 1) return $('.counts').html(data.length + " active servers | " + players + " players in-game");
-    };
+        //const players = data.map(data => data.numplayers).reduce((a, b) => a + b);
+        //if(players === 1) return $('.counts').html(data.length + " active servers | " + players + " player in-game");
+        //if(players != 1) return $('.counts').html(data.length + " active servers | " + players + " players in-game");
+    //};
 
     loadstats();
 
