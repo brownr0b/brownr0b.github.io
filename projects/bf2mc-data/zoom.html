@@ -83,7 +83,7 @@
                 prefixUrl: 'https://cdnjs.cloudflare.com/ajax/libs/openseadragon/2.4.2/images/', // Path to OpenSeadragon images
                 tileSources: {
                     type: 'image',
-                    url: 'colormaps/Backstab/colormap_4x.png' // URL to your 2x image
+                    url: 'colormaps/Backstab/colormap.png' // URL
                 },
                 showNavigationControl: true, // Optionally show zoom controls
                 showFullPageControl: false, // Disable full page button
@@ -142,8 +142,8 @@
                         }
 
                         return {
-                            x: position.x * 4,
-                            z: position.z * 4,
+                            x: position.x,
+                            z: position.z,
                             type: type,
                             label: label
                         };
