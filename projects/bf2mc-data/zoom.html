@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoomable Image with OpenSeadragon and Adjusted Coordinates</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/openseadragon/2.4.2/openseadragon.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            height: 100%;
+        }
+        #openseadragon-viewer {
+            width: 1024px; /* Set initial viewer size */
+            height: 1024px; /* Set initial viewer size */
+            margin: auto; /* Center the viewer */
+        }
+        .point-marker {
+            position: absolute;
+            transform: translate(-50%, -50%);
+        }
+        .point-marker i {
+            font-size: 16px; /* Adjust icon size as needed */
+        }
+        .point-marker.spawn {
+            background-color: white;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 20px;
+        }
+        .point-marker.vehicle {
+            background-color: green; /* Set color for respawn points */
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 20px;
+        }
+        .point-marker.weapon {
+            background-color: purple; /* Set color for respawn points */
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 20px;
+        }
+        .point-marker.ammo {
+            background-color: blue;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 20px;
+        }
+        .point-marker.health {
+            background-color: red;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 20px;
+        }
+        .point-marker.flag {
+            color: yellow; /* Set color for flag points */
+        }
+    </style>
+</head>
+<body>
+    <div id="openseadragon-viewer"></div>
+
+    <script>
+        $(document).ready(function() {
+            // Initialize OpenSeadragon viewer
+            const viewer = OpenSeadragon({
+                id: 'openseadragon-viewer',
+                prefixUrl: 'https://cdnjs.cloudflare.com/ajax/libs/openseadragon/2.4.2/images/', // Path to OpenSeadragon images
+                tileSources: {
+                    type: 'image',
+                    url: 'colormaps/Backstab/colormap_4x.png' // URL to your 2x image
+                },
+                showNavigationControl: true, // Optionally show zoom controls
+                showFullPageControl: false, // Disable full page button
+                minZoomLevel: 1, // Minimum zoom level (original size)
+                maxZoomLevel: 10, // Maximum zoom level (4x)
+                visibilityRatio: 1, // Ensure image is fully loaded before displaying
+                zoomPerClick: 2, // Zoom factor per click
+                zoomPerScroll: 1.2 // Zoom factor per scroll
+            });
+
+            // Function to load JSON data
+            async function loadJSON() {
+                const response = await fetch('data.json');
+                const data = await response.json();
+                return data;
+            }
+
+            // Function to process JSON data and plot points
+            async function plotPoints() {
+                const jsonData = await loadJSON();
+
+                const coordinates = jsonData.objectInstances
+                    .filter(instance =>
+                        instance.instancePositions &&
+                        instance.instancePositions.length > 0 &&
+                        (!instance.descriptorName.startsWith("Objects/Spawn/TriggerZone")) && // Exclude names starting with "TriggerZone"
+                        (!instance.descriptorName.startsWith("Objects/Spawn/SpawnMarker")) && // Exclude names starting with "SpawnMarker"
+                        (!instance.descriptorName.startsWith("Objects/Spawn/SpawnGroup")) && // Exclude names starting with "SpawnGroup"
+                        (!instance.descriptorName.startsWith("Objects/Spawn/SpawnControllerGroup")) // Exclude names starting with "SpawnControllerGroup"
+                        // (!instance.descriptorName.startsWith("Objects/Spawn/SpawnPoint")) && // Exclude names starting with "SpawnPoint"
+                        // (!instance.descriptorName.startsWith("Objects/Spawn/SpectateCamera")) // Exclude names starting with "SpectateCamera"
+                    )
+
+                    .map(instance => {
+                        const position = instance.instancePositions[0].pos;
+                        const label = instance.descriptorName || "Unknown"; // Default to "Unknown" if descriptorName is missing
+                        let type = ""; // Default type
+
+                        console.log("Descriptor Name:", instance.descriptorName); // Debugging: Output descriptor name
+                        
+                        // Set specific types based on descriptorName prefixes
+                        if (instance.descriptorName.startsWith("Objects/Pickup/AmmoPickup")) {
+                            type = "ammo";
+                        } else if (instance.descriptorName.startsWith("Objects/Pickup/HealthPickup")) {
+                            type = "health";
+                        } else if (instance.descriptorName.startsWith("Objects/Spawn/CapturePoint")) {
+                            type = "flag";
+                        } else if (instance.descriptorName.startsWith("Objects/Spawn/SpawnPoint_")) {
+                            type = "spawn";
+                        } else if (instance.descriptorName.startsWith("Objects/Spawn/SpawnController_")) {
+                            if (instance.descriptor.vehicleClass.startsWith("Objects/vehicles")) {
+                                type = "vehicle";
+                            } else if (instance.descriptor.vehicleClass.startsWith("Objects/Weapons")) {
+                                type = "weapon";
+                            }
+                        }
+
+                        return {
+                            x: position.x * 4,
+                            z: position.z * 4,
+                            type: type,
+                            label: label
+                        };
+                    })
+                    .sort((a, b) => {
+                        // Define a priority order for types
+                        const typePriority = {
+                            "flag": 0,
+                            "spawn": 1,
+                            "vehicle": 2,
+                            "health": 3,
+                            "ammo": 4,
+                            "weapon": 5
+                        };
+
+                        // Sort by type priority (lower index means higher priority)
+                        return typePriority[a.type] - typePriority[b.type];
+                    })
+                    .reduce((acc, current) => {
+                        // Check if there's already a vehicle, weapon, or spawn at the same coordinates
+                        const existingVehicleOrWeapon = acc.find(item => (item.x === current.x && item.z === current.z) && (item.type === "vehicle" || item.type === "weapon"));
+                        const existingSpawn = acc.find(item => item.x === current.x && item.z === current.z && item.type === "spawn");
+
+                        // Only add current item if it's a vehicle or weapon, or there's no vehicle/weapon at the same coordinates
+                        if ((current.type === "vehicle" || current.type === "weapon") || !existingVehicleOrWeapon) {
+                            // Remove any existing spawn at the same coordinates if current item is a vehicle or weapon
+                            if ((current.type === "vehicle" || current.type === "weapon") && existingSpawn) {
+                                acc = acc.filter(item => !(item.x === current.x && item.z === current.z && item.type === "spawn"));
+                            }
+                            acc.push(current);
+                        }
+
+                        return acc;
+                    }, []);
+
+                console.log(coordinates);
+
+                coordinates.forEach(function(coord) {
+                    const marker = document.createElement('div');
+                    marker.className = 'point-marker ' + coord.type; // Dynamically set class based on type
+                    marker.style.left = coord.x + 'px';
+                    marker.style.top = coord.z + 'px';
+
+                    // Create icon element for flag points
+                    if (coord.type === 'flag') {
+                        const icon = document.createElement('i');
+                        icon.className = 'fas fa-flag'; // Font Awesome icon class
+                        marker.appendChild(icon);
+                    }
+
+                    viewer.addOverlay({
+                        element: marker,
+                        location: viewer.viewport.imageToViewportCoordinates(new OpenSeadragon.Point(coord.x, coord.z)),
+                        checkResize: false
+                    });
+                });
+            }
+
+            // Plot points after loading the JSON data
+            plotPoints();
+        });
+    </script>
+</body>
+</html>
