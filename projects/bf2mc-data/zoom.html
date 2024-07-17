@@ -13,116 +13,300 @@
             margin: 0;
             padding: 0;
             overflow: hidden;
+            width: 100%;
             height: 100%;
+            display: flex;
+            justify-content: center;
         }
         #openseadragon-viewer {
             width: 1024px; /* Set initial viewer size */
             height: 1024px; /* Set initial viewer size */
             margin: auto; /* Center the viewer */
+            position: relative; /* Ensure markers are positioned relative to this container */
         }
         .point-marker {
             position: absolute;
             transform: translate(-50%, -50%);
         }
         .point-marker i {
-            font-size: 16px; /* Adjust icon size as needed */
+            font-size: 26px; /* Adjust icon size as needed */
         }
         .point-marker.spawn {
             background-color: white;
+            border: 2px solid black; /* Add black border */
             width: 10px;
             height: 10px;
             border-radius: 50%;
             text-align: center;
             line-height: 20px;
+            z-index: 10;
         }
         .point-marker.vehicle {
-            background-color: green; /* Set color for respawn points */
+            background-color: limegreen; /* Set color for respawn points */
+            border: 2px solid black; /* Add black border */
             width: 10px;
             height: 10px;
             border-radius: 50%;
             text-align: center;
             line-height: 20px;
+            z-index: 15;
         }
         .point-marker.weapon {
             background-color: purple; /* Set color for respawn points */
+            border: 2px solid black; /* Add black border */
             width: 10px;
             height: 10px;
             border-radius: 50%;
             text-align: center;
             line-height: 20px;
+            z-index: 15;
         }
         .point-marker.ammo {
             background-color: blue;
+            border: 2px solid black; /* Add black border */
             width: 10px;
             height: 10px;
             border-radius: 50%;
             text-align: center;
             line-height: 20px;
+            z-index: 15;
         }
         .point-marker.health {
             background-color: red;
+            border: 2px solid black; /* Add black border */
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 20px;
+            z-index: 15;
+        }
+        .point-marker.spectate {
+            background-color: darkorange;
+            border: 2px solid black; /* Add black border */
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 20px;
+            z-index: 15;
+        }
+        .point-marker.trigger {
+            background-color: aqua;
+            border: 2px solid black; /* Add black border */
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 20px;
+            z-index: 10;
+        }
+        .point-marker.group {
+            background-color: silver;
+            border: 2px solid black; /* Add black border */
             width: 10px;
             height: 10px;
             border-radius: 50%;
             text-align: center;
             line-height: 20px;
         }
+        .point-marker.capture {
+            background-color: darkcyan;
+            border: 2px solid black; /* Add black border */
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 20px;
+            z-index: 5;
+        }
         .point-marker.flag {
             color: yellow; /* Set color for flag points */
+            -webkit-text-stroke: 2px black;
+            z-index: 10;
+        }
+        .coordinate-display {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            padding: 10px;
+            /* background-color: rgba(255, 255, 255, 0.7); */
+            /* border: 1px solid #ccc; */
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+            /* pointer-events: none; Allow click events to pass through */
+        }
+        .point-info,
+        .object {
+            margin-top: 10px; /* Add margin between coordinates and point info */
+        }
+        .legend {
+            margin-top: 20px;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-top: 5px;
+        }
+        .legend-item:hover {
+            cursor: pointer;
+
+        }
+        .legend-color {
+            width: 16px;
+            height: 16px;
+            margin: 0 10px;
+            border-radius: 50%;
+        }
+        .legend-text {
+            font-family: Arial, sans-serif;
+        }
+        .fa-toggle-on {
+            font-size: 20px;
+        }
+        .fa-flag {
+            margin: 0 10px;
+            width: 20px;
+            height: 20px;
         }
     </style>
 </head>
 <body>
     <div id="openseadragon-viewer"></div>
+    <div id="coordinate-display" class="coordinate-display">
+        <div id="mouse-coordinates">Mouse (0, 0)</div>
+        <div id="point-info" class="point-info">Point Info: None</div>
+        <div id="object" class="object">Object: None</div>
+        <div class="legend">
+            <div class="legend-item" data-type="group">
+                <i class="fas fa-toggle-on fa-flip-horizontal" style="color: red;"></i>
+                <div class="legend-color" style="background-color: silver; border: 2px solid black;"></div>
+                <div class="legend-text">Spawn Group</div>
+            </div>
+            <div class="legend-item" data-type="capture">
+                <i class="fas fa-toggle-on fa-flip-horizontal" style="color: red;"></i>
+                <div class="legend-color" style="background-color: darkcyan; border: 2px solid black;"></div>
+                <div class="legend-text">Spawn Markers</div>
+            </div>
+            <div class="legend-item" data-type="flag">
+                <i class="fas fa-toggle-on fa-flip-horizontal" style="color: red;"></i>
+                <i class="fas fa-flag" style="color: yellow; -webkit-text-stroke: 2px black; text-align: center;"></i>
+                <div class="legend-text">Capture Points</div>
+            </div>
+            <div class="legend-item" data-type="spawn">
+                <i class="fas fa-toggle-on fa-flip-horizontal" style="color: red;"></i>
+                <div class="legend-color" style="background-color: white; border: 2px solid black;"></div>
+                <div class="legend-text">Spawn Points</div>
+            </div>
+            <div class="legend-item" data-type="trigger">
+                <i class="fas fa-toggle-on fa-flip-horizontal" style="color: red;"></i>
+                <div class="legend-color" style="background-color: aqua; border: 2px solid black;"></div>
+                <div class="legend-text">Trigger Zones</div>
+            </div>
+            <div class="legend-item" data-type="vehicle">
+                <i class="fas fa-toggle-on fa-flip-horizontal" style="color: red;"></i>
+                <div class="legend-color" style="background-color: limegreen; border: 2px solid black;"></div>
+                <div class="legend-text">Vehicle Spawns (Spawn Controller)</div>
+            </div>
+            <div class="legend-item" data-type="weapon">
+                <i class="fas fa-toggle-on fa-flip-horizontal" style="color: red;"></i>
+                <div class="legend-color" style="background-color: purple; border: 2px solid black;"></div>
+                <div class="legend-text">Stationary Weapons (Spawn Controller)</div>
+            </div>
+            <div class="legend-item" data-type="ammo">
+                <i class="fas fa-toggle-on fa-flip-horizontal" style="color: red;"></i>
+                <div class="legend-color" style="background-color: blue; border: 2px solid black;"></div>
+                <div class="legend-text">Ammo Pickups</div>
+            </div>
+            <div class="legend-item" data-type="health">
+                <i class="fas fa-toggle-on fa-flip-horizontal" style="color: red;"></i>
+                <div class="legend-color" style="background-color: red; border: 2px solid black;"></div>
+                <div class="legend-text">Health Pickups</div>
+            </div>
+            <div class="legend-item" data-type="spectate">
+                <i class="fas fa-toggle-on fa-flip-horizontal" style="color: red;"></i>
+                <div class="legend-color" style="background-color: darkorange; border: 2px solid black;"></div>
+                <div class="legend-text">Spectate Cameras</div>
+            </div>
+        </div>
+    </div>
 
     <script>
         $(document).ready(function() {
+            function capitalizeFirstLetter(string) {
+                return string.charAt(0).toUpperCase() + string.slice(1);
+            }
+
             // Initialize OpenSeadragon viewer
             const viewer = OpenSeadragon({
                 id: 'openseadragon-viewer',
                 prefixUrl: 'https://cdnjs.cloudflare.com/ajax/libs/openseadragon/2.4.2/images/', // Path to OpenSeadragon images
                 tileSources: {
                     type: 'image',
-                    url: 'colormaps/Backstab/colormap.png' // URL
+                    url: 'colormaps/Backstab/colormap.png' // URL to your 2x image
                 },
                 showNavigationControl: true, // Optionally show zoom controls
                 showFullPageControl: false, // Disable full page button
                 minZoomLevel: 1, // Minimum zoom level (original size)
-                maxZoomLevel: 10, // Maximum zoom level (4x)
+                maxZoomLevel: 16, // Maximum zoom level (4x)
                 visibilityRatio: 1, // Ensure image is fully loaded before displaying
                 zoomPerClick: 2, // Zoom factor per click
                 zoomPerScroll: 1.2 // Zoom factor per scroll
             });
 
+            const mouseCoordinates = document.getElementById('mouse-coordinates');
+            const pointInfo = document.getElementById('point-info');
+            const object = document.getElementById('object');
+
+            let coordinates = [];
+
+            // Create MouseTracker for precise mouse movement tracking
+            const mouseTracker = new OpenSeadragon.MouseTracker({
+                element: viewer.canvas,
+                moveHandler: function(event) {
+                    const viewportPoint = viewer.viewport.pointFromPixel(event.position);
+                    const imagePoint = viewer.viewport.viewportToImageCoordinates(viewportPoint);
+
+                    // Update mouse coordinate display
+                    mouseCoordinates.textContent = `Mouse (${Math.round(imagePoint.x)}, ${Math.round(imagePoint.y)})`;
+                },
+                exitHandler: function(event) {
+                    // Optionally handle mouse leaving viewer
+                    mouseCoordinates.textContent = 'Mouse (0, 0)'; // Reset display when mouse leaves
+                }
+            }).setTracking(true);
+
             // Function to load JSON data
-            async function loadJSON() {
-                const response = await fetch('data.json');
-                const data = await response.json();
-                return data;
+            // async function loadJSON() {
+            //     const response = await fetch('data.json');
+            //     const data = await response.json();
+            //     return data;
+            // }
+
+            function loadJSON(callback) {
+                $.getJSON('data.json', function(data) {
+                    callback(data);
+                });
             }
 
             // Function to process JSON data and plot points
-            async function plotPoints() {
-                const jsonData = await loadJSON();
+            function plotPoints() {
+                loadJSON(function(jsonData) {
 
-                const coordinates = jsonData.objectInstances
-                    .filter(instance =>
-                        instance.instancePositions &&
-                        instance.instancePositions.length > 0 &&
-                        (!instance.descriptorName.startsWith("Objects/Spawn/TriggerZone")) && // Exclude names starting with "TriggerZone"
-                        (!instance.descriptorName.startsWith("Objects/Spawn/SpawnMarker")) && // Exclude names starting with "SpawnMarker"
-                        (!instance.descriptorName.startsWith("Objects/Spawn/SpawnGroup")) && // Exclude names starting with "SpawnGroup"
-                        (!instance.descriptorName.startsWith("Objects/Spawn/SpawnControllerGroup")) // Exclude names starting with "SpawnControllerGroup"
-                        // (!instance.descriptorName.startsWith("Objects/Spawn/SpawnPoint")) && // Exclude names starting with "SpawnPoint"
-                        // (!instance.descriptorName.startsWith("Objects/Spawn/SpectateCamera")) // Exclude names starting with "SpectateCamera"
-                    )
-
+                coordinates = jsonData.objectInstances
+                    // .filter(instance =>
+                    //     instance.instancePositions &&
+                    //     instance.instancePositions.length > 0 &&
+                    //     // (!instance.descriptorName.startsWith("Objects/Spawn/CapturePoint")) && // Exclude names starting with "TriggerZone"
+                    //     // (!instance.descriptorName.startsWith("Objects/Spawn/SpawnMarker")) && // Exclude names starting with "SpawnMarker"
+                    //     // (!instance.descriptorName.startsWith("Objects/Spawn/SpawnGroup")) && // Exclude names starting with "SpawnGroup"
+                    //     // (!instance.descriptorName.startsWith("Objects/Spawn/SpawnControllerGroup")) && // Exclude names starting with "SpawnControllerGroup"
+                    //     // (!instance.descriptorName.startsWith("Objects/Spawn/SpawnPoint")) && // Exclude names starting with "SpawnPoint"
+                    // )
                     .map(instance => {
                         const position = instance.instancePositions[0].pos;
                         const label = instance.descriptorName || "Unknown"; // Default to "Unknown" if descriptorName is missing
                         let type = ""; // Default type
-
-                        console.log("Descriptor Name:", instance.descriptorName); // Debugging: Output descriptor name
                         
                         // Set specific types based on descriptorName prefixes
                         if (instance.descriptorName.startsWith("Objects/Pickup/AmmoPickup")) {
@@ -139,71 +323,133 @@
                             } else if (instance.descriptor.vehicleClass.startsWith("Objects/Weapons")) {
                                 type = "weapon";
                             }
+                        } else if (instance.descriptorName.startsWith("Objects/Spawn/SpectateCamera")) {
+                            type = "spectate";
+                        } else if (instance.descriptorName.startsWith("Objects/Spawn/TriggerZone")) {
+                            type = "trigger";
+                        } else if (instance.descriptorName.startsWith("Objects/Spawn/SpawnGroup")) {
+                            type = "group";
+                        } else if (instance.descriptorName.startsWith("Objects/Spawn/SpawnMarker")) {
+                            type = "capture";
                         }
 
                         return {
                             x: position.x,
                             z: position.z,
                             type: type,
-                            label: label
+                            label: label.replace(/:$/, '')
                         };
                     })
-                    .sort((a, b) => {
-                        // Define a priority order for types
-                        const typePriority = {
-                            "flag": 0,
-                            "spawn": 1,
-                            "vehicle": 2,
-                            "health": 3,
-                            "ammo": 4,
-                            "weapon": 5
-                        };
+                    // .sort((a, b) => {
+                    //     // Define a priority order for types
+                    //     const typePriority = {
+                    //         "flag": 0,
+                    //         "spawn": 1,
+                    //         "trigger": 2,
+                    //         "vehicle": 3,
+                    //         "health": 4,
+                    //         "ammo": 5,
+                    //         "weapon": 6,
+                    //         "spectate": 7
+                    //     };
 
-                        // Sort by type priority (lower index means higher priority)
-                        return typePriority[a.type] - typePriority[b.type];
-                    })
-                    .reduce((acc, current) => {
-                        // Check if there's already a vehicle, weapon, or spawn at the same coordinates
-                        const existingVehicleOrWeapon = acc.find(item => (item.x === current.x && item.z === current.z) && (item.type === "vehicle" || item.type === "weapon"));
-                        const existingSpawn = acc.find(item => item.x === current.x && item.z === current.z && item.type === "spawn");
+                    //     // Sort by type priority (lower index means higher priority)
+                    //     return typePriority[a.type] - typePriority[b.type];
+                    // })
+                    // .reduce((acc, current) => {
+                    //     // Check if there's already a vehicle, weapon, or spawn at the same coordinates
+                    //     const existingVehicleOrWeapon = acc.find(item => (item.x === current.x && item.z === current.z) && (item.type === "vehicle" || item.type === "weapon"));
+                    //     const existingSpawn = acc.find(item => item.x === current.x && item.z === current.z && item.type === "spawn");
 
-                        // Only add current item if it's a vehicle or weapon, or there's no vehicle/weapon at the same coordinates
-                        if ((current.type === "vehicle" || current.type === "weapon") || !existingVehicleOrWeapon) {
-                            // Remove any existing spawn at the same coordinates if current item is a vehicle or weapon
-                            if ((current.type === "vehicle" || current.type === "weapon") && existingSpawn) {
-                                acc = acc.filter(item => !(item.x === current.x && item.z === current.z && item.type === "spawn"));
-                            }
-                            acc.push(current);
+                    //     // Only add current item if it's a vehicle or weapon, or there's no vehicle/weapon at the same coordinates
+                    //     if ((current.type === "vehicle" || current.type === "weapon") || !existingVehicleOrWeapon) {
+                    //         // Remove any existing spawn at the same coordinates if current item is a vehicle or weapon
+                    //         if ((current.type === "vehicle" || current.type === "weapon") && existingSpawn) {
+                    //             acc = acc.filter(item => !(item.x === current.x && item.z === current.z && item.type === "spawn"));
+                    //         }
+                    //         acc.push(current);
+                    //     }
+
+                    //     return acc;
+                    // }, []);
+
+                    coordinates.forEach(function(coord) {
+                        const marker = document.createElement('div');
+                        marker.className = 'point-marker ' + coord.type; // Dynamically set class based on type
+                        marker.style.left = coord.x + 'px';
+                        marker.style.top = coord.z + 'px';
+                        marker.setAttribute("data-x", coord.x);
+                        marker.setAttribute("data-y", coord.z);
+                        marker.style.display = 'none';
+
+                        // Create icon element for flag points
+                        if (coord.type === 'flag') {
+                            const icon = document.createElement('i');
+                            icon.className = 'fas fa-flag'; // Font Awesome icon class
+                            marker.appendChild(icon);
                         }
 
-                        return acc;
-                    }, []);
-
-                console.log(coordinates);
-
-                coordinates.forEach(function(coord) {
-                    const marker = document.createElement('div');
-                    marker.className = 'point-marker ' + coord.type; // Dynamically set class based on type
-                    marker.style.left = coord.x + 'px';
-                    marker.style.top = coord.z + 'px';
-
-                    // Create icon element for flag points
-                    if (coord.type === 'flag') {
-                        const icon = document.createElement('i');
-                        icon.className = 'fas fa-flag'; // Font Awesome icon class
-                        marker.appendChild(icon);
-                    }
-
-                    viewer.addOverlay({
-                        element: marker,
-                        location: viewer.viewport.imageToViewportCoordinates(new OpenSeadragon.Point(coord.x, coord.z)),
-                        checkResize: false
+                        viewer.addOverlay({
+                            element: marker,
+                            location: viewer.viewport.imageToViewportCoordinates(new OpenSeadragon.Point(coord.x, coord.z)),
+                            checkResize: false,
+                            placement: 'TOP'
+                        });
                     });
                 });
             }
+            
 
-            // Plot points after loading the JSON data
-            plotPoints();
+            // Select the marker element
+            const marker = document.querySelector('.point-marker');
+
+            $(document).on('mouseover', '.point-marker', function() {
+                const classNames = $(this).attr('class').split(' '); // Get all classes
+                let type = 'unknown'; // Default type
+
+                // Find the type class (which is not 'point-marker')
+                classNames.forEach(className => {
+                    if (className !== 'point-marker') {
+                        type = className;
+                    }
+                });
+
+                const dataX = $(this).data('x');
+                const dataY = $(this).data('y');
+
+                const instance = coordinates.find(item => item.type === type && item.x == dataX && item.z == dataY);
+
+                // Capitalize the first letter of the type
+                const capitalizedType = capitalizeFirstLetter(type);
+
+                pointInfo.textContent = `Point Info: ${capitalizedType} (${dataX}, ${dataY})`;
+                object.textContent = `Object: ${instance.label}`;
+            });
+
+            $(document).on('mouseout', '.point-marker', function() {
+                pointInfo.textContent = `Point Info: None`;
+                object.textContent = `Object: None`;
+            });
+
+            $(document).on('click', '.legend-item', function() {
+                let datatype = $(this).data('type')
+
+                // Toggle display for elements with the specified class
+                $(`.point-marker.${datatype}`).toggle();
+
+                // Toggle classes and styles for child elements with class .fa-toggle-on
+                $(this).find('.fa-toggle-on').toggleClass('fa-flip-horizontal').css('color', function(index, color) {
+                    // Check the current computed color style
+                    if (this.style.color === 'red' || !color) {
+                        return 'green'; // Toggle to green if red or no inline color
+                    } else {
+                        return 'red'; // Toggle to red if current color is green
+                    }
+                });
+            });
+
+            // Call the function to plot points after the viewer is ready
+            viewer.addHandler('open', plotPoints);
         });
     </script>
 </body>
