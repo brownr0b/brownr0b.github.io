@@ -184,20 +184,20 @@
             // Initialize OpenSeadragon viewer
             const viewer = OpenSeadragon({
                 id: 'openseadragon-viewer',
-                prefixUrl: 'https://cdnjs.cloudflare.com/ajax/libs/openseadragon/2.4.2/images/', // Path to OpenSeadragon images
+                prefixUrl: 'https://cdnjs.cloudflare.com/ajax/libs/openseadragon/2.4.2/images/',
                 tileSources: {
                     type: 'image',
-                    url: '../images/colormaps/backstab/colormap.png' // URL to your 2x image
+                    url: '../images/colormaps/backstab/colormap.png'
                 },
-                showNavigationControl: true, // Optionally show zoom controls
-                showFullPageControl: false, // Disable full page button
+                showNavigationControl: true,
+                showFullPageControl: false,
                 defaultZoomLevel: 0,
-                minZoomLevel: 0, // Minimum zoom level (original size)
-                maxZoomLevel: 6, // Maximum zoom level (4x)
-                visibilityRatio: 1, // Ensure image is fully loaded before displaying
+                minZoomLevel: 0,
+                maxZoomLevel: 6,
+                visibilityRatio: 1,
                 constrainDuringPan: true,
-                zoomPerClick: 2, // Zoom factor per click
-                zoomPerScroll: 1.2 // Zoom factor per scroll
+                zoomPerClick: 2, 
+                zoomPerScroll: 1.2
             });
 
             const mouseCoordinates = document.getElementById('mouse-coordinates');
