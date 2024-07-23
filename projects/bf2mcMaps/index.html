@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Battlefield 2: Modern Combat Maps</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="static/css/styles.css"/>
 </head>
@@ -21,57 +20,5 @@
             </div>
         </a>
     </div>
-    <script>
-        $(function() {
-            const preload = [
-                'images/colormaps/backstab/colormap.png',
-                'images/colormaps/bridgetoofar/colormap.png',
-                'images/colormaps/coldfront/colormap.png',
-                'images/colormaps/dammage/colormap.png',
-                'images/colormaps/deadlypass/colormap.png',
-                'images/colormaps/harboredge/colormap.png',
-                'images/colormaps/honor/colormap.png',
-                'images/colormaps/littlebigeye/colormap.png',
-                'images/colormaps/missilecrisis/colormap.png',
-                'images/colormaps/russianborder/colormap.png',
-                'images/colormaps/specialop/colormap.png',
-                'images/colormaps/theblackgold/colormap.png',
-                'images/colormaps/thenest/colormap.png'
-            ];
-
-            preload.forEach(src => {
-                const img = new Image();
-                img.src = src; // This starts loading the image into the cache
-            });
-        });
-
-        document.addEventListener('DOMContentLoaded', () => {
-            // URLs of the background images
-            const backgroundUrls = [
-                'images/CQ.png',
-                'images/CTF.png'
-            ];
-
-            // Function to check if an image has loaded
-            function loadBackgroundImage(url) {
-                return new Promise((resolve, reject) => {
-                    const img = new Image();
-                    img.src = url;
-                    img.onload = () => resolve();
-                    img.onerror = () => reject();
-                });
-            }
-
-            // Load all background images and then show the body
-            Promise.all(backgroundUrls.map(loadBackgroundImage))
-                .then(() => {
-                    document.body.style.display = 'block';
-                })
-                .catch(() => {
-                    document.body.style.display = 'block';
-                });
-        });
-
-    </script>
 </body>
 </html>
