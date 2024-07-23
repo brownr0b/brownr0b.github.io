@@ -2,76 +2,181 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Battlefield 2: Modern Combat Maps</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="static/css/styles.css"/>
+    <title>thebobbybrown.</title>
+    <!--<link href="https://fonts.googleapis.com/css?family=Raleway:100,300,500,700" rel="stylesheet">-->
+    <!--<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">-->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.0.10/font-awesome-animation.min.css">
+    <link rel="stylesheet" href="css/styles.min.css">
+    <script defer src="js/fontawesome-all.js"></script>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=1.0">
 </head>
 <body>
-    <div id="container">
-        <a class="button" href="conquest/">
-            <div id="cqLeft">
-                <p>CONQUEST</p>
+
+    <nav id="top-nav">
+        <div class="top-container">
+            <a href="#aboutSection">About</a>
+            <a href="#workSection">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <div class="overlay">
+        <nav id="menu">
+            <i class="fa fa-bars"></i>
+        </nav>
+        <section id="homeSection">
+            <div class="homeContent">
+                <h1>Bobby Brown</h1>
             </div>
-        </a>
-        <a class="button" href="capturetheflag/">
-            <div id="ctfRight">
-                <p>CTF</p>
+            <div class="social">
+                <div>
+                    <a href="https://www.linkedin.com/in/therobertbrown/" target="_blank" class="fa-stack fa-lg" title="linkedin">
+                        <i class="fa fa-square fa-stack-2x"></i>
+                        <i class="fab fa-linkedin-in fa-stack-1x fa-inverse"></i>
+                    </a>
+                    <a href="https://twitter.com/geeuhteen" target="_blank" class="fa-stack fa-lg">
+                        <i class="fa fa-square fa-stack-2x"></i>
+                        <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                    </a>
+                    <a href="https://www.instagram.com/thebobbybrown/" target="_blank" class="fa-stack fa-lg">
+                        <i class="fa fa-square fa-stack-2x"></i>
+                        <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+                    </a>
+                </div>
             </div>
-        </a>
+            <div class="drop">
+                <a href="#aboutSection" class="nav fa-stack fa-lg faa-vertical faa-slow animated">
+                    <i class="fa fa-square fa-stack-2x"></i>
+                    <i class="fa fa-angle-down fa-stack-1x fa-inverse" aria-hidden="true"></i>
+                </a>
+            </div>
+        </section>
+        <section id="aboutSection">
+            <div class="aboutContent">
+                <div class="aboutInfo">
+                    <p>Hi, I'm Bobby! I am a Front End Developer from Indianapolis, Indiana. I develop various types of projects and use several types of languages/libraries like HTML, CSS, SASS, Javascript, jQuery, and Node.js. I also have brief experience with PHP and MySQL.</p>
+                    <p> If you are interested in working with me, or simply have an inquiry - please contact me <a href="#contact" class="nav">here</a>.</p>
+                </div>
+                <div class="aboutStuff">
+                    <div class="stuff">
+                        <div class="aboutImg"><i class="far fa-pencil" aria-hidden="true"></i></div>
+                        <h1>Experience</h1>
+                        <p>4+ years in school learning the ins and outs of front end development.</p>
+                        <p>View some of the courses I've taken <a href="https://www.linkedin.com/in/therobertbrown">here</a>.</p>
+                    </div>
+                    <div class="stuff">
+                        <div class="aboutImg"><i class="far fa-code" aria-hidden="true"></i></div>
+                        <h1>Hand-coded</h1>
+                        <p>Personalized experience on a per-client basis.</p>
+                    </div>
+                    <div class="stuff">
+                        <div class="aboutImg"><i class="far fa-mobile" aria-hidden="true"></i></div>
+                        <h1>Responsive Design</h1>
+                        <p>Ensuring that your website looks its best regardless of the device it's viewed on.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="workSection">
+            <div class="workContent">
+                <h1>Projects</h1>
+                <div class="workPics">
+                    <div class="work shadow">
+                        <img class="preview" src="img/work/workOne.jpg">
+                        <div class="zoom">
+                            <i class="far fa-search-plus" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="work shadow">
+                        <img class="preview" src="img/work/workTwo.jpg">
+                        <div class="zoom">
+                            <i class="far fa-search-plus" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="work shadow">
+                        <img class="preview" src="img/work/workThree.jpg">
+                        <div class="zoom">
+                            <i class="far fa-search-plus" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="view-all"><a href="all.html" class="all">View All</a></div>
+            </div>
+        </section>
+        <section id="contact">
+            <div class="contactContent">
+                <div class="contact">
+                    <h1>
+                        <script type="text/javascript">
+                            var phrases = [
+                                "Let's Do Something",
+                                "Hit Me Up",
+                                "Contact Me",
+                                "Questions?"
+                            ];
+                            var scripts = document.getElementsByTagName('script');
+                            var this_script = scripts[scripts.length - 1];
+                            this_script.parentNode.replaceChild(document.createTextNode(phrases[Math.floor(Math.random()*phrases.length)]), this_script);
+                        </script>
+                    </h1>
+                    <div class="form-container">
+                        <form action="confirmation.html" method="post">
+                            <input name="name" type="text" class="feedback-input" placeholder="Name" id="name" required>
+                            <input name="email" type="email" class="feedback-input" id="email" placeholder="Email" required>
+                            <input name="subject" type="text" class="feedback-input" id="subject" placeholder="Subject" required>
+                            <textarea name="comments" class="feedback-input" id="comment" placeholder="Comment" required></textarea>
+                            <input type="submit" name="send" value="SEND" id="button"/>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div id="phpNotice">
+                <h2>Github Pages is not a full-featured web host, therefore it will not execute PHP.</h2>
+                <h2>To contact me, please send an email to <a href="mailto:robertambrown@gmail.com">robertambrown@gmail.com</a>. Thank you.</h2>
+            </div>
+        </section>
+        <section id="footer">
+            <div class="social">
+                <div id="top">
+                    <a href="#homeSection" class="nav"><i class="fa fa-angle-up" aria-hidden="true"></i></a>
+                </div>
+                <div class="media">
+                    <a href="https://www.linkedin.com/in/therobertbrown/" target="_blank" class="fa-stack fa-lg">
+                        <i class="fa fa-square fa-stack-2x"></i>
+                        <i class="fab fa-linkedin-in fa-stack-1x  fa-inverse"></i>
+                    </a>
+                    <a href="https://twitter.com/geeuhteen" target="_blank" class="fa-stack fa-lg">
+                        <i class="fa fa-square fa-stack-2x"></i>
+                        <i class="fab fa-twitter fa-stack-1x  fa-inverse"></i>
+                    </a>
+                    <a href="https://www.instagram.com/thebobbybrown/" target="_blank" class="fa-stack fa-lg">
+                        <i class="fa fa-square fa-stack-2x"></i>
+                        <i class="fab fa-instagram fa-stack-1x  fa-inverse"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
     </div>
-    <script>
-        $(function() {
-            const preload = [
-                'images/colormaps/backstab/colormap.png',
-                'images/colormaps/bridgetoofar/colormap.png',
-                'images/colormaps/coldfront/colormap.png',
-                'images/colormaps/dammage/colormap.png',
-                'images/colormaps/deadlypass/colormap.png',
-                'images/colormaps/harboredge/colormap.png',
-                'images/colormaps/honor/colormap.png',
-                'images/colormaps/littlebigeye/colormap.png',
-                'images/colormaps/missilecrisis/colormap.png',
-                'images/colormaps/russianborder/colormap.png',
-                'images/colormaps/specialop/colormap.png',
-                'images/colormaps/theblackgold/colormap.png',
-                'images/colormaps/thenest/colormap.png'
-            ];
 
-            preload.forEach(src => {
-                const img = new Image();
-                img.src = src; // This starts loading the image into the cache
-            });
-        });
+    <div id="side"></div>
+    <div class="loading"></div>
 
-        document.addEventListener('DOMContentLoaded', () => {
-            // URLs of the background images
-            const backgroundUrls = [
-                'images/CQ.png',
-                'images/CTF.png'
-            ];
+    <div class="openWork">
+        <div class="modal-bg"></div>
+        <div class="modal-content">
+            <div class="modal-img"></div>
+        </div>
+    </div>
 
-            // Function to check if an image has loaded
-            function loadBackgroundImage(url) {
-                return new Promise((resolve, reject) => {
-                    const img = new Image();
-                    img.src = url;
-                    img.onload = () => resolve();
-                    img.onerror = () => reject();
-                });
-            }
-
-            // Load all background images and then show the body
-            Promise.all(backgroundUrls.map(loadBackgroundImage))
-                .then(() => {
-                    document.body.style.display = 'block';
-                })
-                .catch(() => {
-                    document.body.style.display = 'block';
-                });
-        });
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script
+            src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+            integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+            crossorigin="anonymous">
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.6/SmoothScroll.min.js"></script>
+    <script src="js/script.min.js"></script>
 </body>
 </html>
