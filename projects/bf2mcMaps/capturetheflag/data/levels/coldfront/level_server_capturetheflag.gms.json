@@ -1,0 +1,2412 @@
+{
+    "objectInstances": [
+        {
+            "descriptorName": "Objects/Pickup/AmmoPickup_Server_11:",
+            "descriptor": {
+                "pickupClass": "Objects/Pickup/Modifiers.god:Modifiers",
+                "timeoutTime": "999.000000",
+                "state": "AmmoBox",
+                "className": "ServerPickupWrapperDescriptor"
+            },
+            "instancePositions": [
+                {
+                    "pos": {
+                        "x": 497.636902,
+                        "y": 6.86,
+                        "z": 382.785553
+                    },
+                    "rot": {
+                        "x": 0.0,
+                        "y": 3.074153,
+                        "z": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "descriptorName": "Objects/Pickup/AmmoPickup_Server_12:",
+            "descriptor": {
+                "pickupClass": "Objects/Pickup/Modifiers.god:Modifiers",
+                "timeoutTime": "999.000000",
+                "state": "AmmoBox",
+                "className": "ServerPickupWrapperDescriptor"
+            },
+            "instancePositions": [
+                {
+                    "pos": {
+                        "x": 528.663025,
+                        "y": 6.94,
+                        "z": 386.018188
+                    },
+                    "rot": {
+                        "x": 0.0,
+                        "y": -0.159,
+                        "z": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "descriptorName": "Objects/Pickup/AmmoPickup_Server_13:",
+            "descriptor": {
+                "pickupClass": "Objects/Pickup/Modifiers.god:Modifiers",
+                "timeoutTime": "999.000000",
+                "state": "AmmoBox",
+                "className": "ServerPickupWrapperDescriptor"
+            },
+            "instancePositions": [
+                {
+                    "pos": {
+                        "x": 557.527466,
+                        "y": 8.36,
+                        "z": 331.901306
+                    },
+                    "rot": {
+                        "x": 0.0,
+                        "y": 3.09685,
+                        "z": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "descriptorName": "Objects/Pickup/AmmoPickup_Server_8:",
+            "descriptor": {
+                "pickupClass": "Objects/Pickup/Modifiers.god:Modifiers",
+                "timeoutTime": "999.000000",
+                "state": "AmmoBox",
+                "className": "ServerPickupWrapperDescriptor"
+            },
+            "instancePositions": [
+                {
+                    "pos": {
+                        "x": 592.172241,
+                        "y": 7.64,
+                        "z": 337.67215
+                    },
+                    "rot": {
+                        "x": 0.0,
+                        "y": -0.392871,
+                        "z": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "descriptorName": "Objects/Pickup/CTFbasen_Server_0:",
+            "descriptor": {
+                "pickupClass": "Objects/Pickup/Modifiers.god:Modifiers",
+                "timeoutTime": "999.000000",
+                "state": "Flagbase",
+                "className": "ServerPickupWrapperDescriptor"
+            },
+            "instancePositions": [
+                {
+                    "pos": {
+                        "x": 486.079803,
+                        "y": 12.203355,
+                        "z": 382.785645
+                    },
+                    "rot": {
+                        "x": 0.0,
+                        "y": -1.570796,
+                        "z": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "descriptorName": "Objects/Pickup/CTFbasen_Server_1:",
+            "descriptor": {
+                "pickupClass": "Objects/Pickup/Modifiers.god:Modifiers",
+                "timeoutTime": "999.000000",
+                "state": "Flagbase",
+                "className": "ServerPickupWrapperDescriptor"
+            },
+            "instancePositions": [
+                {
+                    "pos": {
+                        "x": 604.267029,
+                        "y": 11.793271,
+                        "z": 349.587677
+                    },
+                    "rot": {
+                        "x": 0.0,
+                        "y": 1.262439,
+                        "z": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "descriptorName": "Objects/Pickup/HealthPickup_Server_1:",
+            "descriptor": {
+                "pickupClass": "Objects/Pickup/Modifiers.god:Modifiers",
+                "timeoutTime": "999.000000",
+                "state": "MedicLocker",
+                "className": "ServerPickupWrapperDescriptor"
+            },
+            "instancePositions": [
+                {
+                    "pos": {
+                        "x": 482.721466,
+                        "y": 8.024102,
+                        "z": 339.071503
+                    },
+                    "rot": {
+                        "x": 0.0,
+                        "y": -3.061509,
+                        "z": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "descriptorName": "Objects/Pickup/HealthPickup_Server_10:",
+            "descriptor": {
+                "pickupClass": "Objects/Pickup/Modifiers.god:Modifiers",
+                "timeoutTime": "999.000000",
+                "state": "MedicLocker",
+                "className": "ServerPickupWrapperDescriptor"
+            },
+            "instancePositions": [
+                {
+                    "pos": {
+                        "x": 518.789185,
+                        "y": 8.193937,
+                        "z": 341.974182
+                    },
+                    "rot": {
+                        "x": 0.0,
+                        "y": -1.602461,
+                        "z": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "descriptorName": "Objects/Pickup/HealthPickup_Server_11:",
+            "descriptor": {
+                "pickupClass": "Objects/Pickup/Modifiers.god:Modifiers",
+                "timeoutTime": "999.000000",
+                "state": "MedicLocker",
+                "className": "ServerPickupWrapperDescriptor"
+            },
+            "instancePositions": [
+                {
+                    "pos": {
+                        "x": 591.950256,
+                        "y": 7.6,
+                        "z": 339.32608
+                    },
+                    "rot": {
+                        "x": 0.0,
+                        "y": -0.314212,
+                        "z": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "descriptorName": "Objects/Pickup/HealthPickup_Server_12:",
+            "descriptor": {
+                "pickupClass": "Objects/Pickup/Modifiers.god:Modifiers",
+                "timeoutTime": "999.000000",
+                "state": "MedicLocker",
+                "className": "ServerPickupWrapperDescriptor"
+            },
+            "instancePositions": [
+                {
+                    "pos": {
+                        "x": 562.639221,
+                        "y": 7.505184,
+                        "z": 373.779388
+                    },
+                    "rot": {
+                        "x": 0.0,
+                        "y": 0.417572,
+                        "z": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "descriptorName": "Objects/Pickup/HealthPickup_Server_18:",
+            "descriptor": {
+                "pickupClass": "Objects/Pickup/Modifiers.god:Modifiers",
+                "timeoutTime": "999.000000",
+                "state": "MedicLocker",
+                "className": "ServerPickupWrapperDescriptor"
+            },
+            "instancePositions": [
+                {
+                    "pos": {
+                        "x": 529.031982,
+                        "y": 6.94,
+                        "z": 387.586609
+                    },
+                    "rot": {
+                        "x": 0.0,
+                        "y": 0.064616,
+                        "z": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "descriptorName": "Objects/Pickup/HealthPickup_Server_19:",
+            "descriptor": {
+                "pickupClass": "Objects/Pickup/Modifiers.god:Modifiers",
+                "timeoutTime": "999.000000",
+                "state": "MedicLocker",
+                "className": "ServerPickupWrapperDescriptor"
+            },
+            "instancePositions": [
+                {
+                    "pos": {
+                        "x": 579.470825,
+                        "y": 7.511304,
+                        "z": 392.119415
+                    },
+                    "rot": {
+                        "x": 0.0,
+                        "y": -6.329839,
+                        "z": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "descriptorName": "Objects/Pickup/HealthPickup_Server_6:",
+            "descriptor": {
+                "pickupClass": "Objects/Pickup/Modifiers.god:Modifiers",
+                "timeoutTime": "999.000000",
+                "state": "MedicLocker",
+                "className": "ServerPickupWrapperDescriptor"
+            },
+            "instancePositions": [
+                {
+                    "pos": {
+                        "x": 497.168945,
+                        "y": 6.86,
+                        "z": 381.449524
+                    },
+                    "rot": {
+                        "x": 0.0,
+                        "y": -3.095184,
+                        "z": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "descriptorName": "Objects/Pickup/HealthPickup_Server_7:",
+            "descriptor": {
+                "pickupClass": "Objects/Pickup/Modifiers.god:Modifiers",
+                "timeoutTime": "999.000000",
+                "state": "MedicLocker",
+                "className": "ServerPickupWrapperDescriptor"
+            },
+            "instancePositions": [
+                {
+                    "pos": {
+                        "x": 557.066345,
+                        "y": 8.349857,
+                        "z": 329.996338
+                    },
+                    "rot": {
+                        "x": 0.0,
+                        "y": 3.19683,
+                        "z": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "descriptorName": "Objects/Spawn/SpawnController_Server_0:",
+            "descriptor": {
+                "version": "3",
+                "name": "scCHVehicle_01",
+                "spawnPoint": "spCHVehicle_01",
+                "vehicleClass": "Objects/vehicles/Land/CH_Bmd3/TEM/Ch_Bmd3_TEM.god:Gamplay_CH_BMD3",
+                "maximumNumberOfVehicles": "1",
+                "minimumRespawnDistance": "12.000000",
+                "minRespawnTimeRange": "30.000000",
+                "maxRespawnTimeRange": "30.000000",
+                "secondsUntilAbandoned": "15.000000",
+                "keepAliveRadius": "20.000000",
+                "timeUntilAbandonedIsDestroyed": "15.000000",
+                "spawnAreaRadius": "2.000000",
+                "brother": "",
+                "className": "SpawnControllerDescriptor"
+            },
+            "instancePositions": [
+                {
+                    "pos": {
+                        "x": 455.023987,
+                        "y": 8.001219,
+                        "z": 348.914398
+                    },
+                    "rot": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "descriptorName": "Objects/Spawn/SpawnController_Server_1:",
+            "descriptor": {
+                "version": "3",
+                "name": "scEUVehicle_01",
+                "spawnPoint": "spEUVehicle_01",
+                "vehicleClass": "Objects/vehicles/Land/EU_Strf90/TEM/EU_Strf90.god:Gameplay_strf90",
+                "maximumNumberOfVehicles": "1",
+                "minimumRespawnDistance": "12.000000",
+                "minRespawnTimeRange": "30.000000",
+                "maxRespawnTimeRange": "30.000000",
+                "secondsUntilAbandoned": "15.000000",
+                "keepAliveRadius": "20.000000",
+                "timeUntilAbandonedIsDestroyed": "15.000000",
+                "spawnAreaRadius": "2.000000",
+                "brother": "",
+                "className": "SpawnControllerDescriptor"
+            },
+            "instancePositions": [
+                {
+                    "pos": {
+                        "x": 603.378479,
+                        "y": 10.439637,
+                        "z": 397.881622
+                    },
+                    "rot": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "descriptorName": "Objects/Spawn/SpawnGroup_Server_0:",
+            "descriptor": {
+                "name": "spawnGroup0",
+                "spawnPoints": [],
+                "className": "SpawnGroupDescriptor"
+            },
+            "instancePositions": [
+                {
+                    "pos": {
+                        "x": 486.079803,
+                        "y": 13.297786,
+                        "z": 382.785645
+                    },
+                    "rot": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "descriptorName": "Objects/Spawn/SpawnGroup_Server_1:",
+            "descriptor": {
+                "name": "spawnGroup1",
+                "spawnPoints": [],
+                "className": "SpawnGroupDescriptor"
+            },
+            "instancePositions": [
+                {
+                    "pos": {
+                        "x": 604.267029,
+                        "y": 12.864567,
+                        "z": 349.587677
+                    },
+                    "rot": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "descriptorName": "Objects/Spawn/SpawnMarker_Server_0:",
+            "descriptor": {
+                "version": "4",
+                "name": "spawnMarker0",
+                "description": "CP_CHINESE_TEAM",
+                "spawnGroup": "spawnGroup0",
+                "initialOwnerTeam": "1",
+                "cameraTransform": {
+                    "xAxis": {
+                        "x": -0.990268,
+                        "y": 0.0,
+                        "z": -0.139173
+                    },
+                    "yAxis": {
+                        "x": -0.050328,
+                        "y": 0.932324,
+                        "z": 0.358105
+                    },
+                    "zAxis": {
+                        "x": 0.129754,
+                        "y": 0.361625,
+                        "z": -0.92325
+                    },
+                    "translation": {
+                        "x": 546.832031,
+                        "y": 19.747999,
+                        "z": 331.059021
+                    }
+                },
+                "index": "1",
+                "showFlagPole": "1",
+                "className": "ServerSpawnMarkerDescriptor"
+            },
+            "instancePositions": [
+                {
+                    "pos": {
+                        "x": 486.079803,
+                        "y": 12.742598,
+                        "z": 382.785645
+                    },
+                    "rot": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "descriptorName": "Objects/Spawn/SpawnMarker_Server_1:",
+            "descriptor": {
+                "version": "4",
+                "name": "spawnMarker1",
+                "description": "CP_EU_TEAM",
+                "spawnGroup": "spawnGroup1",
+                "initialOwnerTeam": "2",
+                "cameraTransform": {
+                    "xAxis": {
+                        "x": -0.990268,
+                        "y": 0.0,
+                        "z": -0.139173
+                    },
+                    "yAxis": {
+                        "x": -0.050328,
+                        "y": 0.932324,
+                        "z": 0.358105
+                    },
+                    "zAxis": {
+                        "x": 0.129754,
+                        "y": 0.361625,
+                        "z": -0.92325
+                    },
+                    "translation": {
+                        "x": 546.832031,
+                        "y": 19.747999,
+                        "z": 331.059021
+                    }
+                },
+                "index": "2",
+                "showFlagPole": "1",
+                "className": "ServerSpawnMarkerDescriptor"
+            },
+            "instancePositions": [
+                {
+                    "pos": {
+                        "x": 604.267029,
+                        "y": 12.332514,
+                        "z": 349.587677
+                    },
+                    "rot": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "descriptorName": "Objects/Spawn/SpawnPoint_Server_0:",
+            "descriptor": {
+                "name": "spCHBase1",
+                "transform": {
+                    "xAxis": {
+                        "x": 1.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "yAxis": {
+                        "x": 0.0,
+                        "y": 1.0,
+                        "z": 0.0
+                    },
+                    "zAxis": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 1.0
+                    },
+                    "translation": {
+                        "x": 196.0,
+                        "y": 2.0,
+                        "z": 836.0
+                    }
+                },
+                "className": "SpawnPointDescriptor"
+            },
+            "instancePositions": [
+                {
+                    "pos": {
+                        "x": 511.72052,
+                        "y": 8.294,
+                        "z": 336.73172
+                    },
+                    "rot": {
+                        "x": 0.0,
+                        "y": 2.251974,
+                        "z": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "descriptorName": "Objects/Spawn/SpawnPoint_Server_1:",
+            "descriptor": {
+                "name": "spEUBase1",
+                "transform": {
+                    "xAxis": {
+                        "x": 1.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "yAxis": {
+                        "x": 0.0,
+                        "y": 1.0,
+                        "z": 0.0
+                    },
+                    "zAxis": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 1.0
+                    },
+                    "translation": {
+                        "x": 196.0,
+                        "y": 2.0,
+                        "z": 836.0
+                    }
+                },
+                "className": "SpawnPointDescriptor"
+            },
+            "instancePositions": [
+                {
+                    "pos": {
+                        "x": 570.74176,
+                        "y": 7.611,
+                        "z": 381.751404
+                    },
+                    "rot": {
+                        "x": 0.0,
+                        "y": -5.001877,
+                        "z": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "descriptorName": "Objects/Spawn/SpawnPoint_Server_10:",
+            "descriptor": {
+                "name": "spCHBase2",
+                "transform": {
+                    "xAxis": {
+                        "x": 1.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "yAxis": {
+                        "x": 0.0,
+                        "y": 1.0,
+                        "z": 0.0
+                    },
+                    "zAxis": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 1.0
+                    },
+                    "translation": {
+                        "x": 196.0,
+                        "y": 2.0,
+                        "z": 836.0
+                    }
+                },
+                "className": "SpawnPointDescriptor"
+            },
+            "instancePositions": [
+                {
+                    "pos": {
+                        "x": 509.824249,
+                        "y": 8.293,
+                        "z": 336.907227
+                    },
+                    "rot": {
+                        "x": 0.0,
+                        "y": -2.680993,
+                        "z": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "descriptorName": "Objects/Spawn/SpawnPoint_Server_11:",
+            "descriptor": {
+                "name": "spCHBase3",
+                "transform": {
+                    "xAxis": {
+                        "x": 1.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "yAxis": {
+                        "x": 0.0,
+                        "y": 1.0,
+                        "z": 0.0
+                    },
+                    "zAxis": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 1.0
+                    },
+                    "translation": {
+                        "x": 196.0,
+                        "y": 2.0,
+                        "z": 836.0
+                    }
+                },
+                "className": "SpawnPointDescriptor"
+            },
+            "instancePositions": [
+                {
+                    "pos": {
+                        "x": 484.952972,
+                        "y": 8.1,
+                        "z": 347.813995
+                    },
+                    "rot": {
+                        "x": 0.0,
+                        "y": 2.291059,
+                        "z": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "descriptorName": "Objects/Spawn/SpawnPoint_Server_12:",
+            "descriptor": {
+                "name": "spEUBase6",
+                "transform": {
+                    "xAxis": {
+                        "x": 1.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "yAxis": {
+                        "x": 0.0,
+                        "y": 1.0,
+                        "z": 0.0
+                    },
+                    "zAxis": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 1.0
+                    },
+                    "translation": {
+                        "x": 196.0,
+                        "y": 2.0,
+                        "z": 836.0
+                    }
+                },
+                "className": "SpawnPointDescriptor"
+            },
+            "instancePositions": [
+                {
+                    "pos": {
+                        "x": 564.741577,
+                        "y": 7.605,
+                        "z": 378.745514
+                    },
+                    "rot": {
+                        "x": 0.0,
+                        "y": -1.449069,
+                        "z": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "descriptorName": "Objects/Spawn/SpawnPoint_Server_13:",
+            "descriptor": {
+                "name": "spEUBase7",
+                "transform": {
+                    "xAxis": {
+                        "x": 1.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "yAxis": {
+                        "x": 0.0,
+                        "y": 1.0,
+                        "z": 0.0
+                    },
+                    "zAxis": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 1.0
+                    },
+                    "translation": {
+                        "x": 196.0,
+                        "y": 2.0,
+                        "z": 836.0
+                    }
+                },
+                "className": "SpawnPointDescriptor"
+            },
+            "instancePositions": [
+                {
+                    "pos": {
+                        "x": 568.905273,
+                        "y": 7.611,
+                        "z": 397.488953
+                    },
+                    "rot": {
+                        "x": 0.0,
+                        "y": 2.41508,
+                        "z": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "descriptorName": "Objects/Spawn/SpawnPoint_Server_14:",
+            "descriptor": {
+                "name": "spEUBase8",
+                "transform": {
+                    "xAxis": {
+                        "x": 1.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "yAxis": {
+                        "x": 0.0,
+                        "y": 1.0,
+                        "z": 0.0
+                    },
+                    "zAxis": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 1.0
+                    },
+                    "translation": {
+                        "x": 196.0,
+                        "y": 2.0,
+                        "z": 836.0
+                    }
+                },
+                "className": "SpawnPointDescriptor"
+            },
+            "instancePositions": [
+                {
+                    "pos": {
+                        "x": 574.664001,
+                        "y": 9.35,
+                        "z": 322.864594
+                    },
+                    "rot": {
+                        "x": 0.0,
+                        "y": -1.239138,
+                        "z": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "descriptorName": "Objects/Spawn/SpawnPoint_Server_15:",
+            "descriptor": {
+                "name": "spEUBase9",
+                "transform": {
+                    "xAxis": {
+                        "x": 1.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "yAxis": {
+                        "x": 0.0,
+                        "y": 1.0,
+                        "z": 0.0
+                    },
+                    "zAxis": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 1.0
+                    },
+                    "translation": {
+                        "x": 196.0,
+                        "y": 2.0,
+                        "z": 836.0
+                    }
+                },
+                "className": "SpawnPointDescriptor"
+            },
+            "instancePositions": [
+                {
+                    "pos": {
+                        "x": 574.497925,
+                        "y": 9.35,
+                        "z": 332.214874
+                    },
+                    "rot": {
+                        "x": 0.0,
+                        "y": 3.802243,
+                        "z": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "descriptorName": "Objects/Spawn/SpawnPoint_Server_16:",
+            "descriptor": {
+                "name": "spEUBase12",
+                "transform": {
+                    "xAxis": {
+                        "x": 1.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "yAxis": {
+                        "x": 0.0,
+                        "y": 1.0,
+                        "z": 0.0
+                    },
+                    "zAxis": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 1.0
+                    },
+                    "translation": {
+                        "x": 196.0,
+                        "y": 2.0,
+                        "z": 836.0
+                    }
+                },
+                "className": "SpawnPointDescriptor"
+            },
+            "instancePositions": [
+                {
+                    "pos": {
+                        "x": 587.578369,
+                        "y": 7.611,
+                        "z": 384.720764
+                    },
+                    "rot": {
+                        "x": 0.0,
+                        "y": -1.738004,
+                        "z": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "descriptorName": "Objects/Spawn/SpawnPoint_Server_17:",
+            "descriptor": {
+                "name": "spEUBase10",
+                "transform": {
+                    "xAxis": {
+                        "x": 1.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "yAxis": {
+                        "x": 0.0,
+                        "y": 1.0,
+                        "z": 0.0
+                    },
+                    "zAxis": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 1.0
+                    },
+                    "translation": {
+                        "x": 196.0,
+                        "y": 2.0,
+                        "z": 836.0
+                    }
+                },
+                "className": "SpawnPointDescriptor"
+            },
+            "instancePositions": [
+                {
+                    "pos": {
+                        "x": 566.117798,
+                        "y": 7.949754,
+                        "z": 374.549286
+                    },
+                    "rot": {
+                        "x": 0.0,
+                        "y": -2.48291,
+                        "z": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "descriptorName": "Objects/Spawn/SpawnPoint_Server_18:",
+            "descriptor": {
+                "name": "spEUBase11",
+                "transform": {
+                    "xAxis": {
+                        "x": 1.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "yAxis": {
+                        "x": 0.0,
+                        "y": 1.0,
+                        "z": 0.0
+                    },
+                    "zAxis": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 1.0
+                    },
+                    "translation": {
+                        "x": 196.0,
+                        "y": 2.0,
+                        "z": 836.0
+                    }
+                },
+                "className": "SpawnPointDescriptor"
+            },
+            "instancePositions": [
+                {
+                    "pos": {
+                        "x": 577.487671,
+                        "y": 12.311,
+                        "z": 395.175781
+                    },
+                    "rot": {
+                        "x": 0.0,
+                        "y": -2.519633,
+                        "z": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "descriptorName": "Objects/Spawn/SpawnPoint_Server_19:",
+            "descriptor": {
+                "name": "spCHBase4",
+                "transform": {
+                    "xAxis": {
+                        "x": 1.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "yAxis": {
+                        "x": 0.0,
+                        "y": 1.0,
+                        "z": 0.0
+                    },
+                    "zAxis": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 1.0
+                    },
+                    "translation": {
+                        "x": 196.0,
+                        "y": 2.0,
+                        "z": 836.0
+                    }
+                },
+                "className": "SpawnPointDescriptor"
+            },
+            "instancePositions": [
+                {
+                    "pos": {
+                        "x": 517.262878,
+                        "y": 8.016,
+                        "z": 387.54245
+                    },
+                    "rot": {
+                        "x": 0.0,
+                        "y": 2.965277,
+                        "z": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "descriptorName": "Objects/Spawn/SpawnPoint_Server_2:",
+            "descriptor": {
+                "name": "spCHVehicle_01",
+                "transform": {
+                    "xAxis": {
+                        "x": 1.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "yAxis": {
+                        "x": 0.0,
+                        "y": 1.0,
+                        "z": 0.0
+                    },
+                    "zAxis": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 1.0
+                    },
+                    "translation": {
+                        "x": 196.0,
+                        "y": 2.0,
+                        "z": 836.0
+                    }
+                },
+                "className": "SpawnPointDescriptor"
+            },
+            "instancePositions": [
+                {
+                    "pos": {
+                        "x": 455.023987,
+                        "y": 7.00086,
+                        "z": 348.914398
+                    },
+                    "rot": {
+                        "x": 0.0,
+                        "y": 0.559238,
+                        "z": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "descriptorName": "Objects/Spawn/SpawnPoint_Server_20:",
+            "descriptor": {
+                "name": "spCHBase5",
+                "transform": {
+                    "xAxis": {
+                        "x": 1.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "yAxis": {
+                        "x": 0.0,
+                        "y": 1.0,
+                        "z": 0.0
+                    },
+                    "zAxis": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 1.0
+                    },
+                    "translation": {
+                        "x": 196.0,
+                        "y": 2.0,
+                        "z": 836.0
+                    }
+                },
+                "className": "SpawnPointDescriptor"
+            },
+            "instancePositions": [
+                {
+                    "pos": {
+                        "x": 527.201477,
+                        "y": 8.016,
+                        "z": 372.057373
+                    },
+                    "rot": {
+                        "x": 0.0,
+                        "y": -0.501941,
+                        "z": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "descriptorName": "Objects/Spawn/SpawnPoint_Server_21:",
+            "descriptor": {
+                "name": "spCHBase6",
+                "transform": {
+                    "xAxis": {
+                        "x": 1.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "yAxis": {
+                        "x": 0.0,
+                        "y": 1.0,
+                        "z": 0.0
+                    },
+                    "zAxis": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 1.0
+                    },
+                    "translation": {
+                        "x": 196.0,
+                        "y": 2.0,
+                        "z": 836.0
+                    }
+                },
+                "className": "SpawnPointDescriptor"
+            },
+            "instancePositions": [
+                {
+                    "pos": {
+                        "x": 482.427124,
+                        "y": 12.805878,
+                        "z": 333.750458
+                    },
+                    "rot": {
+                        "x": 0.0,
+                        "y": -7.086316,
+                        "z": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "descriptorName": "Objects/Spawn/SpawnPoint_Server_22:",
+            "descriptor": {
+                "name": "spCHBase7",
+                "transform": {
+                    "xAxis": {
+                        "x": 1.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "yAxis": {
+                        "x": 0.0,
+                        "y": 1.0,
+                        "z": 0.0
+                    },
+                    "zAxis": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 1.0
+                    },
+                    "translation": {
+                        "x": 196.0,
+                        "y": 2.0,
+                        "z": 836.0
+                    }
+                },
+                "className": "SpawnPointDescriptor"
+            },
+            "instancePositions": [
+                {
+                    "pos": {
+                        "x": 479.456451,
+                        "y": 8.1,
+                        "z": 332.711334
+                    },
+                    "rot": {
+                        "x": 0.0,
+                        "y": -0.001913,
+                        "z": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "descriptorName": "Objects/Spawn/SpawnPoint_Server_23:",
+            "descriptor": {
+                "name": "spCHBase8",
+                "transform": {
+                    "xAxis": {
+                        "x": 1.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "yAxis": {
+                        "x": 0.0,
+                        "y": 1.0,
+                        "z": 0.0
+                    },
+                    "zAxis": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 1.0
+                    },
+                    "translation": {
+                        "x": 196.0,
+                        "y": 2.0,
+                        "z": 836.0
+                    }
+                },
+                "className": "SpawnPointDescriptor"
+            },
+            "instancePositions": [
+                {
+                    "pos": {
+                        "x": 490.430359,
+                        "y": 12.517754,
+                        "z": 347.337006
+                    },
+                    "rot": {
+                        "x": 0.0,
+                        "y": 3.419477,
+                        "z": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "descriptorName": "Objects/Spawn/SpawnPoint_Server_24:",
+            "descriptor": {
+                "name": "spCHBase9",
+                "transform": {
+                    "xAxis": {
+                        "x": 1.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "yAxis": {
+                        "x": 0.0,
+                        "y": 1.0,
+                        "z": 0.0
+                    },
+                    "zAxis": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 1.0
+                    },
+                    "translation": {
+                        "x": 196.0,
+                        "y": 2.0,
+                        "z": 836.0
+                    }
+                },
+                "className": "SpawnPointDescriptor"
+            },
+            "instancePositions": [
+                {
+                    "pos": {
+                        "x": 482.659546,
+                        "y": 8.1,
+                        "z": 332.565826
+                    },
+                    "rot": {
+                        "x": 0.0,
+                        "y": -0.003201,
+                        "z": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "descriptorName": "Objects/Spawn/SpawnPoint_Server_25:",
+            "descriptor": {
+                "name": "spCHBase10",
+                "transform": {
+                    "xAxis": {
+                        "x": 1.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "yAxis": {
+                        "x": 0.0,
+                        "y": 1.0,
+                        "z": 0.0
+                    },
+                    "zAxis": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 1.0
+                    },
+                    "translation": {
+                        "x": 196.0,
+                        "y": 2.0,
+                        "z": 836.0
+                    }
+                },
+                "className": "SpawnPointDescriptor"
+            },
+            "instancePositions": [
+                {
+                    "pos": {
+                        "x": 503.700745,
+                        "y": 8.293,
+                        "z": 336.888763
+                    },
+                    "rot": {
+                        "x": 0.0,
+                        "y": 2.569276,
+                        "z": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "descriptorName": "Objects/Spawn/SpawnPoint_Server_26:",
+            "descriptor": {
+                "name": "spCHBase11",
+                "transform": {
+                    "xAxis": {
+                        "x": 1.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "yAxis": {
+                        "x": 0.0,
+                        "y": 1.0,
+                        "z": 0.0
+                    },
+                    "zAxis": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 1.0
+                    },
+                    "translation": {
+                        "x": 196.0,
+                        "y": 2.0,
+                        "z": 836.0
+                    }
+                },
+                "className": "SpawnPointDescriptor"
+            },
+            "instancePositions": [
+                {
+                    "pos": {
+                        "x": 481.788239,
+                        "y": 12.585675,
+                        "z": 345.65274
+                    },
+                    "rot": {
+                        "x": 0.0,
+                        "y": -0.239563,
+                        "z": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "descriptorName": "Objects/Spawn/SpawnPoint_Server_27:",
+            "descriptor": {
+                "name": "spCHBase12",
+                "transform": {
+                    "xAxis": {
+                        "x": 1.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "yAxis": {
+                        "x": 0.0,
+                        "y": 1.0,
+                        "z": 0.0
+                    },
+                    "zAxis": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 1.0
+                    },
+                    "translation": {
+                        "x": 196.0,
+                        "y": 2.0,
+                        "z": 836.0
+                    }
+                },
+                "className": "SpawnPointDescriptor"
+            },
+            "instancePositions": [
+                {
+                    "pos": {
+                        "x": 494.322418,
+                        "y": 12.517754,
+                        "z": 347.027863
+                    },
+                    "rot": {
+                        "x": 0.0,
+                        "y": 3.898,
+                        "z": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "descriptorName": "Objects/Spawn/SpawnPoint_Server_3:",
+            "descriptor": {
+                "name": "spEUVehicle_01",
+                "transform": {
+                    "xAxis": {
+                        "x": 1.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "yAxis": {
+                        "x": 0.0,
+                        "y": 1.0,
+                        "z": 0.0
+                    },
+                    "zAxis": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 1.0
+                    },
+                    "translation": {
+                        "x": 196.0,
+                        "y": 2.0,
+                        "z": 836.0
+                    }
+                },
+                "className": "SpawnPointDescriptor"
+            },
+            "instancePositions": [
+                {
+                    "pos": {
+                        "x": 603.378479,
+                        "y": 9.440018,
+                        "z": 397.881622
+                    },
+                    "rot": {
+                        "x": 0.0,
+                        "y": -3.480031,
+                        "z": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "descriptorName": "Objects/Spawn/SpawnPoint_Server_6:",
+            "descriptor": {
+                "name": "spEUBase4",
+                "transform": {
+                    "xAxis": {
+                        "x": 1.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "yAxis": {
+                        "x": 0.0,
+                        "y": 1.0,
+                        "z": 0.0
+                    },
+                    "zAxis": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 1.0
+                    },
+                    "translation": {
+                        "x": 196.0,
+                        "y": 2.0,
+                        "z": 836.0
+                    }
+                },
+                "className": "SpawnPointDescriptor"
+            },
+            "instancePositions": [
+                {
+                    "pos": {
+                        "x": 586.871216,
+                        "y": 7.973767,
+                        "z": 398.336456
+                    },
+                    "rot": {
+                        "x": 0.0,
+                        "y": 3.152034,
+                        "z": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "descriptorName": "Objects/Spawn/SpawnPoint_Server_7:",
+            "descriptor": {
+                "name": "spEUBase5",
+                "transform": {
+                    "xAxis": {
+                        "x": 1.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "yAxis": {
+                        "x": 0.0,
+                        "y": 1.0,
+                        "z": 0.0
+                    },
+                    "zAxis": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 1.0
+                    },
+                    "translation": {
+                        "x": 196.0,
+                        "y": 2.0,
+                        "z": 836.0
+                    }
+                },
+                "className": "SpawnPointDescriptor"
+            },
+            "instancePositions": [
+                {
+                    "pos": {
+                        "x": 570.612,
+                        "y": 12.411729,
+                        "z": 390.248596
+                    },
+                    "rot": {
+                        "x": 0.0,
+                        "y": -3.258474,
+                        "z": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "descriptorName": "Objects/Spawn/SpawnPoint_Server_8:",
+            "descriptor": {
+                "name": "spEUBase2",
+                "transform": {
+                    "xAxis": {
+                        "x": 1.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "yAxis": {
+                        "x": 0.0,
+                        "y": 1.0,
+                        "z": 0.0
+                    },
+                    "zAxis": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 1.0
+                    },
+                    "translation": {
+                        "x": 196.0,
+                        "y": 2.0,
+                        "z": 836.0
+                    }
+                },
+                "className": "SpawnPointDescriptor"
+            },
+            "instancePositions": [
+                {
+                    "pos": {
+                        "x": 570.581787,
+                        "y": 7.611,
+                        "z": 384.253784
+                    },
+                    "rot": {
+                        "x": 0.0,
+                        "y": 1.463611,
+                        "z": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "descriptorName": "Objects/Spawn/SpawnPoint_Server_9:",
+            "descriptor": {
+                "name": "spEUBase3",
+                "transform": {
+                    "xAxis": {
+                        "x": 1.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "yAxis": {
+                        "x": 0.0,
+                        "y": 1.0,
+                        "z": 0.0
+                    },
+                    "zAxis": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 1.0
+                    },
+                    "translation": {
+                        "x": 196.0,
+                        "y": 2.0,
+                        "z": 836.0
+                    }
+                },
+                "className": "SpawnPointDescriptor"
+            },
+            "instancePositions": [
+                {
+                    "pos": {
+                        "x": 564.023499,
+                        "y": 7.605,
+                        "z": 384.643219
+                    },
+                    "rot": {
+                        "x": 0.0,
+                        "y": -1.989826,
+                        "z": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "descriptorName": "Objects/Spawn/SpectateCamera_Server_0:",
+            "descriptor": {
+                "version": "2",
+                "description": "Cold Front",
+                "isFollowingAction": "0",
+                "range": "50.000000",
+                "className": "ServerSpectateCameraDescriptor"
+            },
+            "instancePositions": [
+                {
+                    "pos": {
+                        "x": 546.832031,
+                        "y": 19.748333,
+                        "z": 331.058594
+                    },
+                    "rot": {
+                        "x": 0.37001,
+                        "y": 6.143559,
+                        "z": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "descriptorName": "Objects/Spawn/TriggerZone_Server_1:",
+            "descriptor": {
+                "version": "5",
+                "name": "tz_health_1",
+                "type": "health",
+                "buildUpTime": "0.000000",
+                "coolDownTime": "0.000000",
+                "isRepeating": "1",
+                "repeatTime": "1.000000",
+                "iconName": "Symbols/p_health.tga",
+                "iconOffset": {
+                    "x": 0.0,
+                    "y": 0.7,
+                    "z": 0.0
+                },
+                "zonePrimitives": [
+                    {
+                        "ClassName": "SphereZonePrimitive",
+                        "version": "2",
+                        "offset": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
+                        },
+                        "radius": "1.500000"
+                    }
+                ],
+                "triggers": [],
+                "className": "ServerTriggerZoneDescriptor"
+            },
+            "instancePositions": [
+                {
+                    "pos": {
+                        "x": 529.031982,
+                        "y": 7.311999,
+                        "z": 387.586609
+                    },
+                    "rot": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "descriptorName": "Objects/Spawn/TriggerZone_Server_10:",
+            "descriptor": {
+                "version": "5",
+                "name": "tz_ammo_10",
+                "type": "ammo",
+                "buildUpTime": "0.000000",
+                "coolDownTime": "0.000000",
+                "isRepeating": "1",
+                "repeatTime": "1.000000",
+                "iconName": "Symbols/p_ammo.tga",
+                "iconOffset": {
+                    "x": 0.0,
+                    "y": 0.7,
+                    "z": 0.0
+                },
+                "zonePrimitives": [
+                    {
+                        "ClassName": "SphereZonePrimitive",
+                        "version": "2",
+                        "offset": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
+                        },
+                        "radius": "1.500000"
+                    }
+                ],
+                "triggers": [],
+                "className": "ServerTriggerZoneDescriptor"
+            },
+            "instancePositions": [
+                {
+                    "pos": {
+                        "x": 557.198792,
+                        "y": 8.872983,
+                        "z": 332.288025
+                    },
+                    "rot": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "descriptorName": "Objects/Spawn/TriggerZone_Server_11:",
+            "descriptor": {
+                "version": "5",
+                "name": "tz_health_11",
+                "type": "health",
+                "buildUpTime": "0.000000",
+                "coolDownTime": "0.000000",
+                "isRepeating": "1",
+                "repeatTime": "1.000000",
+                "iconName": "Symbols/p_health.tga",
+                "iconOffset": {
+                    "x": 0.0,
+                    "y": 0.7,
+                    "z": 0.0
+                },
+                "zonePrimitives": [
+                    {
+                        "ClassName": "SphereZonePrimitive",
+                        "version": "2",
+                        "offset": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
+                        },
+                        "radius": "1.500000"
+                    }
+                ],
+                "triggers": [],
+                "className": "ServerTriggerZoneDescriptor"
+            },
+            "instancePositions": [
+                {
+                    "pos": {
+                        "x": 562.639221,
+                        "y": 7.755,
+                        "z": 373.779388
+                    },
+                    "rot": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "descriptorName": "Objects/Spawn/TriggerZone_Server_2:",
+            "descriptor": {
+                "version": "5",
+                "name": "tz_health_2",
+                "type": "health",
+                "buildUpTime": "0.000000",
+                "coolDownTime": "0.000000",
+                "isRepeating": "1",
+                "repeatTime": "1.000000",
+                "iconName": "Symbols/p_health.tga",
+                "iconOffset": {
+                    "x": 0.0,
+                    "y": 0.7,
+                    "z": 0.0
+                },
+                "zonePrimitives": [
+                    {
+                        "ClassName": "SphereZonePrimitive",
+                        "version": "2",
+                        "offset": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
+                        },
+                        "radius": "1.500000"
+                    }
+                ],
+                "triggers": [],
+                "className": "ServerTriggerZoneDescriptor"
+            },
+            "instancePositions": [
+                {
+                    "pos": {
+                        "x": 579.470825,
+                        "y": 7.883,
+                        "z": 392.119415
+                    },
+                    "rot": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "descriptorName": "Objects/Spawn/TriggerZone_Server_35:",
+            "descriptor": {
+                "version": "5",
+                "name": "tz_health_35",
+                "type": "health",
+                "buildUpTime": "0.000000",
+                "coolDownTime": "0.000000",
+                "isRepeating": "1",
+                "repeatTime": "1.000000",
+                "iconName": "Symbols/p_health.tga",
+                "iconOffset": {
+                    "x": 0.0,
+                    "y": 0.7,
+                    "z": 0.0
+                },
+                "zonePrimitives": [
+                    {
+                        "ClassName": "SphereZonePrimitive",
+                        "version": "2",
+                        "offset": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
+                        },
+                        "radius": "1.500000"
+                    }
+                ],
+                "triggers": [],
+                "className": "ServerTriggerZoneDescriptor"
+            },
+            "instancePositions": [
+                {
+                    "pos": {
+                        "x": 497.168945,
+                        "y": 7.232,
+                        "z": 381.449524
+                    },
+                    "rot": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "descriptorName": "Objects/Spawn/TriggerZone_Server_36:",
+            "descriptor": {
+                "version": "5",
+                "name": "tz_ammo_36",
+                "type": "ammo",
+                "buildUpTime": "0.000000",
+                "coolDownTime": "0.000000",
+                "isRepeating": "1",
+                "repeatTime": "1.000000",
+                "iconName": "Symbols/p_ammo.tga",
+                "iconOffset": {
+                    "x": 0.0,
+                    "y": 0.7,
+                    "z": 0.0
+                },
+                "zonePrimitives": [
+                    {
+                        "ClassName": "SphereZonePrimitive",
+                        "version": "2",
+                        "offset": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
+                        },
+                        "radius": "1.500000"
+                    }
+                ],
+                "triggers": [],
+                "className": "ServerTriggerZoneDescriptor"
+            },
+            "instancePositions": [
+                {
+                    "pos": {
+                        "x": 592.613098,
+                        "y": 8.152983,
+                        "z": 337.420746
+                    },
+                    "rot": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "descriptorName": "Objects/Spawn/TriggerZone_Server_37:",
+            "descriptor": {
+                "version": "5",
+                "name": "tz_health_37",
+                "type": "health",
+                "buildUpTime": "0.000000",
+                "coolDownTime": "0.000000",
+                "isRepeating": "1",
+                "repeatTime": "1.000000",
+                "iconName": "Symbols/p_health.tga",
+                "iconOffset": {
+                    "x": 0.0,
+                    "y": 0.7,
+                    "z": 0.0
+                },
+                "zonePrimitives": [
+                    {
+                        "ClassName": "SphereZonePrimitive",
+                        "version": "2",
+                        "offset": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
+                        },
+                        "radius": "1.500000"
+                    }
+                ],
+                "triggers": [],
+                "className": "ServerTriggerZoneDescriptor"
+            },
+            "instancePositions": [
+                {
+                    "pos": {
+                        "x": 557.066345,
+                        "y": 8.722,
+                        "z": 329.996338
+                    },
+                    "rot": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "descriptorName": "Objects/Spawn/TriggerZone_Server_46:",
+            "descriptor": {
+                "version": "5",
+                "name": "tzdamage01",
+                "type": "damage",
+                "buildUpTime": "0.300000",
+                "coolDownTime": "0.100000",
+                "isRepeating": "1",
+                "repeatTime": "1.000000",
+                "iconName": "",
+                "iconOffset": {
+                    "x": 0.0,
+                    "y": 2.0,
+                    "z": 0.0
+                },
+                "zonePrimitives": [
+                    {
+                        "ClassName": "SphereZonePrimitive",
+                        "version": "2",
+                        "offset": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
+                        },
+                        "radius": "1.000000"
+                    }
+                ],
+                "triggers": [],
+                "className": "ServerTriggerZoneDescriptor"
+            },
+            "instancePositions": [
+                {
+                    "pos": {
+                        "x": 595.76825,
+                        "y": 8.204,
+                        "z": 355.810455
+                    },
+                    "rot": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "descriptorName": "Objects/Spawn/TriggerZone_Server_47:",
+            "descriptor": {
+                "version": "5",
+                "name": "tzdamage02",
+                "type": "damage",
+                "buildUpTime": "0.300000",
+                "coolDownTime": "0.100000",
+                "isRepeating": "1",
+                "repeatTime": "1.000000",
+                "iconName": "",
+                "iconOffset": {
+                    "x": 0.0,
+                    "y": 2.0,
+                    "z": 0.0
+                },
+                "zonePrimitives": [
+                    {
+                        "ClassName": "SphereZonePrimitive",
+                        "version": "2",
+                        "offset": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
+                        },
+                        "radius": "1.000000"
+                    }
+                ],
+                "triggers": [],
+                "className": "ServerTriggerZoneDescriptor"
+            },
+            "instancePositions": [
+                {
+                    "pos": {
+                        "x": 529.618042,
+                        "y": 15.097498,
+                        "z": 383.427917
+                    },
+                    "rot": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "descriptorName": "Objects/Spawn/TriggerZone_Server_48:",
+            "descriptor": {
+                "version": "5",
+                "name": "tzdamage03",
+                "type": "damage",
+                "buildUpTime": "0.300000",
+                "coolDownTime": "0.100000",
+                "isRepeating": "1",
+                "repeatTime": "1.000000",
+                "iconName": "",
+                "iconOffset": {
+                    "x": 0.0,
+                    "y": 2.0,
+                    "z": 0.0
+                },
+                "zonePrimitives": [
+                    {
+                        "ClassName": "SphereZonePrimitive",
+                        "version": "2",
+                        "offset": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
+                        },
+                        "radius": "1.300000"
+                    }
+                ],
+                "triggers": [],
+                "className": "ServerTriggerZoneDescriptor"
+            },
+            "instancePositions": [
+                {
+                    "pos": {
+                        "x": 529.61792,
+                        "y": 15.097498,
+                        "z": 382.275024
+                    },
+                    "rot": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "descriptorName": "Objects/Spawn/TriggerZone_Server_49:",
+            "descriptor": {
+                "version": "5",
+                "name": "tzdamage04",
+                "type": "damage",
+                "buildUpTime": "0.300000",
+                "coolDownTime": "0.100000",
+                "isRepeating": "1",
+                "repeatTime": "1.000000",
+                "iconName": "",
+                "iconOffset": {
+                    "x": 0.0,
+                    "y": 2.0,
+                    "z": 0.0
+                },
+                "zonePrimitives": [
+                    {
+                        "ClassName": "SphereZonePrimitive",
+                        "version": "2",
+                        "offset": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
+                        },
+                        "radius": "1.300000"
+                    }
+                ],
+                "triggers": [],
+                "className": "ServerTriggerZoneDescriptor"
+            },
+            "instancePositions": [
+                {
+                    "pos": {
+                        "x": 529.618042,
+                        "y": 15.097498,
+                        "z": 381.235321
+                    },
+                    "rot": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "descriptorName": "Objects/Spawn/TriggerZone_Server_5:",
+            "descriptor": {
+                "version": "5",
+                "name": "tz_health_5",
+                "type": "health",
+                "buildUpTime": "0.000000",
+                "coolDownTime": "0.000000",
+                "isRepeating": "1",
+                "repeatTime": "1.000000",
+                "iconName": "Symbols/p_health.tga",
+                "iconOffset": {
+                    "x": 0.0,
+                    "y": 0.7,
+                    "z": 0.0
+                },
+                "zonePrimitives": [
+                    {
+                        "ClassName": "SphereZonePrimitive",
+                        "version": "2",
+                        "offset": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
+                        },
+                        "radius": "1.500000"
+                    }
+                ],
+                "triggers": [],
+                "className": "ServerTriggerZoneDescriptor"
+            },
+            "instancePositions": [
+                {
+                    "pos": {
+                        "x": 482.721466,
+                        "y": 8.396,
+                        "z": 339.071503
+                    },
+                    "rot": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "descriptorName": "Objects/Spawn/TriggerZone_Server_6:",
+            "descriptor": {
+                "version": "5",
+                "name": "tz_ammo_6",
+                "type": "ammo",
+                "buildUpTime": "0.000000",
+                "coolDownTime": "0.000000",
+                "isRepeating": "1",
+                "repeatTime": "1.000000",
+                "iconName": "Symbols/p_ammo.tga",
+                "iconOffset": {
+                    "x": 0.0,
+                    "y": 0.7,
+                    "z": 0.0
+                },
+                "zonePrimitives": [
+                    {
+                        "ClassName": "SphereZonePrimitive",
+                        "version": "2",
+                        "offset": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
+                        },
+                        "radius": "1.500000"
+                    }
+                ],
+                "triggers": [],
+                "className": "ServerTriggerZoneDescriptor"
+            },
+            "instancePositions": [
+                {
+                    "pos": {
+                        "x": 497.299561,
+                        "y": 7.372983,
+                        "z": 383.164703
+                    },
+                    "rot": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "descriptorName": "Objects/Spawn/TriggerZone_Server_7:",
+            "descriptor": {
+                "version": "5",
+                "name": "tz_health_7",
+                "type": "health",
+                "buildUpTime": "0.000000",
+                "coolDownTime": "0.000000",
+                "isRepeating": "1",
+                "repeatTime": "1.000000",
+                "iconName": "Symbols/p_health.tga",
+                "iconOffset": {
+                    "x": 0.0,
+                    "y": 0.7,
+                    "z": 0.0
+                },
+                "zonePrimitives": [
+                    {
+                        "ClassName": "SphereZonePrimitive",
+                        "version": "2",
+                        "offset": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
+                        },
+                        "radius": "1.500000"
+                    }
+                ],
+                "triggers": [],
+                "className": "ServerTriggerZoneDescriptor"
+            },
+            "instancePositions": [
+                {
+                    "pos": {
+                        "x": 518.789185,
+                        "y": 8.566,
+                        "z": 341.974182
+                    },
+                    "rot": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "descriptorName": "Objects/Spawn/TriggerZone_Server_8:",
+            "descriptor": {
+                "version": "5",
+                "name": "tz_ammo_8",
+                "type": "ammo",
+                "buildUpTime": "0.000000",
+                "coolDownTime": "0.000000",
+                "isRepeating": "1",
+                "repeatTime": "1.000000",
+                "iconName": "Symbols/p_ammo.tga",
+                "iconOffset": {
+                    "x": 0.0,
+                    "y": 0.7,
+                    "z": 0.0
+                },
+                "zonePrimitives": [
+                    {
+                        "ClassName": "SphereZonePrimitive",
+                        "version": "2",
+                        "offset": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
+                        },
+                        "radius": "1.500000"
+                    }
+                ],
+                "triggers": [],
+                "className": "ServerTriggerZoneDescriptor"
+            },
+            "instancePositions": [
+                {
+                    "pos": {
+                        "x": 529.03363,
+                        "y": 7.452983,
+                        "z": 385.671478
+                    },
+                    "rot": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "descriptorName": "Objects/Spawn/TriggerZone_Server_9:",
+            "descriptor": {
+                "version": "5",
+                "name": "tz_health_9",
+                "type": "health",
+                "buildUpTime": "0.000000",
+                "coolDownTime": "0.000000",
+                "isRepeating": "1",
+                "repeatTime": "1.000000",
+                "iconName": "Symbols/p_health.tga",
+                "iconOffset": {
+                    "x": 0.0,
+                    "y": 0.7,
+                    "z": 0.0
+                },
+                "zonePrimitives": [
+                    {
+                        "ClassName": "SphereZonePrimitive",
+                        "version": "2",
+                        "offset": {
+                            "x": 0.0,
+                            "y": 0.0,
+                            "z": 0.0
+                        },
+                        "radius": "1.500000"
+                    }
+                ],
+                "triggers": [],
+                "className": "ServerTriggerZoneDescriptor"
+            },
+            "instancePositions": [
+                {
+                    "pos": {
+                        "x": 591.950256,
+                        "y": 7.972,
+                        "z": 339.32608
+                    },
+                    "rot": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                }
+            ]
+        }
+    ]
+}

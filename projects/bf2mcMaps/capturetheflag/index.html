@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BF2MC | CTF Maps</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/openseadragon/2.4.2/openseadragon.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/maps.css"/>
+</head>
+<body>
+    <div id="container">
+        <h1>Capture the Flag</h1>
+        <div id="map-selection" class="map-selection">
+            <div class="map active" data-map="backstab">Backstab</div>
+            <div class="map" data-map="deadlypass">DeadlyPass</div>
+            <div class="map" data-map="bridgetoofar">BridgeTooFar</div>
+            <div class="map" data-map="dammage">Dammage</div>
+            <div class="map" data-map="harboredge">HarborEdge</div>
+            <div class="map" data-map="honor">Honor</div>
+            <div class="map" data-map="littlebigeye">LittleBigEye</div>
+            <div class="map" data-map="missilecrisis">MissileCrisis</div>
+            <div class="map" data-map="coldfront">Coldfront</div>
+            <div class="map" data-map="russianborder">RussianBorder</div>
+            <div class="map" data-map="specialop">SpecialOp</div>
+            <div class="map" data-map="theblackgold">TheBlackGold</div>
+            <div class="map" data-map="thenest">TheNest</div>
+        </div>
+        <div class="legend">
+            <div class="legend-item" data-type="flag">
+                <i class="fas fa-toggle-on" style="color: green;"></i>
+                <i class="fas fa-flag" style="color: white;"></i>
+                <div class="legend-count"></div>
+                <div class="legend-text">Capture Points</div>
+            </div>
+            <div class="legend-item" data-type="group">
+                <i class="fas fa-toggle-on fa-flip-horizontal" style="color: maroon;"></i>
+                <div class="legend-color" style="background-color: silver;"></div>
+                <div class="legend-count"></div>
+                <div class="legend-text">Spawn Groups</div>
+            </div>
+            <div class="legend-item" data-type="capture">
+                <i class="fas fa-toggle-on fa-flip-horizontal" style="color: maroon;"></i>
+                <div class="legend-color" style="background-color: darkcyan;"></div>
+                <div class="legend-count"></div>
+                <div class="legend-text">Spawn Markers</div>
+            </div>
+            <div class="legend-item" data-type="controller">
+                <i class="fas fa-toggle-on fa-flip-horizontal" style="color: maroon;"></i>
+                <div class="legend-color" style="background-color: bisque;"></div>
+                <div class="legend-count"></div>
+                <div class="legend-text">Spawn Controllers</div>
+            </div>
+            <div class="legend-item" data-type="camera">
+                <i class="fas fa-toggle-on fa-flip-horizontal" style="color: maroon;"></i>
+                <div class="legend-color" style="background-color: darkorange;"></div>
+                <div class="legend-count"></div>
+                <div class="legend-text">Cameras</div>
+            </div>
+            <div class="legend-item" data-type="trigger">
+                <i class="fas fa-toggle-on fa-flip-horizontal" style="color: maroon;"></i>
+                <div class="legend-color" style="background-color: aqua;"></div>
+                <div class="legend-count"></div>
+                <div class="legend-text">Trigger Zones</div>
+            </div>
+            <div class="legend-item" data-type="player">
+                <i class="fas fa-toggle-on fa-flip-horizontal" style="color: maroon;"></i>
+                <div class="legend-color" style="background-color: yellow;"></div>
+                <div class="legend-count"></div>
+                <div class="legend-text">Player Spawns</div>
+            </div>
+            <div class="legend-item" data-type="vehicle">
+                <i class="fas fa-toggle-on fa-flip-horizontal" style="color: maroon;"></i>
+                <div class="legend-color" style="background-color: limegreen;"></div>
+                <div class="legend-count"></div>
+                <div class="legend-text">Vehicle Spawns</div>
+            </div>
+            <div class="legend-item" data-type="weapon">
+                <i class="fas fa-toggle-on fa-flip-horizontal" style="color: maroon;"></i>
+                <div class="legend-color" style="background-color: purple;"></div>
+                <div class="legend-count"></div>
+                <div class="legend-text">Stationary Weapons</div>
+            </div>
+            <div class="legend-item" data-type="ammo">
+                <i class="fas fa-toggle-on fa-flip-horizontal" style="color: maroon;"></i>
+                <div class="legend-color" style="background-color: blue;"></div>
+                <div class="legend-count"></div>
+                <div class="legend-text">Ammo Pickups</div>
+            </div>
+            <div class="legend-item" data-type="health">
+                <i class="fas fa-toggle-on fa-flip-horizontal" style="color: maroon;"></i>
+                <div class="legend-color" style="background-color: red;"></div>
+                <div class="legend-count"></div>
+                <div class="legend-text">Health Pickups</div>
+            </div>
+        </div>
+        <a href="../conquest/">View Conquest Maps</a>
+    </div>
+    <div id="coordinate-display" class="coordinate-display">
+        <div id="mouse-coordinates">Mouse (0, 0)</div>
+    </div>
+    <div id="openClose">
+        <i class="fas fa-angle-left"></i>
+    </div>
+    <div id="openseadragon-viewer"></div>
+
+    <script>
+        $(document).ready(function() {
+            const teamColors = {
+                'backstab': {
+                    0: 'white',
+                    1: 'green',
+                    2: 'blue'
+                },
+                'deadlypass': {
+                    0: 'white',
+                    1: 'green',
+                    2: 'blue'
+                },
+                'bridgetoofar': {
+                    0: 'white',
+                    1: 'red',
+                    2: 'blue'
+                },
+                'dammage': {
+                    0: 'white',
+                    1: 'red',
+                    2: 'blue'
+                },
+                'harboredge': {
+                    0: 'white',
+                    1: 'red',
+                    2: 'blue'
+                },
+                'honor': {
+                    0: 'white',
+                    1: 'red',
+                    2: 'blue'
+                },
+                'littlebigeye': {
+                    0: 'white',
+                    1: 'red',
+                    2: 'blue'
+                },
+                'missilecrisis': {
+                    0: 'white',
+                    1: 'red',
+                    2: 'yellow'
+                },
+                'coldfront': {
+                    0: 'white',
+                    1: 'red',
+                    2: 'yellow'
+                },
+                'russianborder': {
+                    0: 'white',
+                    1: 'red',
+                    2: 'yellow'
+                },
+                'specialop': {
+                    0: 'white',
+                    1: 'red',
+                    2: 'blue'
+                },
+                'theblackgold': {
+                    0: 'white',
+                    1: 'green',
+                    2: 'blue'
+                },
+                'thenest': {
+                    0: 'white',
+                    1: 'green',
+                    2: 'blue'
+                }
+            };
+
+            function capitalizeFirstLetter(string) {
+                return string.charAt(0).toUpperCase() + string.slice(1);
+            }
+
+            // Initialize OpenSeadragon viewer
+            const viewer = OpenSeadragon({
+                id: 'openseadragon-viewer',
+                prefixUrl: 'https://cdnjs.cloudflare.com/ajax/libs/openseadragon/2.4.2/images/', // Path to OpenSeadragon images
+                tileSources: {
+                    type: 'image',
+                    url: '../images/colormaps/backstab/colormap.png' // URL to your 2x image
+                },
+                showNavigationControl: true, // Optionally show zoom controls
+                showFullPageControl: false, // Disable full page button
+                defaultZoomLevel: 0,
+                minZoomLevel: 0, // Minimum zoom level (original size)
+                maxZoomLevel: 6, // Maximum zoom level (4x)
+                visibilityRatio: 1, // Ensure image is fully loaded before displaying
+                constrainDuringPan: true,
+                zoomPerClick: 2, // Zoom factor per click
+                zoomPerScroll: 1.2 // Zoom factor per scroll
+            });
+
+            const mouseCoordinates = document.getElementById('mouse-coordinates');
+            const pointInfo = document.getElementById('point-info');
+            const object = document.getElementById('object');
+            const name = document.getElementById('name');
+
+            let coordinates = [];
+
+            // Create MouseTracker for precise mouse movement tracking
+            const mouseTracker = new OpenSeadragon.MouseTracker({
+                element: viewer.canvas,
+                moveHandler: function(event) {
+                    const viewportPoint = viewer.viewport.pointFromPixel(event.position);
+                    const imagePoint = viewer.viewport.viewportToImageCoordinates(viewportPoint);
+
+                    // Calculate x and y coordinates
+                    let x = Math.round(imagePoint.x);
+                    let y = Math.round(imagePoint.y);
+
+                    if (x > 1024 || y > 1024 || x < 0 || y < 0) {
+                        x = 0;
+                        y = 0;
+                    }
+
+                    // Update mouse coordinate display
+                    mouseCoordinates.textContent = `Mouse (${x}, ${y})`;
+                },
+                exitHandler: function(event) {
+                    // Optionally handle mouse leaving viewer
+                    mouseCoordinates.textContent = 'Mouse (0, 0)'; // Reset display when mouse leaves
+                }
+            }).setTracking(true);
+
+            function resetToggles() {
+                $('.legend-item').each(function() {
+                    const $toggle = $(this).find('.fa-toggle-on');
+                    const dataType = $(this).data('type');
+
+                    if (dataType === 'flag') {
+                        // Always set the flag type toggle to green and remove fa-flip-horizontal
+                        $toggle.removeClass('fa-flip-horizontal').css('color', 'green');
+                    } else {
+                        // Reset other toggle buttons
+                        $toggle.addClass('fa-flip-horizontal').css('color', 'maroon');
+                    }
+                });
+
+                // Show all point markers and reset their style
+                $('.point-marker').show().css('display', 'none');
+                $('.point-marker flag').show().css('display', 'block');
+            }
+
+            let map = 'backstab';
+
+            let url = 'data/levels/backstab/level_server_capturetheflag.gms.json';
+
+            $(document).on('click', '.map', function() {
+                map = $(this).data('map');
+                let imgUrl = `../images/colormaps/${map}/colormap.png`; // Dynamically construct the URL
+                viewer.open({
+                    type: 'image',
+                    url: imgUrl
+                });
+
+                url = `data/levels/${map}/level_server_capturetheflag.gms.json`; // Update the `url` variable
+                plotPoints(); // Re-run plotPoints with the updated URL
+
+                resetToggles();
+
+                $('.map').not(this).removeClass('active');
+    
+                $(this).addClass('active');
+            });
+
+            function loadJSON(url, callback) {
+                $.getJSON(url, function(data) {
+                    callback(data);
+                });
+            }
+
+            // Function to process JSON data and plot points
+            function plotPoints() {
+                loadJSON(url, function(jsonData) {
+                    // Initialize an object to store counts for each type
+                    const typeCounts = {
+                        ammo: 0,
+                        health: 0,
+                        flag: 0,
+                        vehicle: 0,
+                        weapon: 0,
+                        player: 0,
+                        controller: 0,
+                        camera: 0,
+                        trigger: 0,
+                        group: 0,
+                        capture: 0
+                    };
+
+                    coordinates = jsonData.objectInstances
+                        .map(instance => {
+                            const position = instance.instancePositions[0].pos;
+                            const descriptorName = instance.descriptorName || "";
+                            const name = instance.descriptor.name || "";
+                            let type = "";
+                            let colorClass = "";
+                            let vehicleClass = "";
+                            let state = "";
+                            let description = "";
+                            let descriptorType = "";
+                            
+                            // Set specific types based on descriptorName prefixes
+                            if (instance.descriptorName.startsWith("Objects/Pickup/AmmoPickup")) {
+                                type = "ammo";
+                                state = instance.descriptor.state || "";
+                            } else if (instance.descriptorName.startsWith("Objects/Pickup/HealthPickup")) {
+                                type = "health";
+                                state = instance.descriptor.state || "";
+                            } else if (instance.descriptorName.startsWith("Objects/Pickup/CTFbase")) {
+                                type = "flag";
+
+                                // Find the corresponding SpawnMarker_Server instance
+                                const spawnMarkerInstance = jsonData.objectInstances.find(spawnInstance => 
+                                    spawnInstance.descriptorName.startsWith("Objects/Spawn/SpawnMarker_Server_") &&
+                                    spawnInstance.instancePositions.some(spawnPos => 
+                                    Math.round(spawnPos.pos.x) === Math.round(position.x) && Math.round(spawnPos.pos.z) === Math.round(position.z)
+                                    )
+                                );
+
+                                if (spawnMarkerInstance) {
+                                    const initialOwnerTeam = spawnMarkerInstance.descriptor.initialOwnerTeam;
+                                    // Determine color class based on initialOwnerTeam and current map
+                                    const teamColor = teamColors[map][initialOwnerTeam];
+                                    switch (teamColor) {
+                                        case 'white':
+                                            colorClass = "flag-neutral";
+                                            break;
+                                        case 'green':
+                                            colorClass = "flag-mec";
+                                            break;
+                                        case 'blue':
+                                            colorClass = "flag-us";
+                                            break;
+                                        case 'red':
+                                            colorClass = "flag-ch";
+                                            break;
+                                        case 'yellow':
+                                            colorClass = "flag-eu";
+                                            break;
+                                        default:
+                                            colorClass = "flag-neutral";
+                                    }
+                                } else {
+                                    colorClass = "flag-neutral"; // Default to neutral if no matching spawn marker is found
+                                }
+
+                                state = instance.descriptor.state || "";
+                                
+                            } else if (instance.descriptorName.startsWith("Objects/Spawn/SpawnPoint_")) {
+                                // Find the corresponding SpawnController instance
+                                const spawnControllerInstance = jsonData.objectInstances.find(spawnInstance =>
+                                    spawnInstance.descriptorName.startsWith("Objects/Spawn/SpawnController_") &&
+                                    spawnInstance.descriptor.spawnPoint === instance.descriptor.name
+                                );
+
+                                if (spawnControllerInstance) {
+                                    // Check for vehicleClass in the SpawnController instance
+                                    if (spawnControllerInstance.descriptor.vehicleClass.includes("Objects/vehicles")) {
+                                        type = "vehicle";
+                                    } else if (spawnControllerInstance.descriptor.vehicleClass.includes("Objects/Weapons")) {
+                                        type = "weapon";
+                                    } else {
+                                        type = "player";
+                                    }
+                                } else {
+                                    // Default type if no matching SpawnController is found
+                                    type = "player";
+                                }
+                            } else if (instance.descriptorName.startsWith("Objects/Spawn/SpawnController_")) {
+                                type = "controller";
+                                vehicleClass = instance.descriptor.vehicleClass || "";
+                            } else if (instance.descriptorName.startsWith("Objects/Spawn/SpectateCamera")) {
+                                type = "camera";
+                                description = instance.descriptor.description || "";
+                            } else if (instance.descriptorName.startsWith("Objects/Spawn/TriggerZone")) {
+                                type = "trigger";
+                                descriptorType = instance.descriptor.type || "";
+                            } else if (instance.descriptorName.startsWith("Objects/Spawn/SpawnGroup")) {
+                                type = "group";
+                            } else if (instance.descriptorName.startsWith("Objects/Spawn/SpawnMarker")) {
+                                type = "capture";
+                                description = instance.descriptor.description || "";
+                            }
+
+                            // Increment the count for the current type
+                            if (type) {
+                                typeCounts[type] = (typeCounts[type] || 0) + 1;
+                            }
+
+                            return {
+                                x: position.x,
+                                y: position.y,
+                                z: position.z,
+                                type: type,
+                                descriptorName: descriptorName.replace(/:$/, ''),
+                                name: name,
+                                colorClass: colorClass,
+                                vehicleClass: vehicleClass,
+                                state: state,
+                                description: description,
+                                descriptorType: descriptorType
+                            };
+                        })
+
+                        coordinates.forEach(function(coord) {
+                            const marker = document.createElement('div');
+                            marker.className = 'point-marker ' + coord.type + (coord.type === 'flag' ? ' ' + coord.colorClass : '');
+                            marker.style.left = coord.x + 'px';
+                            marker.style.top = coord.z + 'px';
+                            marker.setAttribute("data-x", coord.x);
+                            marker.setAttribute("data-y", coord.z);
+                            marker.style.display = coord.type === 'flag' ? 'block' : 'none';
+
+                            // Create icon element for flag points
+                            if (coord.type === 'flag') {
+                                const icon = document.createElement('i');
+                                icon.className = 'fas fa-flag'; // Font Awesome icon class
+                                marker.appendChild(icon);
+                            }
+
+                            viewer.addOverlay({
+                                element: marker,
+                                location: viewer.viewport.imageToViewportCoordinates(new OpenSeadragon.Point(coord.x, coord.z)),
+                                checkResize: false,
+                                placement: 'TOP'
+                            });
+                        });
+                        
+                        // Update legend counts
+                        for (const [type, count] of Object.entries(typeCounts)) {
+                            $('.legend-item[data-type="' + type + '"] .legend-count').text(count + '\u00A0');
+                        }
+                });
+            }
+
+            $(document).on('mouseover', '.point-marker', function() {
+                const classNames = $(this).attr('class').split(' '); // Get all classes
+
+                const flagClasses = ['flag-mec', 'flag-us', 'flag-neutral', 'flag-ch', 'flag-eu'];
+
+                // Find the type class (which is not 'point-marker' and not in flagClasses)
+                const type = $(this).attr('class').split(' ').find(c => c !== 'point-marker');
+
+                const dataX = $(this).data('x');
+                const dataY = $(this).data('y');
+
+                const threshold = 0.25;
+
+                // Find overlapping instances within a range of 0.25 for x and z
+                const instances = coordinates.filter(item => 
+                    item.type === type && 
+                    Math.abs(item.x - dataX) <= threshold && 
+                    Math.abs(item.z - dataY) <= threshold
+                );
+
+                const displayContainer = $('#coordinate-display');
+                
+                // Clear the content inside coordinate-display except for #mouse-coordinates
+                displayContainer.find(':not(#mouse-coordinates)').remove();
+
+                instances.forEach(instance => {
+                    // Create new divs for each instance
+                    const nameDiv = (instance.name) ? $('<div>').addClass('name').html(`<span>Name:</span> ${instance.name}`) : '';
+                    const objectDiv = (instance.descriptorName) ? $('<div>').addClass('object').html(`<span>Descriptor Name:</span> ${instance.descriptorName}`) : '';
+                    const coordinatesDiv = $('<div>').addClass('point-info').html(`<span>Coordinates:</span> (${instance.x}, ${instance.y}, ${instance.z})`);
+
+                    // Add vehicleClass if it exists and the type is 'controller'
+                    const vehicleClassDiv = ((instance.type === 'controller') && instance.vehicleClass) 
+                        ? $('<div>').addClass('vehicleClass').html(`<span>Vehicle Class:</span> ${instance.vehicleClass}`)
+                        : '';
+                    const stateDiv = (instance.state) ? $('<div>').addClass('state').html(`<span>State:</span> ${instance.state}`) : '';
+                    const descriptionDiv = (instance.description) ? $('<div>').addClass('description').html(`<span>Description:</span> ${instance.description}`) : '';
+                    const decriptorTypeDiv = (instance.descriptorType) ? $('<div>').addClass('type').html(`<span>Type:</span> ${instance.descriptorType}`) : '';
+
+                    // Wrap each set in a parent div
+                    const parentDiv = $('<div>').addClass('instance-info');
+                    parentDiv.append(objectDiv);
+                    parentDiv.append(nameDiv);
+                    parentDiv.append(stateDiv);
+                    parentDiv.append(descriptionDiv);
+                    parentDiv.append(decriptorTypeDiv);
+                    if (vehicleClassDiv) {
+                        parentDiv.append(vehicleClassDiv);
+                    }
+                    parentDiv.append(coordinatesDiv);
+
+                    // Append the wrapped div to the display container
+                    displayContainer.append(parentDiv);
+                });
+            });
+
+            $(document).on('mouseout', '.point-marker', function() {
+                // Clear the dynamically added content inside #coordinate-display
+                $('#coordinate-display').find(':not(#mouse-coordinates)').remove();
+            });
+
+            $(document).on('click', '.legend-item', function() {
+                let datatype = $(this).data('type')
+
+                // Toggle display for elements with the specified class
+                $(`.point-marker.${datatype}`).toggle();
+
+                // Toggle classes and styles for child elements with class .fa-toggle-on
+                $(this).find('.fa-toggle-on').toggleClass('fa-flip-horizontal').css('color', function(index, color) {
+                    // Check the current computed color style
+                    if (this.style.color === 'maroon' || !color) {
+                        return 'green'; // Toggle to green if red or no inline color
+                    } else {
+                        return 'maroon'; // Toggle to red if current color is green
+                    }
+                });
+            });
+
+            // Call the function to plot points after the viewer is ready
+            viewer.addHandler('open', plotPoints);
+
+            const containerWidth = $('#container').outerWidth();
+            const coordinateWidth = $('#coordinate-display');
+
+            $('#openClose').css('left', containerWidth + 'px');
+            // $('#coordinate-display').css('left', containerWidth + 'px');
+
+            $(document).on('click', '#openClose', function() {
+                const $container = $('#container');
+                const $openClose = $('#openClose');
+                const containerWidth = $container.outerWidth();
+
+                if ($container.is(':visible')) {
+                    $openClose.animate({
+                        left: '0' // Move #openClose to the left
+                    }, 300);
+                    // Slide out #container to the left (off-screen) and move #openClose to the left
+                    $container.animate({
+                        left: '-' + containerWidth + 'px' // Move #container off-screen to the left
+                    }, 300, function() {
+                        $container.hide(); // Hide #container after sliding out
+                    });
+
+                    // Change the icon to fa-angle-right
+                    $openClose.find('i').removeClass('fa-angle-left').addClass('fa-angle-right');
+                } else {
+                    // Show #container and slide it into view from the left
+                    $container.show().animate({
+                        left: '0' // Slide #container into view from the left
+                    }, 300);
+
+                    $openClose.animate({
+                        left: containerWidth + 'px' // Move #openClose to the right
+                    }, 300);
+
+                    // Change the icon to fa-angle-left
+                    $openClose.find('i').removeClass('fa-angle-right').addClass('fa-angle-left');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
