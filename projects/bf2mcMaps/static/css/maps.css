@@ -166,6 +166,17 @@ a:hover {
   z-index: 10;
 }
 
+.point-marker.artillery {
+    background-color: pink;
+    border: 2px solid black; /* Add black border */
+    width: 10px;
+    height: 10px;
+    border-radius: 48%;
+    text-align: center;
+    line-height: 20px;
+    z-index: 11;
+}
+
 #container {
   display: flex;
   flex-direction: column;

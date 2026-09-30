@@ -96,6 +96,12 @@
                 <div class="legend-count"></div>
                 <div class="legend-text">Health Pickups</div>
             </div>
+			<div class="legend-item" data-type="artillery">
+                <i class="fas fa-toggle-on fa-flip-horizontal" style="color: maroon;"></i>
+                <div class="legend-color" style="background-color: pink;"></div>
+                <div class="legend-count"></div>
+                <div class="legend-text">Artillery Strike</div>
+            </div>
         </div>
         <a href="../capturetheflag/">View CTF Maps</a>
     </div>
@@ -285,7 +291,8 @@
                         camera: 0,
                         trigger: 0,
                         group: 0,
-                        capture: 0
+                        capture: 0,
+						artillery: 0
                     };
 
                     coordinates = jsonData.objectInstances
@@ -307,6 +314,9 @@
                             } else if (instance.descriptorName.startsWith("Objects/Pickup/HealthPickup")) {
                                 type = "health";
                                 state = instance.descriptor.state || "";
+                            } else if (instance.descriptorName.startsWith("Objects/MILITARY/Computer/Computer")) {
+                                type = "artillery";
+                                description = instance.descriptor.description || "";
                             } else if (instance.descriptorName.startsWith("Objects/Spawn/CapturePoint")) {
                                 type = "flag";
 

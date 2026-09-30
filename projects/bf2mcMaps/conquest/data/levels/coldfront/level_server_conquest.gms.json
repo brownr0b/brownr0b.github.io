@@ -9595,6 +9595,30 @@
                     }
                 }
             ]
+        },
+        {
+            "descriptorName": "Objects/MILITARY/Computer/Computer:",
+            "descriptor": {
+                "version": "1",
+                "name": "Artillery Strike",
+				"type": "artillery",
+                "spawnPoint": "spWeapon_01",
+                "vehicleClass": "Objects/MILITARY/Computer/Computer.sgf:Render_Computer"
+            },
+            "instancePositions": [
+                {
+                    "pos": {
+                        "x": 206.490,
+                        "y": 37.138,
+                        "z": 367.974
+                    },
+                    "rot": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    }
+                }
+            ]
         }
     ]
 }
